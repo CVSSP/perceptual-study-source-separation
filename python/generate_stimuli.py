@@ -9,31 +9,32 @@ def main():
     masseval.config.mus_base_path = '/vol/vssp/maruss/data2/MUS2017'
     masseval.config.dsd_base_path = '/vol/vssp/maruss/data2/DSD100'
     audio_dir = '/scratch/stimuli'
-    df = masseval.data.get_sisec_df()
 
-    # Remove accompaniment
-    df = df.query("target != 'accompaniment'")
 
     # config for selection
-    only_these_algos = ['GRA3', 'KON', 'OZE', 'UHL3', 'NUG3']
-    targets = ['vocals', 'bass', 'other', 'drums']
+    #only_these_algos = ['GRA3', 'KON', 'OZE', 'UHL3', 'NUG3']
+    only_these_algos = None
+    targets = ['vocals']
     metrics = ['SAR', 'SIR']
-    num_tracks_per_metric = 2
+    num_algos = 5
+    num_tracks_per_metric = [2, 3]  #So we get 5 samples of each target N = 20
     target_loudness = -30
     segment_duration = 7
-    include_background_in_quality_anchor=False
     remove_outliers = False
+
+    df = masseval.data.get_sisec_df(False)
+    #df = df.query("target != 'accompaniment'")
 
     # Main processing
     full_test = pd.DataFrame()
     for target in targets:
         exclude_tracks = [] # Don't select the same source twice
-        for metric in metrics:
+        for metric, num_tracks in zip(metrics, num_tracks_per_metric):
 
             sample = masseval.data.get_sample(
                 df,
-                num_tracks=num_tracks_per_metric,
-                num_algos=len(only_these_algos),
+                num_tracks=num_tracks,
+                num_algos=num_algos,
                 metric=metric,
                 target=target,
                 only_these_algos=only_these_algos,
@@ -54,7 +55,8 @@ def main():
                 force_mono=True,
                 target_loudness=target_loudness,
                 segment_duration=segment_duration,
-                include_background_in_quality_anchor=include_background_in_quality_anchor
+                include_background_in_quality_anchor=False,
+                loudness_normalise_interferer=False,
                 )
 
     #frames.to_csv('../data/stimuli.csv', index=None)
