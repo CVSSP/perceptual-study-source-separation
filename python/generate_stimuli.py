@@ -17,10 +17,11 @@ def main():
     targets = ['vocals']
     metrics = ['SAR', 'SIR']
     num_algos = 5
-    num_tracks_per_metric = [2, 3]  #So we get 5 samples of each target N = 20
+    num_tracks_per_metric = [8, 8]
     target_loudness = -30
     segment_duration = 7
     remove_outliers = False
+    trim_factor_distorted=0.4
 
     df = masseval.data.get_sisec_df(False)
     #df = df.query("target != 'accompaniment'")
@@ -28,7 +29,7 @@ def main():
     # Main processing
     full_test = pd.DataFrame()
     for target in targets:
-        exclude_tracks = [] # Don't select the same source twice
+        exclude_tracks = [3] # Song 3 has strange vocals
         for metric, num_tracks in zip(metrics, num_tracks_per_metric):
 
             sample = masseval.data.get_sample(
@@ -39,6 +40,7 @@ def main():
                 target=target,
                 only_these_algos=only_these_algos,
                 exclude_tracks=exclude_tracks,
+                trim_factor_distorted=trim_factor_distorted,
                 remove_outliers=remove_outliers,
                 selection_plot=False,
             )
