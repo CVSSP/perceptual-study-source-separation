@@ -21,6 +21,7 @@ def main():
     target_loudness = -30
     segment_duration = 7
     remove_outliers = False
+    trim_factor_distorted=0.4
 
     df = masseval.data.get_sisec_df(False)
     #df = df.query("target != 'accompaniment'")
@@ -39,6 +40,7 @@ def main():
                 target=target,
                 only_these_algos=only_these_algos,
                 exclude_tracks=exclude_tracks,
+                trim_factor_distorted=trim_factor_distorted,
                 remove_outliers=remove_outliers,
                 selection_plot=False,
             )
