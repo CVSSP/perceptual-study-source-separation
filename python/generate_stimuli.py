@@ -17,7 +17,7 @@ def main():
     targets = ['vocals']
     metrics = ['SAR', 'SIR']
     num_algos = 5
-    num_tracks_per_metric = [2, 3]  #So we get 5 samples of each target N = 20
+    num_tracks_per_metric = [8, 8]
     target_loudness = -30
     segment_duration = 7
     remove_outliers = False
@@ -29,7 +29,7 @@ def main():
     # Main processing
     full_test = pd.DataFrame()
     for target in targets:
-        exclude_tracks = [] # Don't select the same source twice
+        exclude_tracks = [3] # Song 3 has strange vocals
         for metric, num_tracks in zip(metrics, num_tracks_per_metric):
 
             sample = masseval.data.get_sample(
