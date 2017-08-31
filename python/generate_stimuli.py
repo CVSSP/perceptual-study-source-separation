@@ -8,11 +8,10 @@ def main():
     # masseval side
     masseval.config.mus_base_path = '/vol/vssp/maruss/data2/MUS2017'
     masseval.config.dsd_base_path = '/vol/vssp/maruss/data2/DSD100'
-    audio_dir = '/scratch/stimuli'
-
+    audio_dir = './experiment/sounds'
 
     # config for selection
-    #only_these_algos = ['GRA3', 'KON', 'OZE', 'UHL3', 'NUG3']
+    # only_these_algos = ['GRA3', 'KON', 'OZE', 'UHL3', 'NUG3']
     only_these_algos = None
     targets = ['vocals']
     metrics = ['SAR', 'SIR']
@@ -21,15 +20,14 @@ def main():
     target_loudness = -30
     segment_duration = 7
     remove_outliers = False
-    trim_factor_distorted=0.4
+    trim_factor_distorted = 0.4
 
     df = masseval.data.get_sisec_df(False)
-    #df = df.query("target != 'accompaniment'")
 
     # Main processing
     full_test = pd.DataFrame()
     for target in targets:
-        exclude_tracks = [3] # Song 3 has strange vocals
+        exclude_tracks = [3]  # Song 3 has strange vocals
         for metric, num_tracks in zip(metrics, num_tracks_per_metric):
 
             sample = masseval.data.get_sample(
@@ -40,7 +38,6 @@ def main():
                 target=target,
                 only_these_algos=only_these_algos,
                 exclude_tracks=exclude_tracks,
-                trim_factor_distorted=trim_factor_distorted,
                 remove_outliers=remove_outliers,
                 selection_plot=False,
             )
@@ -57,13 +54,63 @@ def main():
                 force_mono=True,
                 target_loudness=target_loudness,
                 segment_duration=segment_duration,
+                trim_factor_distorted=trim_factor_distorted,
                 include_background_in_quality_anchor=False,
                 loudness_normalise_interferer=False,
                 )
 
-    #frames.to_csv('../data/stimuli.csv', index=None)
+    return exclude_tracks
+
+
+def training(exclude_tracks):
+
+    # masseval side
+    masseval.config.mus_base_path = '/vol/vssp/maruss/data2/MUS2017'
+    masseval.config.dsd_base_path = '/vol/vssp/maruss/data2/DSD100'
+    audio_dir = './experiment/sounds/training'
+
+    # config for selection
+    only_these_algos = ['GRA3', 'KON', 'OZE', 'UHL3', 'NUG3']
+    # only_these_algos = None
+    target = 'vocals'
+    metric = 'SAR'
+    num_algos = 5
+    num_tracks = 1
+    target_loudness = -30
+    segment_duration = 7
+    remove_outliers = False
+    trim_factor_distorted = 0.4
+
+    df = masseval.data.get_sisec_df(False)
+
+    sample = masseval.data.get_sample(
+        df,
+        num_tracks=num_tracks,
+        num_algos=num_algos,
+        metric=metric,
+        target=target,
+        only_these_algos=only_these_algos,
+        exclude_tracks=exclude_tracks,
+        remove_outliers=remove_outliers,
+        selection_plot=False,
+    )
+
+    # Store the test wav files
+    masseval.audio.write_target_from_sample(
+        sample,
+        target=target,
+        directory=audio_dir,
+        force_mono=True,
+        target_loudness=target_loudness,
+        segment_duration=segment_duration,
+        trim_factor_distorted=trim_factor_distorted,
+        include_background_in_quality_anchor=False,
+        loudness_normalise_interferer=False,
+        )
 
 
 if __name__ == '__main__':
 
-    main()
+    exclude_tracks = main()
+
+    training(exclude_tracks)
