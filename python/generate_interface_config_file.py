@@ -6,6 +6,7 @@ def main(stimuli_input_folder,
          stimuli_website_folder,
          ref_name='ref.wav',
          excluse_these_wav_files=[],
+         labels=['Dissimilar', 'Similar'],
          filename=None):
 
     x = [_ for _ in os.walk(stimuli_input_folder)]
@@ -42,7 +43,7 @@ def main(stimuli_input_folder,
               'randomise_pages': True,
               'include_number_box': True,
               'must_play_all_samples_to_continue': True,
-              'labels': ['Dissimilar', 'Similar'],
+              'labels': labels,
               'pages': pages,
               }
 
@@ -52,9 +53,18 @@ def main(stimuli_input_folder,
 
 if __name__ == '__main__':
 
-    main(
-        stimuli_input_folder='/scratch/stimuli',
-        stimuli_website_folder='sounds',
-        ref_name='ref.wav',
-        excluse_these_wav_files=[],
-        filename='/scratch/test.yaml')
+    main(stimuli_input_folder='./experiment/sounds',
+         stimuli_website_folder='sounds',
+         ref_name='ref.wav',
+         excluse_these_wav_files=['Artefacts.wav',
+                                  'Distortion.wav'],
+         labels=['Worse quality', 'Same quality'],
+         filename='./experiment/_data/quality.yaml')
+
+    main(stimuli_input_folder='./experiment/sounds',
+         stimuli_website_folder='sounds',
+         ref_name='ref.wav',
+         excluse_these_wav_files=['Artefacts.wav',
+                                  'Distortion.wav'],
+         labels=['Much interference', 'No interference'],
+         filename='./experiment/_data/interferer.yaml')
