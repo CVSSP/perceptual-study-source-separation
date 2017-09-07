@@ -1,0 +1,31 @@
+continuous_playback: true
+loop_playback: true
+sets:
+- name: Sound quality fixed / interference by other instruments varied
+  sounds:
+  - button_label: Ref
+    id: 0
+    url: sounds/training/0dB-Bulldozer.wav
+  - button_label: A
+    id: 1
+    url: sounds/training/-7dB-Bulldozer.wav
+  - button_label: B
+    id: 2
+    url: sounds/training/5dB-Bulldozer.wav
+  - button_label: C
+    id: 3
+    url: sounds/training/11dB-Bulldozer.wav
+- name: Sound quality varied / interference by other instruments fixed
+  sounds:
+  - button_label: Ref
+    id: 4
+    url: sounds/training/0dB-Bulldozer.wav
+  - button_label: A
+    id: 5
+    url: sounds/training/fair-Bulldozer.wav
+  - button_label: B
+    id: 6
+    url: sounds/training/poor-Bulldozer.wav
+  - button_label: C
+    id: 7
+    url: sounds/training/bad-Bulldozer.wav
