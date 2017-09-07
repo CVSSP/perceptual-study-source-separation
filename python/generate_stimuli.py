@@ -8,7 +8,7 @@ def main():
     # masseval side
     masseval.config.mus_base_path = '/vol/vssp/maruss/data2/MUS2017'
     masseval.config.dsd_base_path = '/vol/vssp/maruss/data2/DSD100'
-    audio_dir = './experiment/sounds'
+    audio_dir = './site/sounds'
 
     # config for selection
     # only_these_algos = ['GRA3', 'KON', 'OZE', 'UHL3', 'NUG3']
@@ -67,7 +67,7 @@ def training(exclude_tracks):
     # masseval side
     masseval.config.mus_base_path = '/vol/vssp/maruss/data2/MUS2017'
     masseval.config.dsd_base_path = '/vol/vssp/maruss/data2/DSD100'
-    audio_dir = './experiment/sounds/training'
+    audio_dir = './site/sounds'
 
     # config for selection
     only_these_algos = ['GRA3', 'KON', 'OZE', 'UHL3', 'NUG3']
