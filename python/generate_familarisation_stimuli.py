@@ -16,12 +16,12 @@ if __name__ == '__main__':
     '''
 
     masseval.config.dsd_base_path = '/vol/vssp/maruss/data2/DSD100'
-    audio_dir = '../site/sounds_familiarisation/'
+    audio_dir = 'sounds_familiarisation/'
     config_file = '../site/_data/familiarisation.yaml'
 
     # Create folder for training stimuli
     dir = os.path.dirname(__file__)
-    path = os.path.join(dir, audio_dir)
+    path = os.path.join(dir, '../site/', audio_dir)
     if os.path.exists(path):
         shutil.rmtree(path)
     os.mkdir(path)
@@ -70,11 +70,9 @@ if __name__ == '__main__':
                 'continuous_playback': True,
                 'loop_playback': True,
                 'rows': [
-                    {'name': ('Sound quality fixed / interference by other'
-                              'instruments varied'),
+                    {'name': 'Sound quality fixed / interference varied',
                      'sounds': []},
-                    {'name': ('Sound quality varied / interference by other'
-                              'instruments fixed'),
+                    {'name': 'Sound quality varied / interference fixed',
                      'sounds': []},
                 ]}
 
@@ -112,7 +110,7 @@ if __name__ == '__main__':
 
             new_config['rows'][0]['sounds'].append(
                 {'button_label': labels[i],
-                 'url': 'site/sounds_familiarisation/' + filename}
+                 'url': audio_dir + filename}
             )
 
             # Store the target as reference
@@ -124,7 +122,7 @@ if __name__ == '__main__':
         # Now create artefacts, here were add the reference again
         new_config['rows'][1]['sounds'].append(
             {'button_label': labels[0],
-             'url': 'site/soundsfamiliarisation/0dB-{}.wav'.format(title)}
+             'url': audio_dir + '0dB-{}.wav'.format(title)}
         )
 
         stim_idx += 1
@@ -149,7 +147,7 @@ if __name__ == '__main__':
 
             new_config['rows'][1]['sounds'].append(
                 {'button_label': label,
-                 'url': 'site/sounds_familiarisation/' + filename}
+                 'url': audio_dir + filename}
             )
 
             stim_idx += 1
