@@ -25,7 +25,7 @@ cd "dependencies"
 # Get MUSHRA GUI (WebAudioEvaluationTool)
 git clone "$LISTEN" "listen"
 cd "listen"
-git checkout "7fdd3d0f91662181974e99beae9e231cceb1e88c"
+git checkout "4918e45d81d28b554558bfad71f4bb2dcf15098d"
 cd ..
 
 # Move all the files into place
@@ -39,6 +39,7 @@ if $STIM; then
     rm -rf "site/sounds"
     python "python/generate_stimuli.py"
     python "python/generate_interface_config_file.py"
+    python "python/generate_familarisation_stimuli.py"
 fi
 
 # Clean up
