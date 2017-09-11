@@ -4,9 +4,17 @@ OPTIONS="$@"
 LISTEN="https://github.com/deeuu/listen.git"
 TEMPLATES="_site"
 
-function usage() {
+usage() {
     echo ""
+    echo "Usage: $0 [--option]"
+    echo ""
+    echo "Options:"
+    echo "  --nostim    don't generate audio files"
+    echo "  --noenv     don't make python virtual environement"
+    echo "  --help      show this help message"
+    exit 0
 }
+
 STIM=true
 VENV=true
 case "$OPTIONS" in
@@ -35,6 +43,7 @@ cd ..
 mv "dependencies/listen/site" "site"
 cp -R "$TEMPLATES"/* "site/"
 rm "site/_data/menu.yml"
+rm -rf "site/sounds"
 
 if $VENV; then
     cd venvs
@@ -45,7 +54,6 @@ fi
 
 # Create stimuli and corresponding MUSHRA config files
 if $STIM; then
-    rm -rf "site/sounds"
     cd venvs
     source ./py3/bin/activate
     cd ../
