@@ -66,7 +66,7 @@ def experiment_stimuli():
                 loudness_normalise_interferer=False,
                 )
 
-    full_test.to_csv('./data/experiment_stimul.csv', index=None)
+    full_test.to_csv('./data/experiment_stimuli.csv', index=None)
 
     return exclude_tracks
 
@@ -117,7 +117,7 @@ def training(exclude_tracks):
         loudness_normalise_interferer=False,
         )
 
-    sample.to_csv('./data/training_stimul.csv', index=None)
+    sample.to_csv('./data/training_stimuli.csv', index=None)
 
 
 if __name__ == '__main__':

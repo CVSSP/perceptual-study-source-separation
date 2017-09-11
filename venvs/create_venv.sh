@@ -7,7 +7,6 @@ source bin/activate
 
 curl https://bootstrap.pypa.io/get-pip.py | python
 
-pip --no-cache-dir install -U --force-reinstall matplotlib
 pip install seaborn
 pip install xlrd
 pip install numpy
@@ -19,6 +18,7 @@ pip install ipython
 pip install lxml
 pip install pyyaml
 pip install mir_eval
+pip install matplotlib
 
 git clone -b dev https://github.com/IoSR-Surrey/untwist.git
 cd untwist
