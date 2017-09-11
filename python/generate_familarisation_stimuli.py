@@ -51,7 +51,7 @@ if __name__ == '__main__':
     labels = ['Ref', 'A', 'B', 'C']
 
     # Audio quality params, just generate 3 because we have our reference
-    trim_factor_distorted = [0.1, 0.2, 0.2]
+    trim_factor_distorted = [0.1, 0.2, 0.4]
     trim_factor_artefacts = [0.99, 0.99, 0.99]
     balances = [[0, -24], [0, -16], [0, -6]]
     anchor_types = ['fair', 'poor', 'bad']
@@ -69,7 +69,7 @@ if __name__ == '__main__':
         new_config = {
                 'continuous_playback': True,
                 'loop_playback': True,
-                'sets': [
+                'rows': [
                     {'name': ('Sound quality fixed / interference by other'
                               'instruments varied'),
                      'sounds': []},
@@ -110,9 +110,8 @@ if __name__ == '__main__':
             filename = '{0}dB-{1}.wav'.format(level, title)
             masseval.audio.write_wav(mix_tmp, path + filename, target_loudness)
 
-            new_config['sets'][0]['sounds'].append(
-                {'id': stim_idx,
-                 'button_label': labels[i],
+            new_config['rows'][0]['sounds'].append(
+                {'button_label': labels[i],
                  'url': 'site/sounds_familiarisation/' + filename}
             )
 
@@ -123,9 +122,8 @@ if __name__ == '__main__':
             stim_idx += 1
 
         # Now create artefacts, here were add the reference again
-        new_config['sets'][1]['sounds'].append(
-            {'id': stim_idx,
-             'button_label': labels[0],
+        new_config['rows'][1]['sounds'].append(
+            {'button_label': labels[0],
              'url': 'site/soundsfamiliarisation/0dB-{}.wav'.format(title)}
         )
 
@@ -149,9 +147,8 @@ if __name__ == '__main__':
             filename = '{0}-{1}.wav'.format(anchor_type, title)
             masseval.audio.write_wav(anchor, path + filename, target_loudness)
 
-            new_config['sets'][1]['sounds'].append(
-                {'id': stim_idx,
-                 'button_label': label,
+            new_config['rows'][1]['sounds'].append(
+                {'button_label': label,
                  'url': 'site/sounds_familiarisation/' + filename}
             )
 
