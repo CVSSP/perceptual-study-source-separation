@@ -13,9 +13,9 @@ This listening assessment is comprised of 2 parts:
 The order in which you take each test is set by the experimenter.
 Each test will take between 30 and 50 minutes.
 
-In both cases you will listen to 8 samples of an extraction of vocals and their
-backings from a song. You then rate according to the given perceptual attribute.
-This task is then repeated for a number of songs.
+In both cases you will listen to 8 samples of a vocal recording that has been
+extracted from a song. Your task is to rate each sample according to one of the
+two perceptual attributes. This task is then repeated for a number of songs.
 Both experiments involve an initial training stage which will:
 
 - Allow you to familiarise yourself with the perceptual attribute we are

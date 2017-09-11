@@ -6,7 +6,7 @@ title: Sound quality
 next_url: /quality/
 ---
 
-<h1 style="text-align: center;">Sound quality</h1>
+<h1 style="text-align: center;">Training: Sound quality</h1>
 
 <h2 style="text-align: center;">Please rate the sound quality compared to the reference</h2>
 

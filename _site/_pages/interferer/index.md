@@ -10,5 +10,6 @@ title: Interferer
 <h2 style="text-align: center;">Please rate the amount of interference by other instruments</h2>
 
 **Interference** describes the amount of other instruments that are audible
-beside the vocals. <br/>
+besides the vocals.
+
 It does **not** include artefacts or distortions that belong to the vocals.
