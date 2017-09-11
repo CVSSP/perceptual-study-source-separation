@@ -3,9 +3,10 @@ layout: similarity
 config_file: training_interferer
 permalink: /training_interferer/
 title: Interferer
+next_url: /quality/
 ---
 
-<h1 style="text-align: center;">Interference by other instruments</h1>
+<h1 style="text-align: center;">Interference</h1>
 
 <h2 style="text-align: center;">Please rate the amount of interference by other instruments</h2>
 

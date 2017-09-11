@@ -8,7 +8,7 @@ title:
 This listening assessment is comprised of 2 parts:
 
 * Test 1: **Sound quality**
-* Test 2: **Interference by other instruments**
+* Test 2: **Interference**
 
 The order in which you take each test is set by the experimenter.
 Each test will take between 30 and 50 minutes.
@@ -31,9 +31,9 @@ break at any point!
 
   <a href="{{ site.url }}/familiarisation_quality" id="btn-quality" data-inline="true"
           class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right"
-          style="min-width: 350px;">Sound quality</a>
+          style="min-width: 300px;">Sound quality</a>
   <a href="{{ site.url }}/familiarisation_interferer" id="btn-interferer" data-inline="true"
           class=" ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right"
-          style="min-width: 350px;">Interference by other instruments</a>
+          style="min-width: 300px;">Interference</a>
 
 </div>

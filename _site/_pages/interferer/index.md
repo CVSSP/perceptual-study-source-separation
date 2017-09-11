@@ -5,6 +5,10 @@ permalink: /interferer/
 title: Interferer
 ---
 
-<h1 style="text-align: center;">Interference by other instruments</h1>
+<h1 style="text-align: center;">Interference</h1>
 
 <h2 style="text-align: center;">Please rate the amount of interference by other instruments</h2>
+
+**Interference** describes the amount of other instruments that are audible
+beside the vocals. <br/>
+It does **not** include artefacts or distortions that belong to the vocals.
