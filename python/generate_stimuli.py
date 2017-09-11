@@ -35,6 +35,9 @@ def experiment_stimuli():
     full_test = pd.DataFrame()
     for target in targets:
         exclude_tracks = [3]  # Song 3 has strange vocals
+
+        exclude_algos_in_tracks = {'DUR': [11]}
+
         for metric, num_tracks in zip(metrics, num_tracks_per_metric):
 
             sample = masseval.data.get_sample(
@@ -47,6 +50,7 @@ def experiment_stimuli():
                 exclude_tracks=exclude_tracks,
                 remove_outliers=remove_outliers,
                 selection_plot=False,
+                exclude_algos_in_tracks=exclude_algos_in_tracks,
             )
 
             tracks = sample['track_id'].values
