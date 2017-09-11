@@ -1,0 +1,289 @@
+track_id,is_dev,target_id,method_id,metric_id,target,method,metric,score,title,genre,filename,filepath
+11,0,1,3,1,bass,GRA3,SAR,13.602839375008378,Cnoc An Tursa - Bannockburn,Heavy Metal,11_GRA3_bass.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/011 - Cnoc An Tursa - Bannockburn/bass.wav
+11,0,2,3,1,drums,GRA3,SAR,12.726569517139113,Cnoc An Tursa - Bannockburn,Heavy Metal,11_GRA3_drums.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/011 - Cnoc An Tursa - Bannockburn/drums.wav
+11,0,3,3,1,other,GRA3,SAR,12.755857422230976,Cnoc An Tursa - Bannockburn,Heavy Metal,11_GRA3_other.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/011 - Cnoc An Tursa - Bannockburn/other.wav
+11,0,4,3,1,vocals,GRA3,SAR,8.700321284967139,Cnoc An Tursa - Bannockburn,Heavy Metal,11_GRA3_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/011 - Cnoc An Tursa - Bannockburn/vocals.wav
+11,0,0,4,1,accompaniment,HUA,SAR,9.714926886522248,Cnoc An Tursa - Bannockburn,Heavy Metal,11_HUA_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/011 - Cnoc An Tursa - Bannockburn/accompaniment.wav
+11,0,4,4,1,vocals,HUA,SAR,6.780765629475888,Cnoc An Tursa - Bannockburn,Heavy Metal,11_HUA_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/011 - Cnoc An Tursa - Bannockburn/vocals.wav
+11,0,0,8,1,accompaniment,KAM1,SAR,15.301297138206465,Cnoc An Tursa - Bannockburn,Heavy Metal,11_KAM1_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/KAM1/Test/011 - Cnoc An Tursa - Bannockburn/accompaniment.wav
+11,0,4,8,1,vocals,KAM1,SAR,-3.5858851294332186,Cnoc An Tursa - Bannockburn,Heavy Metal,11_KAM1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KAM1/Test/011 - Cnoc An Tursa - Bannockburn/vocals.wav
+11,0,0,17,1,accompaniment,RAF2,SAR,11.330616010300474,Cnoc An Tursa - Bannockburn,Heavy Metal,11_RAF2_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/RAF2/Test/011 - Cnoc An Tursa - Bannockburn/accompaniment.wav
+11,0,4,17,1,vocals,RAF2,SAR,3.7127367311300654,Cnoc An Tursa - Bannockburn,Heavy Metal,11_RAF2_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/RAF2/Test/011 - Cnoc An Tursa - Bannockburn/vocals.wav
+11,0,0,19,1,accompaniment,STO1,SAR,17.601667145354885,Cnoc An Tursa - Bannockburn,Heavy Metal,11_STO1_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/STO1/Test/011 - Cnoc An Tursa - Bannockburn/accompaniment.wav
+11,0,4,19,1,vocals,STO1,SAR,1.1645641107687947,Cnoc An Tursa - Bannockburn,Heavy Metal,11_STO1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/STO1/Test/011 - Cnoc An Tursa - Bannockburn/vocals.wav
+11,0,1,3,1,bass,ref,SAR,,Cnoc An Tursa - Bannockburn,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/011 - Cnoc An Tursa - Bannockburn/bass.wav
+11,0,1,3,1,drums,ref,SAR,,Cnoc An Tursa - Bannockburn,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/011 - Cnoc An Tursa - Bannockburn/drums.wav
+11,0,1,3,1,other,ref,SAR,,Cnoc An Tursa - Bannockburn,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/011 - Cnoc An Tursa - Bannockburn/other.wav
+11,0,1,3,1,vocals,ref,SAR,,Cnoc An Tursa - Bannockburn,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/011 - Cnoc An Tursa - Bannockburn/vocals.wav
+12,0,0,1,1,accompaniment,DUR,SAR,13.884004337899064,Dark Ride - Burning Bridges,Heavy Metal,12_DUR_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/DUR/Test/012 - Dark Ride - Burning Bridges/accompaniment.wav
+12,0,4,1,1,vocals,DUR,SAR,3.155979089376781,Dark Ride - Burning Bridges,Heavy Metal,12_DUR_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/DUR/Test/012 - Dark Ride - Burning Bridges/vocals.wav
+12,0,1,2,1,bass,GRA2,SAR,9.273688746871198,Dark Ride - Burning Bridges,Heavy Metal,12_GRA2_bass.m4a,/vol/vssp/maruss/data2/MUS2017/GRA2/Test/012 - Dark Ride - Burning Bridges/bass.wav
+12,0,2,2,1,drums,GRA2,SAR,10.278941597374336,Dark Ride - Burning Bridges,Heavy Metal,12_GRA2_drums.m4a,/vol/vssp/maruss/data2/MUS2017/GRA2/Test/012 - Dark Ride - Burning Bridges/drums.wav
+12,0,3,2,1,other,GRA2,SAR,7.963645793459951,Dark Ride - Burning Bridges,Heavy Metal,12_GRA2_other.m4a,/vol/vssp/maruss/data2/MUS2017/GRA2/Test/012 - Dark Ride - Burning Bridges/other.wav
+12,0,4,2,1,vocals,GRA2,SAR,5.180119964753368,Dark Ride - Burning Bridges,Heavy Metal,12_GRA2_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/GRA2/Test/012 - Dark Ride - Burning Bridges/vocals.wav
+12,0,1,3,1,bass,GRA3,SAR,15.139208487033088,Dark Ride - Burning Bridges,Heavy Metal,12_GRA3_bass.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/012 - Dark Ride - Burning Bridges/bass.wav
+12,0,2,3,1,drums,GRA3,SAR,12.144329959756565,Dark Ride - Burning Bridges,Heavy Metal,12_GRA3_drums.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/012 - Dark Ride - Burning Bridges/drums.wav
+12,0,3,3,1,other,GRA3,SAR,12.004048691382813,Dark Ride - Burning Bridges,Heavy Metal,12_GRA3_other.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/012 - Dark Ride - Burning Bridges/other.wav
+12,0,4,3,1,vocals,GRA3,SAR,7.546263959852762,Dark Ride - Burning Bridges,Heavy Metal,12_GRA3_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/012 - Dark Ride - Burning Bridges/vocals.wav
+12,0,0,9,1,accompaniment,KAM2,SAR,12.172929350036108,Dark Ride - Burning Bridges,Heavy Metal,12_KAM2_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/KAM2/Test/012 - Dark Ride - Burning Bridges/accompaniment.wav
+12,0,4,9,1,vocals,KAM2,SAR,0.8766778255281588,Dark Ride - Burning Bridges,Heavy Metal,12_KAM2_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KAM2/Test/012 - Dark Ride - Burning Bridges/vocals.wav
+12,0,1,10,1,bass,KON,SAR,6.118596526679593,Dark Ride - Burning Bridges,Heavy Metal,12_KON_bass.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/012 - Dark Ride - Burning Bridges/bass.wav
+12,0,2,10,1,drums,KON,SAR,1.0501183779730072,Dark Ride - Burning Bridges,Heavy Metal,12_KON_drums.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/012 - Dark Ride - Burning Bridges/drums.wav
+12,0,3,10,1,other,KON,SAR,1.8018387000056493,Dark Ride - Burning Bridges,Heavy Metal,12_KON_other.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/012 - Dark Ride - Burning Bridges/other.wav
+12,0,4,10,1,vocals,KON,SAR,-4.184167640650541,Dark Ride - Burning Bridges,Heavy Metal,12_KON_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/012 - Dark Ride - Burning Bridges/vocals.wav
+12,0,0,1,1,bass,ref,SAR,,Dark Ride - Burning Bridges,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/012 - Dark Ride - Burning Bridges/bass.wav
+12,0,0,1,1,drums,ref,SAR,,Dark Ride - Burning Bridges,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/012 - Dark Ride - Burning Bridges/drums.wav
+12,0,0,1,1,other,ref,SAR,,Dark Ride - Burning Bridges,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/012 - Dark Ride - Burning Bridges/other.wav
+12,0,0,1,1,vocals,ref,SAR,,Dark Ride - Burning Bridges,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/012 - Dark Ride - Burning Bridges/vocals.wav
+20,0,1,0,1,bass,CHA,SAR,7.525718444747567,James May - Dont Let Go,Pop/Rock,20_CHA_bass.m4a,/vol/vssp/maruss/data2/MUS2017/CHA/Test/020 - James May - Dont Let Go/bass.wav
+20,0,2,0,1,drums,CHA,SAR,1.0946270091020638,James May - Dont Let Go,Pop/Rock,20_CHA_drums.m4a,/vol/vssp/maruss/data2/MUS2017/CHA/Test/020 - James May - Dont Let Go/drums.wav
+20,0,3,0,1,other,CHA,SAR,0.5109531822935893,James May - Dont Let Go,Pop/Rock,20_CHA_other.m4a,/vol/vssp/maruss/data2/MUS2017/CHA/Test/020 - James May - Dont Let Go/other.wav
+20,0,4,0,1,vocals,CHA,SAR,7.494799506480137,James May - Dont Let Go,Pop/Rock,20_CHA_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/CHA/Test/020 - James May - Dont Let Go/vocals.wav
+20,0,0,1,1,accompaniment,DUR,SAR,12.852678263891061,James May - Dont Let Go,Pop/Rock,20_DUR_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/DUR/Test/020 - James May - Dont Let Go/accompaniment.wav
+20,0,4,1,1,vocals,DUR,SAR,5.711603821679626,James May - Dont Let Go,Pop/Rock,20_DUR_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/DUR/Test/020 - James May - Dont Let Go/vocals.wav
+20,0,0,4,1,accompaniment,HUA,SAR,8.160784931184219,James May - Dont Let Go,Pop/Rock,20_HUA_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/020 - James May - Dont Let Go/accompaniment.wav
+20,0,4,4,1,vocals,HUA,SAR,9.2757570873501,James May - Dont Let Go,Pop/Rock,20_HUA_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/020 - James May - Dont Let Go/vocals.wav
+20,0,0,9,1,accompaniment,KAM2,SAR,7.830818959671283,James May - Dont Let Go,Pop/Rock,20_KAM2_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/KAM2/Test/020 - James May - Dont Let Go/accompaniment.wav
+20,0,4,9,1,vocals,KAM2,SAR,3.8691577699843256,James May - Dont Let Go,Pop/Rock,20_KAM2_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KAM2/Test/020 - James May - Dont Let Go/vocals.wav
+20,0,1,10,1,bass,KON,SAR,5.385525693946931,James May - Dont Let Go,Pop/Rock,20_KON_bass.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/020 - James May - Dont Let Go/bass.wav
+20,0,2,10,1,drums,KON,SAR,-8.27878264877488,James May - Dont Let Go,Pop/Rock,20_KON_drums.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/020 - James May - Dont Let Go/drums.wav
+20,0,3,10,1,other,KON,SAR,-1.8346937247388888,James May - Dont Let Go,Pop/Rock,20_KON_other.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/020 - James May - Dont Let Go/other.wav
+20,0,4,10,1,vocals,KON,SAR,0.7187774690581265,James May - Dont Let Go,Pop/Rock,20_KON_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/020 - James May - Dont Let Go/vocals.wav
+20,0,1,0,1,bass,ref,SAR,,James May - Dont Let Go,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/020 - James May - Dont Let Go/bass.wav
+20,0,1,0,1,drums,ref,SAR,,James May - Dont Let Go,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/020 - James May - Dont Let Go/drums.wav
+20,0,1,0,1,other,ref,SAR,,James May - Dont Let Go,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/020 - James May - Dont Let Go/other.wav
+20,0,1,0,1,vocals,ref,SAR,,James May - Dont Let Go,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/020 - James May - Dont Let Go/vocals.wav
+24,0,1,3,1,bass,GRA3,SAR,17.43126706096199,Leaf - Come Around,Pop/Rock,24_GRA3_bass.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/024 - Leaf - Come Around/bass.wav
+24,0,2,3,1,drums,GRA3,SAR,11.895137212913484,Leaf - Come Around,Pop/Rock,24_GRA3_drums.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/024 - Leaf - Come Around/drums.wav
+24,0,3,3,1,other,GRA3,SAR,15.798081135129314,Leaf - Come Around,Pop/Rock,24_GRA3_other.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/024 - Leaf - Come Around/other.wav
+24,0,4,3,1,vocals,GRA3,SAR,7.952743133582637,Leaf - Come Around,Pop/Rock,24_GRA3_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/024 - Leaf - Come Around/vocals.wav
+24,0,0,4,1,accompaniment,HUA,SAR,11.037366895254364,Leaf - Come Around,Pop/Rock,24_HUA_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/024 - Leaf - Come Around/accompaniment.wav
+24,0,4,4,1,vocals,HUA,SAR,10.054582933458649,Leaf - Come Around,Pop/Rock,24_HUA_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/024 - Leaf - Come Around/vocals.wav
+24,0,0,8,1,accompaniment,KAM1,SAR,15.393547741475935,Leaf - Come Around,Pop/Rock,24_KAM1_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/KAM1/Test/024 - Leaf - Come Around/accompaniment.wav
+24,0,4,8,1,vocals,KAM1,SAR,1.1681813986843892,Leaf - Come Around,Pop/Rock,24_KAM1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KAM1/Test/024 - Leaf - Come Around/vocals.wav
+24,0,0,17,1,accompaniment,RAF2,SAR,11.595680881082929,Leaf - Come Around,Pop/Rock,24_RAF2_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/RAF2/Test/024 - Leaf - Come Around/accompaniment.wav
+24,0,4,17,1,vocals,RAF2,SAR,5.6864683694734275,Leaf - Come Around,Pop/Rock,24_RAF2_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/RAF2/Test/024 - Leaf - Come Around/vocals.wav
+24,0,0,20,1,accompaniment,STO2,SAR,16.197667279916764,Leaf - Come Around,Pop/Rock,24_STO2_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/STO2/Test/024 - Leaf - Come Around/accompaniment.wav
+24,0,4,20,1,vocals,STO2,SAR,3.5044003910789283,Leaf - Come Around,Pop/Rock,24_STO2_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/STO2/Test/024 - Leaf - Come Around/vocals.wav
+24,0,1,3,1,bass,ref,SAR,,Leaf - Come Around,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/024 - Leaf - Come Around/bass.wav
+24,0,1,3,1,drums,ref,SAR,,Leaf - Come Around,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/024 - Leaf - Come Around/drums.wav
+24,0,1,3,1,other,ref,SAR,,Leaf - Come Around,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/024 - Leaf - Come Around/other.wav
+24,0,1,3,1,vocals,ref,SAR,,Leaf - Come Around,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/024 - Leaf - Come Around/vocals.wav
+25,0,1,2,1,bass,GRA2,SAR,9.86104605477851,Leaf - Wicked,Pop/Rock,25_GRA2_bass.m4a,/vol/vssp/maruss/data2/MUS2017/GRA2/Test/025 - Leaf - Wicked/bass.wav
+25,0,2,2,1,drums,GRA2,SAR,9.43343762647528,Leaf - Wicked,Pop/Rock,25_GRA2_drums.m4a,/vol/vssp/maruss/data2/MUS2017/GRA2/Test/025 - Leaf - Wicked/drums.wav
+25,0,3,2,1,other,GRA2,SAR,7.2534261287938575,Leaf - Wicked,Pop/Rock,25_GRA2_other.m4a,/vol/vssp/maruss/data2/MUS2017/GRA2/Test/025 - Leaf - Wicked/other.wav
+25,0,4,2,1,vocals,GRA2,SAR,6.692611296797657,Leaf - Wicked,Pop/Rock,25_GRA2_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/GRA2/Test/025 - Leaf - Wicked/vocals.wav
+25,0,0,4,1,accompaniment,HUA,SAR,6.636428111859247,Leaf - Wicked,Pop/Rock,25_HUA_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/025 - Leaf - Wicked/accompaniment.wav
+25,0,4,4,1,vocals,HUA,SAR,10.441264035987224,Leaf - Wicked,Pop/Rock,25_HUA_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/025 - Leaf - Wicked/vocals.wav
+25,0,1,10,1,bass,KON,SAR,4.068557440084359,Leaf - Wicked,Pop/Rock,25_KON_bass.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/025 - Leaf - Wicked/bass.wav
+25,0,2,10,1,drums,KON,SAR,4.3849608453086475,Leaf - Wicked,Pop/Rock,25_KON_drums.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/025 - Leaf - Wicked/drums.wav
+25,0,3,10,1,other,KON,SAR,0.4649409694353288,Leaf - Wicked,Pop/Rock,25_KON_other.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/025 - Leaf - Wicked/other.wav
+25,0,4,10,1,vocals,KON,SAR,2.9066028714972627,Leaf - Wicked,Pop/Rock,25_KON_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/025 - Leaf - Wicked/vocals.wav
+25,0,0,16,1,accompaniment,RAF1,SAR,11.765801212579264,Leaf - Wicked,Pop/Rock,25_RAF1_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/RAF1/Test/025 - Leaf - Wicked/accompaniment.wav
+25,0,4,16,1,vocals,RAF1,SAR,4.85957435138317,Leaf - Wicked,Pop/Rock,25_RAF1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/RAF1/Test/025 - Leaf - Wicked/vocals.wav
+25,0,0,18,1,accompaniment,RAF3,SAR,13.392935537116252,Leaf - Wicked,Pop/Rock,25_RAF3_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/RAF3/Test/025 - Leaf - Wicked/accompaniment.wav
+25,0,4,18,1,vocals,RAF3,SAR,8.504878366293793,Leaf - Wicked,Pop/Rock,25_RAF3_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/RAF3/Test/025 - Leaf - Wicked/vocals.wav
+25,0,1,2,1,bass,ref,SAR,,Leaf - Wicked,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/025 - Leaf - Wicked/bass.wav
+25,0,1,2,1,drums,ref,SAR,,Leaf - Wicked,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/025 - Leaf - Wicked/drums.wav
+25,0,1,2,1,other,ref,SAR,,Leaf - Wicked,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/025 - Leaf - Wicked/other.wav
+25,0,1,2,1,vocals,ref,SAR,,Leaf - Wicked,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/025 - Leaf - Wicked/vocals.wav
+42,0,1,0,1,bass,CHA,SAR,7.483588390558977,The Wrong'Uns - Rothko,Pop/Rock,42_CHA_bass.m4a,/vol/vssp/maruss/data2/MUS2017/CHA/Test/042 - The Wrong'Uns - Rothko/bass.wav
+42,0,2,0,1,drums,CHA,SAR,6.207625120394107,The Wrong'Uns - Rothko,Pop/Rock,42_CHA_drums.m4a,/vol/vssp/maruss/data2/MUS2017/CHA/Test/042 - The Wrong'Uns - Rothko/drums.wav
+42,0,3,0,1,other,CHA,SAR,2.1499887998489533,The Wrong'Uns - Rothko,Pop/Rock,42_CHA_other.m4a,/vol/vssp/maruss/data2/MUS2017/CHA/Test/042 - The Wrong'Uns - Rothko/other.wav
+42,0,4,0,1,vocals,CHA,SAR,6.7341799997140255,The Wrong'Uns - Rothko,Pop/Rock,42_CHA_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/CHA/Test/042 - The Wrong'Uns - Rothko/vocals.wav
+42,0,0,9,1,accompaniment,KAM2,SAR,9.663559254870727,The Wrong'Uns - Rothko,Pop/Rock,42_KAM2_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/KAM2/Test/042 - The Wrong'Uns - Rothko/accompaniment.wav
+42,0,4,9,1,vocals,KAM2,SAR,4.581902013708216,The Wrong'Uns - Rothko,Pop/Rock,42_KAM2_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KAM2/Test/042 - The Wrong'Uns - Rothko/vocals.wav
+42,0,1,10,1,bass,KON,SAR,-2.0390518789217986,The Wrong'Uns - Rothko,Pop/Rock,42_KON_bass.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/042 - The Wrong'Uns - Rothko/bass.wav
+42,0,2,10,1,drums,KON,SAR,-8.572889149660755,The Wrong'Uns - Rothko,Pop/Rock,42_KON_drums.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/042 - The Wrong'Uns - Rothko/drums.wav
+42,0,3,10,1,other,KON,SAR,-0.7776604961301921,The Wrong'Uns - Rothko,Pop/Rock,42_KON_other.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/042 - The Wrong'Uns - Rothko/other.wav
+42,0,4,10,1,vocals,KON,SAR,2.2237724619736907,The Wrong'Uns - Rothko,Pop/Rock,42_KON_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/042 - The Wrong'Uns - Rothko/vocals.wav
+42,0,1,13,1,bass,NUG3,SAR,6.0021496737876925,The Wrong'Uns - Rothko,Pop/Rock,42_NUG3_bass.m4a,/vol/vssp/maruss/data2/MUS2017/NUG3/Test/042 - The Wrong'Uns - Rothko/bass.wav
+42,0,2,13,1,drums,NUG3,SAR,7.369922121825688,The Wrong'Uns - Rothko,Pop/Rock,42_NUG3_drums.m4a,/vol/vssp/maruss/data2/MUS2017/NUG3/Test/042 - The Wrong'Uns - Rothko/drums.wav
+42,0,3,13,1,other,NUG3,SAR,5.472032323809175,The Wrong'Uns - Rothko,Pop/Rock,42_NUG3_other.m4a,/vol/vssp/maruss/data2/MUS2017/NUG3/Test/042 - The Wrong'Uns - Rothko/other.wav
+42,0,4,13,1,vocals,NUG3,SAR,8.77763398665974,The Wrong'Uns - Rothko,Pop/Rock,42_NUG3_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/NUG3/Test/042 - The Wrong'Uns - Rothko/vocals.wav
+42,0,1,23,1,bass,UHL3,SAR,7.959803204685309,The Wrong'Uns - Rothko,Pop/Rock,42_UHL3_bass.m4a,/vol/vssp/maruss/data2/MUS2017/UHL3/Test/042 - The Wrong'Uns - Rothko/bass.wav
+42,0,2,23,1,drums,UHL3,SAR,7.539097058022254,The Wrong'Uns - Rothko,Pop/Rock,42_UHL3_drums.m4a,/vol/vssp/maruss/data2/MUS2017/UHL3/Test/042 - The Wrong'Uns - Rothko/drums.wav
+42,0,3,23,1,other,UHL3,SAR,6.6890841933969085,The Wrong'Uns - Rothko,Pop/Rock,42_UHL3_other.m4a,/vol/vssp/maruss/data2/MUS2017/UHL3/Test/042 - The Wrong'Uns - Rothko/other.wav
+42,0,4,23,1,vocals,UHL3,SAR,10.687070921853909,The Wrong'Uns - Rothko,Pop/Rock,42_UHL3_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/UHL3/Test/042 - The Wrong'Uns - Rothko/vocals.wav
+42,0,1,0,1,bass,ref,SAR,,The Wrong'Uns - Rothko,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/042 - The Wrong'Uns - Rothko/bass.wav
+42,0,1,0,1,drums,ref,SAR,,The Wrong'Uns - Rothko,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/042 - The Wrong'Uns - Rothko/drums.wav
+42,0,1,0,1,other,ref,SAR,,The Wrong'Uns - Rothko,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/042 - The Wrong'Uns - Rothko/other.wav
+42,0,1,0,1,vocals,ref,SAR,,The Wrong'Uns - Rothko,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/042 - The Wrong'Uns - Rothko/vocals.wav
+47,0,1,3,1,bass,GRA3,SAR,10.788587438014801,Voelund - Comfort Lives In Belief,Pop/Rock,47_GRA3_bass.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/047 - Voelund - Comfort Lives In Belief/bass.wav
+47,0,2,3,1,drums,GRA3,SAR,7.676080896029947,Voelund - Comfort Lives In Belief,Pop/Rock,47_GRA3_drums.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/047 - Voelund - Comfort Lives In Belief/drums.wav
+47,0,3,3,1,other,GRA3,SAR,12.80069325657879,Voelund - Comfort Lives In Belief,Pop/Rock,47_GRA3_other.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/047 - Voelund - Comfort Lives In Belief/other.wav
+47,0,4,3,1,vocals,GRA3,SAR,7.188480745691326,Voelund - Comfort Lives In Belief,Pop/Rock,47_GRA3_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/047 - Voelund - Comfort Lives In Belief/vocals.wav
+47,0,0,8,1,accompaniment,KAM1,SAR,8.828701723998623,Voelund - Comfort Lives In Belief,Pop/Rock,47_KAM1_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/KAM1/Test/047 - Voelund - Comfort Lives In Belief/accompaniment.wav
+47,0,4,8,1,vocals,KAM1,SAR,0.05046198000705841,Voelund - Comfort Lives In Belief,Pop/Rock,47_KAM1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KAM1/Test/047 - Voelund - Comfort Lives In Belief/vocals.wav
+47,0,1,15,1,bass,OZE,SAR,7.092315753734231,Voelund - Comfort Lives In Belief,Pop/Rock,47_OZE_bass.m4a,/vol/vssp/maruss/data2/MUS2017/OZE/Test/047 - Voelund - Comfort Lives In Belief/bass.wav
+47,0,2,15,1,drums,OZE,SAR,3.6019174001154,Voelund - Comfort Lives In Belief,Pop/Rock,47_OZE_drums.m4a,/vol/vssp/maruss/data2/MUS2017/OZE/Test/047 - Voelund - Comfort Lives In Belief/drums.wav
+47,0,3,15,1,other,OZE,SAR,3.026277877512582,Voelund - Comfort Lives In Belief,Pop/Rock,47_OZE_other.m4a,/vol/vssp/maruss/data2/MUS2017/OZE/Test/047 - Voelund - Comfort Lives In Belief/other.wav
+47,0,4,15,1,vocals,OZE,SAR,2.514316815783145,Voelund - Comfort Lives In Belief,Pop/Rock,47_OZE_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/OZE/Test/047 - Voelund - Comfort Lives In Belief/vocals.wav
+47,0,0,16,1,accompaniment,RAF1,SAR,8.49513033818242,Voelund - Comfort Lives In Belief,Pop/Rock,47_RAF1_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/RAF1/Test/047 - Voelund - Comfort Lives In Belief/accompaniment.wav
+47,0,4,16,1,vocals,RAF1,SAR,5.497880279444373,Voelund - Comfort Lives In Belief,Pop/Rock,47_RAF1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/RAF1/Test/047 - Voelund - Comfort Lives In Belief/vocals.wav
+47,0,0,19,1,accompaniment,STO1,SAR,11.82313078360256,Voelund - Comfort Lives In Belief,Pop/Rock,47_STO1_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/STO1/Test/047 - Voelund - Comfort Lives In Belief/accompaniment.wav
+47,0,4,19,1,vocals,STO1,SAR,4.062105453049653,Voelund - Comfort Lives In Belief,Pop/Rock,47_STO1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/STO1/Test/047 - Voelund - Comfort Lives In Belief/vocals.wav
+47,0,1,3,1,bass,ref,SAR,,Voelund - Comfort Lives In Belief,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/047 - Voelund - Comfort Lives In Belief/bass.wav
+47,0,1,3,1,drums,ref,SAR,,Voelund - Comfort Lives In Belief,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/047 - Voelund - Comfort Lives In Belief/drums.wav
+47,0,1,3,1,other,ref,SAR,,Voelund - Comfort Lives In Belief,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/047 - Voelund - Comfort Lives In Belief/other.wav
+47,0,1,3,1,vocals,ref,SAR,,Voelund - Comfort Lives In Belief,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/047 - Voelund - Comfort Lives In Belief/vocals.wav
+48,0,0,1,1,accompaniment,DUR,SAR,11.72530229120512,We Fell From The Sky - Not You,Heavy Metal,48_DUR_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/DUR/Test/048 - We Fell From The Sky - Not You/accompaniment.wav
+48,0,4,1,1,vocals,DUR,SAR,3.002954605989489,We Fell From The Sky - Not You,Heavy Metal,48_DUR_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/DUR/Test/048 - We Fell From The Sky - Not You/vocals.wav
+48,0,0,4,1,accompaniment,HUA,SAR,5.9383973343429926,We Fell From The Sky - Not You,Heavy Metal,48_HUA_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/048 - We Fell From The Sky - Not You/accompaniment.wav
+48,0,4,4,1,vocals,HUA,SAR,9.986373168558623,We Fell From The Sky - Not You,Heavy Metal,48_HUA_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/048 - We Fell From The Sky - Not You/vocals.wav
+48,0,1,10,1,bass,KON,SAR,-0.8645613308779468,We Fell From The Sky - Not You,Heavy Metal,48_KON_bass.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/048 - We Fell From The Sky - Not You/bass.wav
+48,0,2,10,1,drums,KON,SAR,4.37800782502737,We Fell From The Sky - Not You,Heavy Metal,48_KON_drums.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/048 - We Fell From The Sky - Not You/drums.wav
+48,0,3,10,1,other,KON,SAR,4.700678757845474,We Fell From The Sky - Not You,Heavy Metal,48_KON_other.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/048 - We Fell From The Sky - Not You/other.wav
+48,0,4,10,1,vocals,KON,SAR,-3.86344296705796,We Fell From The Sky - Not You,Heavy Metal,48_KON_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/048 - We Fell From The Sky - Not You/vocals.wav
+48,0,0,18,1,accompaniment,RAF3,SAR,13.163192484034456,We Fell From The Sky - Not You,Heavy Metal,48_RAF3_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/RAF3/Test/048 - We Fell From The Sky - Not You/accompaniment.wav
+48,0,4,18,1,vocals,RAF3,SAR,6.136798895557625,We Fell From The Sky - Not You,Heavy Metal,48_RAF3_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/RAF3/Test/048 - We Fell From The Sky - Not You/vocals.wav
+48,0,1,21,1,bass,UHL1,SAR,2.506649556228689,We Fell From The Sky - Not You,Heavy Metal,48_UHL1_bass.m4a,/vol/vssp/maruss/data2/MUS2017/UHL1/Test/048 - We Fell From The Sky - Not You/bass.wav
+48,0,2,21,1,drums,UHL1,SAR,11.073831670362585,We Fell From The Sky - Not You,Heavy Metal,48_UHL1_drums.m4a,/vol/vssp/maruss/data2/MUS2017/UHL1/Test/048 - We Fell From The Sky - Not You/drums.wav
+48,0,3,21,1,other,UHL1,SAR,8.586220125139668,We Fell From The Sky - Not You,Heavy Metal,48_UHL1_other.m4a,/vol/vssp/maruss/data2/MUS2017/UHL1/Test/048 - We Fell From The Sky - Not You/other.wav
+48,0,4,21,1,vocals,UHL1,SAR,-0.4735454637599503,We Fell From The Sky - Not You,Heavy Metal,48_UHL1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/UHL1/Test/048 - We Fell From The Sky - Not You/vocals.wav
+48,0,0,1,1,bass,ref,SAR,,We Fell From The Sky - Not You,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/048 - We Fell From The Sky - Not You/bass.wav
+48,0,0,1,1,drums,ref,SAR,,We Fell From The Sky - Not You,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/048 - We Fell From The Sky - Not You/drums.wav
+48,0,0,1,1,other,ref,SAR,,We Fell From The Sky - Not You,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/048 - We Fell From The Sky - Not You/other.wav
+48,0,0,1,1,vocals,ref,SAR,,We Fell From The Sky - Not You,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/048 - We Fell From The Sky - Not You/vocals.wav
+10,0,0,4,3,accompaniment,HUA,SIR,4.5400671982790834,Carlos Gonzalez - A Place For Us,Pop/Rock,10_HUA_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/010 - Carlos Gonzalez - A Place For Us/accompaniment.wav
+10,0,4,4,3,vocals,HUA,SIR,-0.029298626121097075,Carlos Gonzalez - A Place For Us,Pop/Rock,10_HUA_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/010 - Carlos Gonzalez - A Place For Us/vocals.wav
+10,0,0,8,3,accompaniment,KAM1,SIR,5.383890203019957,Carlos Gonzalez - A Place For Us,Pop/Rock,10_KAM1_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/KAM1/Test/010 - Carlos Gonzalez - A Place For Us/accompaniment.wav
+10,0,4,8,3,vocals,KAM1,SIR,11.803734294314244,Carlos Gonzalez - A Place For Us,Pop/Rock,10_KAM1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KAM1/Test/010 - Carlos Gonzalez - A Place For Us/vocals.wav
+10,0,1,10,3,bass,KON,SIR,-5.991324049170317,Carlos Gonzalez - A Place For Us,Pop/Rock,10_KON_bass.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/010 - Carlos Gonzalez - A Place For Us/bass.wav
+10,0,2,10,3,drums,KON,SIR,-0.7920324863068395,Carlos Gonzalez - A Place For Us,Pop/Rock,10_KON_drums.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/010 - Carlos Gonzalez - A Place For Us/drums.wav
+10,0,3,10,3,other,KON,SIR,3.0285178835147133,Carlos Gonzalez - A Place For Us,Pop/Rock,10_KON_other.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/010 - Carlos Gonzalez - A Place For Us/other.wav
+10,0,4,10,3,vocals,KON,SIR,6.119421935989053,Carlos Gonzalez - A Place For Us,Pop/Rock,10_KON_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/010 - Carlos Gonzalez - A Place For Us/vocals.wav
+10,0,1,12,3,bass,NUG2,SIR,-5.644827744811533,Carlos Gonzalez - A Place For Us,Pop/Rock,10_NUG2_bass.m4a,/vol/vssp/maruss/data2/MUS2017/NUG2/Test/010 - Carlos Gonzalez - A Place For Us/bass.wav
+10,0,2,12,3,drums,NUG2,SIR,5.468891691199079,Carlos Gonzalez - A Place For Us,Pop/Rock,10_NUG2_drums.m4a,/vol/vssp/maruss/data2/MUS2017/NUG2/Test/010 - Carlos Gonzalez - A Place For Us/drums.wav
+10,0,3,12,3,other,NUG2,SIR,5.782803900980093,Carlos Gonzalez - A Place For Us,Pop/Rock,10_NUG2_other.m4a,/vol/vssp/maruss/data2/MUS2017/NUG2/Test/010 - Carlos Gonzalez - A Place For Us/other.wav
+10,0,4,12,3,vocals,NUG2,SIR,8.707642955512036,Carlos Gonzalez - A Place For Us,Pop/Rock,10_NUG2_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/NUG2/Test/010 - Carlos Gonzalez - A Place For Us/vocals.wav
+10,0,0,17,3,accompaniment,RAF2,SIR,8.528601554766707,Carlos Gonzalez - A Place For Us,Pop/Rock,10_RAF2_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/RAF2/Test/010 - Carlos Gonzalez - A Place For Us/accompaniment.wav
+10,0,4,17,3,vocals,RAF2,SIR,2.743893292952852,Carlos Gonzalez - A Place For Us,Pop/Rock,10_RAF2_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/RAF2/Test/010 - Carlos Gonzalez - A Place For Us/vocals.wav
+10,0,0,4,3,bass,ref,SIR,,Carlos Gonzalez - A Place For Us,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/010 - Carlos Gonzalez - A Place For Us/bass.wav
+10,0,0,4,3,drums,ref,SIR,,Carlos Gonzalez - A Place For Us,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/010 - Carlos Gonzalez - A Place For Us/drums.wav
+10,0,0,4,3,other,ref,SIR,,Carlos Gonzalez - A Place For Us,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/010 - Carlos Gonzalez - A Place For Us/other.wav
+10,0,0,4,3,vocals,ref,SIR,,Carlos Gonzalez - A Place For Us,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/010 - Carlos Gonzalez - A Place For Us/vocals.wav
+18,0,1,3,3,bass,GRA3,SIR,-3.9043608457440064,Hollow Ground - Ill Fate,Heavy Metal,18_GRA3_bass.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/018 - Hollow Ground - Ill Fate/bass.wav
+18,0,2,3,3,drums,GRA3,SIR,-5.371492759453957,Hollow Ground - Ill Fate,Heavy Metal,18_GRA3_drums.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/018 - Hollow Ground - Ill Fate/drums.wav
+18,0,3,3,3,other,GRA3,SIR,1.2475342453762357,Hollow Ground - Ill Fate,Heavy Metal,18_GRA3_other.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/018 - Hollow Ground - Ill Fate/other.wav
+18,0,4,3,3,vocals,GRA3,SIR,-2.320033008336901,Hollow Ground - Ill Fate,Heavy Metal,18_GRA3_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/018 - Hollow Ground - Ill Fate/vocals.wav
+18,0,0,4,3,accompaniment,HUA,SIR,13.39667126245694,Hollow Ground - Ill Fate,Heavy Metal,18_HUA_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/018 - Hollow Ground - Ill Fate/accompaniment.wav
+18,0,4,4,3,vocals,HUA,SIR,-7.653086256103437,Hollow Ground - Ill Fate,Heavy Metal,18_HUA_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/018 - Hollow Ground - Ill Fate/vocals.wav
+18,0,1,11,3,bass,NUG1,SIR,-1.7791589271703332,Hollow Ground - Ill Fate,Heavy Metal,18_NUG1_bass.m4a,/vol/vssp/maruss/data2/MUS2017/NUG1/Test/018 - Hollow Ground - Ill Fate/bass.wav
+18,0,2,11,3,drums,NUG1,SIR,2.558485341677402,Hollow Ground - Ill Fate,Heavy Metal,18_NUG1_drums.m4a,/vol/vssp/maruss/data2/MUS2017/NUG1/Test/018 - Hollow Ground - Ill Fate/drums.wav
+18,0,3,11,3,other,NUG1,SIR,5.412596681287637,Hollow Ground - Ill Fate,Heavy Metal,18_NUG1_other.m4a,/vol/vssp/maruss/data2/MUS2017/NUG1/Test/018 - Hollow Ground - Ill Fate/other.wav
+18,0,4,11,3,vocals,NUG1,SIR,16.026724622829118,Hollow Ground - Ill Fate,Heavy Metal,18_NUG1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/NUG1/Test/018 - Hollow Ground - Ill Fate/vocals.wav
+18,0,1,15,3,bass,OZE,SIR,-4.128752053728293,Hollow Ground - Ill Fate,Heavy Metal,18_OZE_bass.m4a,/vol/vssp/maruss/data2/MUS2017/OZE/Test/018 - Hollow Ground - Ill Fate/bass.wav
+18,0,2,15,3,drums,OZE,SIR,-6.324126242098108,Hollow Ground - Ill Fate,Heavy Metal,18_OZE_drums.m4a,/vol/vssp/maruss/data2/MUS2017/OZE/Test/018 - Hollow Ground - Ill Fate/drums.wav
+18,0,3,15,3,other,OZE,SIR,3.747116041699585,Hollow Ground - Ill Fate,Heavy Metal,18_OZE_other.m4a,/vol/vssp/maruss/data2/MUS2017/OZE/Test/018 - Hollow Ground - Ill Fate/other.wav
+18,0,4,15,3,vocals,OZE,SIR,4.537775177430573,Hollow Ground - Ill Fate,Heavy Metal,18_OZE_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/OZE/Test/018 - Hollow Ground - Ill Fate/vocals.wav
+18,0,1,21,3,bass,UHL1,SIR,-3.8171136930103975,Hollow Ground - Ill Fate,Heavy Metal,18_UHL1_bass.m4a,/vol/vssp/maruss/data2/MUS2017/UHL1/Test/018 - Hollow Ground - Ill Fate/bass.wav
+18,0,2,21,3,drums,UHL1,SIR,6.737111169654785,Hollow Ground - Ill Fate,Heavy Metal,18_UHL1_drums.m4a,/vol/vssp/maruss/data2/MUS2017/UHL1/Test/018 - Hollow Ground - Ill Fate/drums.wav
+18,0,3,21,3,other,UHL1,SIR,3.83785666276736,Hollow Ground - Ill Fate,Heavy Metal,18_UHL1_other.m4a,/vol/vssp/maruss/data2/MUS2017/UHL1/Test/018 - Hollow Ground - Ill Fate/other.wav
+18,0,4,21,3,vocals,UHL1,SIR,9.928935363444976,Hollow Ground - Ill Fate,Heavy Metal,18_UHL1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/UHL1/Test/018 - Hollow Ground - Ill Fate/vocals.wav
+18,0,1,3,3,bass,ref,SIR,,Hollow Ground - Ill Fate,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/018 - Hollow Ground - Ill Fate/bass.wav
+18,0,1,3,3,drums,ref,SIR,,Hollow Ground - Ill Fate,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/018 - Hollow Ground - Ill Fate/drums.wav
+18,0,1,3,3,other,ref,SIR,,Hollow Ground - Ill Fate,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/018 - Hollow Ground - Ill Fate/other.wav
+18,0,1,3,3,vocals,ref,SIR,,Hollow Ground - Ill Fate,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/018 - Hollow Ground - Ill Fate/vocals.wav
+19,0,1,3,3,bass,GRA3,SIR,-4.083123661435988,James Elder & Mark M Thompson - The English Actor,Heavy Metal,19_GRA3_bass.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/019 - James Elder & Mark M Thompson - The English Actor/bass.wav
+19,0,2,3,3,drums,GRA3,SIR,-2.922574623177547,James Elder & Mark M Thompson - The English Actor,Heavy Metal,19_GRA3_drums.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/019 - James Elder & Mark M Thompson - The English Actor/drums.wav
+19,0,3,3,3,other,GRA3,SIR,0.2954617732003197,James Elder & Mark M Thompson - The English Actor,Heavy Metal,19_GRA3_other.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/019 - James Elder & Mark M Thompson - The English Actor/other.wav
+19,0,4,3,3,vocals,GRA3,SIR,2.577459495973455,James Elder & Mark M Thompson - The English Actor,Heavy Metal,19_GRA3_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/GRA3/Test/019 - James Elder & Mark M Thompson - The English Actor/vocals.wav
+19,0,0,4,3,accompaniment,HUA,SIR,7.1179476010248255,James Elder & Mark M Thompson - The English Actor,Heavy Metal,19_HUA_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/019 - James Elder & Mark M Thompson - The English Actor/accompaniment.wav
+19,0,4,4,3,vocals,HUA,SIR,0.2464555939941209,James Elder & Mark M Thompson - The English Actor,Heavy Metal,19_HUA_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/019 - James Elder & Mark M Thompson - The English Actor/vocals.wav
+19,0,0,8,3,accompaniment,KAM1,SIR,9.10143009738201,James Elder & Mark M Thompson - The English Actor,Heavy Metal,19_KAM1_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/KAM1/Test/019 - James Elder & Mark M Thompson - The English Actor/accompaniment.wav
+19,0,4,8,3,vocals,KAM1,SIR,10.903466473424835,James Elder & Mark M Thompson - The English Actor,Heavy Metal,19_KAM1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KAM1/Test/019 - James Elder & Mark M Thompson - The English Actor/vocals.wav
+19,0,0,9,3,accompaniment,KAM2,SIR,9.815904982523223,James Elder & Mark M Thompson - The English Actor,Heavy Metal,19_KAM2_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/KAM2/Test/019 - James Elder & Mark M Thompson - The English Actor/accompaniment.wav
+19,0,4,9,3,vocals,KAM2,SIR,7.8366945670311505,James Elder & Mark M Thompson - The English Actor,Heavy Metal,19_KAM2_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KAM2/Test/019 - James Elder & Mark M Thompson - The English Actor/vocals.wav
+19,0,1,10,3,bass,KON,SIR,0.5493796659332941,James Elder & Mark M Thompson - The English Actor,Heavy Metal,19_KON_bass.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/019 - James Elder & Mark M Thompson - The English Actor/bass.wav
+19,0,2,10,3,drums,KON,SIR,4.0406063212264245,James Elder & Mark M Thompson - The English Actor,Heavy Metal,19_KON_drums.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/019 - James Elder & Mark M Thompson - The English Actor/drums.wav
+19,0,3,10,3,other,KON,SIR,4.860752031796596,James Elder & Mark M Thompson - The English Actor,Heavy Metal,19_KON_other.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/019 - James Elder & Mark M Thompson - The English Actor/other.wav
+19,0,4,10,3,vocals,KON,SIR,5.376790606074203,James Elder & Mark M Thompson - The English Actor,Heavy Metal,19_KON_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/019 - James Elder & Mark M Thompson - The English Actor/vocals.wav
+19,0,1,3,3,bass,ref,SIR,,James Elder & Mark M Thompson - The English Actor,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/019 - James Elder & Mark M Thompson - The English Actor/bass.wav
+19,0,1,3,3,drums,ref,SIR,,James Elder & Mark M Thompson - The English Actor,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/019 - James Elder & Mark M Thompson - The English Actor/drums.wav
+19,0,1,3,3,other,ref,SIR,,James Elder & Mark M Thompson - The English Actor,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/019 - James Elder & Mark M Thompson - The English Actor/other.wav
+19,0,1,3,3,vocals,ref,SIR,,James Elder & Mark M Thompson - The English Actor,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/019 - James Elder & Mark M Thompson - The English Actor/vocals.wav
+26,0,0,4,3,accompaniment,HUA,SIR,11.962598722827748,Louis Cressy Band - Good Time,Pop/Rock,26_HUA_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/026 - Louis Cressy Band - Good Time/accompaniment.wav
+26,0,4,4,3,vocals,HUA,SIR,-7.26754437259732,Louis Cressy Band - Good Time,Pop/Rock,26_HUA_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/026 - Louis Cressy Band - Good Time/vocals.wav
+26,0,0,6,3,accompaniment,JEO1,SIR,14.483831625650856,Louis Cressy Band - Good Time,Pop/Rock,26_JEO1_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/JEO1/Test/026 - Louis Cressy Band - Good Time/accompaniment.wav
+26,0,4,6,3,vocals,JEO1,SIR,-0.4347618588238384,Louis Cressy Band - Good Time,Pop/Rock,26_JEO1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/JEO1/Test/026 - Louis Cressy Band - Good Time/vocals.wav
+26,0,0,8,3,accompaniment,KAM1,SIR,18.064998597794162,Louis Cressy Band - Good Time,Pop/Rock,26_KAM1_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/KAM1/Test/026 - Louis Cressy Band - Good Time/accompaniment.wav
+26,0,4,8,3,vocals,KAM1,SIR,2.8812998941557537,Louis Cressy Band - Good Time,Pop/Rock,26_KAM1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KAM1/Test/026 - Louis Cressy Band - Good Time/vocals.wav
+26,0,1,10,3,bass,KON,SIR,4.899473505800759,Louis Cressy Band - Good Time,Pop/Rock,26_KON_bass.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/026 - Louis Cressy Band - Good Time/bass.wav
+26,0,2,10,3,drums,KON,SIR,7.91816783123673,Louis Cressy Band - Good Time,Pop/Rock,26_KON_drums.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/026 - Louis Cressy Band - Good Time/drums.wav
+26,0,3,10,3,other,KON,SIR,4.470143318291684,Louis Cressy Band - Good Time,Pop/Rock,26_KON_other.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/026 - Louis Cressy Band - Good Time/other.wav
+26,0,4,10,3,vocals,KON,SIR,6.60728514114793,Louis Cressy Band - Good Time,Pop/Rock,26_KON_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/026 - Louis Cressy Band - Good Time/vocals.wav
+26,0,0,16,3,accompaniment,RAF1,SIR,16.0648664058857,Louis Cressy Band - Good Time,Pop/Rock,26_RAF1_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/RAF1/Test/026 - Louis Cressy Band - Good Time/accompaniment.wav
+26,0,4,16,3,vocals,RAF1,SIR,-3.798177440827794,Louis Cressy Band - Good Time,Pop/Rock,26_RAF1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/RAF1/Test/026 - Louis Cressy Band - Good Time/vocals.wav
+26,0,0,4,3,bass,ref,SIR,,Louis Cressy Band - Good Time,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/026 - Louis Cressy Band - Good Time/bass.wav
+26,0,0,4,3,drums,ref,SIR,,Louis Cressy Band - Good Time,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/026 - Louis Cressy Band - Good Time/drums.wav
+26,0,0,4,3,other,ref,SIR,,Louis Cressy Band - Good Time,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/026 - Louis Cressy Band - Good Time/other.wav
+26,0,0,4,3,vocals,ref,SIR,,Louis Cressy Band - Good Time,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/026 - Louis Cressy Band - Good Time/vocals.wav
+30,0,1,0,3,bass,CHA,SIR,3.520071563050558,Patrick Talbot - A Reason To Leave,Jazz,30_CHA_bass.m4a,/vol/vssp/maruss/data2/MUS2017/CHA/Test/030 - Patrick Talbot - A Reason To Leave/bass.wav
+30,0,2,0,3,drums,CHA,SIR,11.695336161149848,Patrick Talbot - A Reason To Leave,Jazz,30_CHA_drums.m4a,/vol/vssp/maruss/data2/MUS2017/CHA/Test/030 - Patrick Talbot - A Reason To Leave/drums.wav
+30,0,3,0,3,other,CHA,SIR,2.763086562163247,Patrick Talbot - A Reason To Leave,Jazz,30_CHA_other.m4a,/vol/vssp/maruss/data2/MUS2017/CHA/Test/030 - Patrick Talbot - A Reason To Leave/other.wav
+30,0,4,0,3,vocals,CHA,SIR,8.828896066320862,Patrick Talbot - A Reason To Leave,Jazz,30_CHA_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/CHA/Test/030 - Patrick Talbot - A Reason To Leave/vocals.wav
+30,0,0,4,3,accompaniment,HUA,SIR,7.357616410176567,Patrick Talbot - A Reason To Leave,Jazz,30_HUA_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/030 - Patrick Talbot - A Reason To Leave/accompaniment.wav
+30,0,4,4,3,vocals,HUA,SIR,-0.6562520672223935,Patrick Talbot - A Reason To Leave,Jazz,30_HUA_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/030 - Patrick Talbot - A Reason To Leave/vocals.wav
+30,0,0,7,3,accompaniment,JEO2,SIR,10.691320951590237,Patrick Talbot - A Reason To Leave,Jazz,30_JEO2_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/JEO2/Test/030 - Patrick Talbot - A Reason To Leave/accompaniment.wav
+30,0,4,7,3,vocals,JEO2,SIR,13.442213164978291,Patrick Talbot - A Reason To Leave,Jazz,30_JEO2_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/JEO2/Test/030 - Patrick Talbot - A Reason To Leave/vocals.wav
+30,0,1,13,3,bass,NUG3,SIR,6.083295994422668,Patrick Talbot - A Reason To Leave,Jazz,30_NUG3_bass.m4a,/vol/vssp/maruss/data2/MUS2017/NUG3/Test/030 - Patrick Talbot - A Reason To Leave/bass.wav
+30,0,2,13,3,drums,NUG3,SIR,18.315995485052465,Patrick Talbot - A Reason To Leave,Jazz,30_NUG3_drums.m4a,/vol/vssp/maruss/data2/MUS2017/NUG3/Test/030 - Patrick Talbot - A Reason To Leave/drums.wav
+30,0,3,13,3,other,NUG3,SIR,2.406690153720186,Patrick Talbot - A Reason To Leave,Jazz,30_NUG3_other.m4a,/vol/vssp/maruss/data2/MUS2017/NUG3/Test/030 - Patrick Talbot - A Reason To Leave/other.wav
+30,0,4,13,3,vocals,NUG3,SIR,18.02330858119862,Patrick Talbot - A Reason To Leave,Jazz,30_NUG3_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/NUG3/Test/030 - Patrick Talbot - A Reason To Leave/vocals.wav
+30,0,0,16,3,accompaniment,RAF1,SIR,11.031043064439269,Patrick Talbot - A Reason To Leave,Jazz,30_RAF1_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/RAF1/Test/030 - Patrick Talbot - A Reason To Leave/accompaniment.wav
+30,0,4,16,3,vocals,RAF1,SIR,3.9475521119558614,Patrick Talbot - A Reason To Leave,Jazz,30_RAF1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/RAF1/Test/030 - Patrick Talbot - A Reason To Leave/vocals.wav
+30,0,1,0,3,bass,ref,SIR,,Patrick Talbot - A Reason To Leave,Jazz,,/vol/vssp/maruss/data2/DSD100/Sources/Test/030 - Patrick Talbot - A Reason To Leave/bass.wav
+30,0,1,0,3,drums,ref,SIR,,Patrick Talbot - A Reason To Leave,Jazz,,/vol/vssp/maruss/data2/DSD100/Sources/Test/030 - Patrick Talbot - A Reason To Leave/drums.wav
+30,0,1,0,3,other,ref,SIR,,Patrick Talbot - A Reason To Leave,Jazz,,/vol/vssp/maruss/data2/DSD100/Sources/Test/030 - Patrick Talbot - A Reason To Leave/other.wav
+30,0,1,0,3,vocals,ref,SIR,,Patrick Talbot - A Reason To Leave,Jazz,,/vol/vssp/maruss/data2/DSD100/Sources/Test/030 - Patrick Talbot - A Reason To Leave/vocals.wav
+41,0,0,1,3,accompaniment,DUR,SIR,17.38615620524427,The Mountaineering Club - Mallory,Pop/Rock,41_DUR_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/DUR/Test/041 - The Mountaineering Club - Mallory/accompaniment.wav
+41,0,4,1,3,vocals,DUR,SIR,2.08488528773376,The Mountaineering Club - Mallory,Pop/Rock,41_DUR_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/DUR/Test/041 - The Mountaineering Club - Mallory/vocals.wav
+41,0,0,4,3,accompaniment,HUA,SIR,10.097689547846157,The Mountaineering Club - Mallory,Pop/Rock,41_HUA_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/041 - The Mountaineering Club - Mallory/accompaniment.wav
+41,0,4,4,3,vocals,HUA,SIR,-7.542856227389818,The Mountaineering Club - Mallory,Pop/Rock,41_HUA_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/041 - The Mountaineering Club - Mallory/vocals.wav
+41,0,1,11,3,bass,NUG1,SIR,6.569733117003577,The Mountaineering Club - Mallory,Pop/Rock,41_NUG1_bass.m4a,/vol/vssp/maruss/data2/MUS2017/NUG1/Test/041 - The Mountaineering Club - Mallory/bass.wav
+41,0,2,11,3,drums,NUG1,SIR,7.886680799247668,The Mountaineering Club - Mallory,Pop/Rock,41_NUG1_drums.m4a,/vol/vssp/maruss/data2/MUS2017/NUG1/Test/041 - The Mountaineering Club - Mallory/drums.wav
+41,0,3,11,3,other,NUG1,SIR,7.283105679149817,The Mountaineering Club - Mallory,Pop/Rock,41_NUG1_other.m4a,/vol/vssp/maruss/data2/MUS2017/NUG1/Test/041 - The Mountaineering Club - Mallory/other.wav
+41,0,4,11,3,vocals,NUG1,SIR,6.783048723486433,The Mountaineering Club - Mallory,Pop/Rock,41_NUG1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/NUG1/Test/041 - The Mountaineering Club - Mallory/vocals.wav
+41,0,0,18,3,accompaniment,RAF3,SIR,14.289114870005347,The Mountaineering Club - Mallory,Pop/Rock,41_RAF3_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/RAF3/Test/041 - The Mountaineering Club - Mallory/accompaniment.wav
+41,0,4,18,3,vocals,RAF3,SIR,-3.110367688763033,The Mountaineering Club - Mallory,Pop/Rock,41_RAF3_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/RAF3/Test/041 - The Mountaineering Club - Mallory/vocals.wav
+41,0,1,21,3,bass,UHL1,SIR,4.135844070149004,The Mountaineering Club - Mallory,Pop/Rock,41_UHL1_bass.m4a,/vol/vssp/maruss/data2/MUS2017/UHL1/Test/041 - The Mountaineering Club - Mallory/bass.wav
+41,0,2,21,3,drums,UHL1,SIR,13.042346243816366,The Mountaineering Club - Mallory,Pop/Rock,41_UHL1_drums.m4a,/vol/vssp/maruss/data2/MUS2017/UHL1/Test/041 - The Mountaineering Club - Mallory/drums.wav
+41,0,3,21,3,other,UHL1,SIR,11.143176611244357,The Mountaineering Club - Mallory,Pop/Rock,41_UHL1_other.m4a,/vol/vssp/maruss/data2/MUS2017/UHL1/Test/041 - The Mountaineering Club - Mallory/other.wav
+41,0,4,21,3,vocals,UHL1,SIR,11.765308337632089,The Mountaineering Club - Mallory,Pop/Rock,41_UHL1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/UHL1/Test/041 - The Mountaineering Club - Mallory/vocals.wav
+41,0,0,1,3,bass,ref,SIR,,The Mountaineering Club - Mallory,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/041 - The Mountaineering Club - Mallory/bass.wav
+41,0,0,1,3,drums,ref,SIR,,The Mountaineering Club - Mallory,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/041 - The Mountaineering Club - Mallory/drums.wav
+41,0,0,1,3,other,ref,SIR,,The Mountaineering Club - Mallory,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/041 - The Mountaineering Club - Mallory/other.wav
+41,0,0,1,3,vocals,ref,SIR,,The Mountaineering Club - Mallory,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/041 - The Mountaineering Club - Mallory/vocals.wav
+45,0,0,4,3,accompaniment,HUA,SIR,7.2118948548761725,Traffic Experiment - Sirens,Pop/Rock,45_HUA_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/045 - Traffic Experiment - Sirens/accompaniment.wav
+45,0,4,4,3,vocals,HUA,SIR,-3.147197575108509,Traffic Experiment - Sirens,Pop/Rock,45_HUA_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/045 - Traffic Experiment - Sirens/vocals.wav
+45,0,0,9,3,accompaniment,KAM2,SIR,8.82125700842548,Traffic Experiment - Sirens,Pop/Rock,45_KAM2_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/KAM2/Test/045 - Traffic Experiment - Sirens/accompaniment.wav
+45,0,4,9,3,vocals,KAM2,SIR,1.9102955941038289,Traffic Experiment - Sirens,Pop/Rock,45_KAM2_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KAM2/Test/045 - Traffic Experiment - Sirens/vocals.wav
+45,0,0,17,3,accompaniment,RAF2,SIR,8.95925762795348,Traffic Experiment - Sirens,Pop/Rock,45_RAF2_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/RAF2/Test/045 - Traffic Experiment - Sirens/accompaniment.wav
+45,0,4,17,3,vocals,RAF2,SIR,-0.4373499385316395,Traffic Experiment - Sirens,Pop/Rock,45_RAF2_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/RAF2/Test/045 - Traffic Experiment - Sirens/vocals.wav
+45,0,0,19,3,accompaniment,STO1,SIR,9.385754069669686,Traffic Experiment - Sirens,Pop/Rock,45_STO1_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/STO1/Test/045 - Traffic Experiment - Sirens/accompaniment.wav
+45,0,4,19,3,vocals,STO1,SIR,4.586107250693903,Traffic Experiment - Sirens,Pop/Rock,45_STO1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/STO1/Test/045 - Traffic Experiment - Sirens/vocals.wav
+45,0,1,21,3,bass,UHL1,SIR,-2.7047979231701262,Traffic Experiment - Sirens,Pop/Rock,45_UHL1_bass.m4a,/vol/vssp/maruss/data2/MUS2017/UHL1/Test/045 - Traffic Experiment - Sirens/bass.wav
+45,0,2,21,3,drums,UHL1,SIR,9.855101145779004,Traffic Experiment - Sirens,Pop/Rock,45_UHL1_drums.m4a,/vol/vssp/maruss/data2/MUS2017/UHL1/Test/045 - Traffic Experiment - Sirens/drums.wav
+45,0,3,21,3,other,UHL1,SIR,3.99348185021559,Traffic Experiment - Sirens,Pop/Rock,45_UHL1_other.m4a,/vol/vssp/maruss/data2/MUS2017/UHL1/Test/045 - Traffic Experiment - Sirens/other.wav
+45,0,4,21,3,vocals,UHL1,SIR,7.330372206515085,Traffic Experiment - Sirens,Pop/Rock,45_UHL1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/UHL1/Test/045 - Traffic Experiment - Sirens/vocals.wav
+45,0,0,4,3,bass,ref,SIR,,Traffic Experiment - Sirens,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/045 - Traffic Experiment - Sirens/bass.wav
+45,0,0,4,3,drums,ref,SIR,,Traffic Experiment - Sirens,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/045 - Traffic Experiment - Sirens/drums.wav
+45,0,0,4,3,other,ref,SIR,,Traffic Experiment - Sirens,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/045 - Traffic Experiment - Sirens/other.wav
+45,0,0,4,3,vocals,ref,SIR,,Traffic Experiment - Sirens,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/045 - Traffic Experiment - Sirens/vocals.wav
+49,0,0,4,3,accompaniment,HUA,SIR,10.463869650697037,Young Griffo - Facade,Heavy Metal,49_HUA_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/049 - Young Griffo - Facade/accompaniment.wav
+49,0,4,4,3,vocals,HUA,SIR,-3.0266118428168136,Young Griffo - Facade,Heavy Metal,49_HUA_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/049 - Young Griffo - Facade/vocals.wav
+49,0,0,7,3,accompaniment,JEO2,SIR,13.590944771901267,Young Griffo - Facade,Heavy Metal,49_JEO2_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/JEO2/Test/049 - Young Griffo - Facade/accompaniment.wav
+49,0,4,7,3,vocals,JEO2,SIR,0.8803851543923527,Young Griffo - Facade,Heavy Metal,49_JEO2_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/JEO2/Test/049 - Young Griffo - Facade/vocals.wav
+49,0,0,8,3,accompaniment,KAM1,SIR,13.333129755553596,Young Griffo - Facade,Heavy Metal,49_KAM1_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/KAM1/Test/049 - Young Griffo - Facade/accompaniment.wav
+49,0,4,8,3,vocals,KAM1,SIR,5.518641506607171,Young Griffo - Facade,Heavy Metal,49_KAM1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KAM1/Test/049 - Young Griffo - Facade/vocals.wav
+49,0,1,12,3,bass,NUG2,SIR,5.304485851892312,Young Griffo - Facade,Heavy Metal,49_NUG2_bass.m4a,/vol/vssp/maruss/data2/MUS2017/NUG2/Test/049 - Young Griffo - Facade/bass.wav
+49,0,2,12,3,drums,NUG2,SIR,7.698732807142247,Young Griffo - Facade,Heavy Metal,49_NUG2_drums.m4a,/vol/vssp/maruss/data2/MUS2017/NUG2/Test/049 - Young Griffo - Facade/drums.wav
+49,0,3,12,3,other,NUG2,SIR,8.705575523993643,Young Griffo - Facade,Heavy Metal,49_NUG2_other.m4a,/vol/vssp/maruss/data2/MUS2017/NUG2/Test/049 - Young Griffo - Facade/other.wav
+49,0,4,12,3,vocals,NUG2,SIR,7.863315417006793,Young Griffo - Facade,Heavy Metal,49_NUG2_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/NUG2/Test/049 - Young Griffo - Facade/vocals.wav
+49,0,0,20,3,accompaniment,STO2,SIR,11.639374106167883,Young Griffo - Facade,Heavy Metal,49_STO2_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/STO2/Test/049 - Young Griffo - Facade/accompaniment.wav
+49,0,4,20,3,vocals,STO2,SIR,3.194051568776273,Young Griffo - Facade,Heavy Metal,49_STO2_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/STO2/Test/049 - Young Griffo - Facade/vocals.wav
+49,0,0,4,3,bass,ref,SIR,,Young Griffo - Facade,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/049 - Young Griffo - Facade/bass.wav
+49,0,0,4,3,drums,ref,SIR,,Young Griffo - Facade,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/049 - Young Griffo - Facade/drums.wav
+49,0,0,4,3,other,ref,SIR,,Young Griffo - Facade,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/049 - Young Griffo - Facade/other.wav
+49,0,0,4,3,vocals,ref,SIR,,Young Griffo - Facade,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/049 - Young Griffo - Facade/vocals.wav

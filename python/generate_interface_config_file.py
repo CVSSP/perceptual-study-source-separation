@@ -58,6 +58,7 @@ if __name__ == '__main__':
               'must_play_all_samples_to_continue': True,
               'back_button_can_exit_test': False,
               'allow_submission': True,
+              'add_consistency_check': True,
               }
 
     main(config,
