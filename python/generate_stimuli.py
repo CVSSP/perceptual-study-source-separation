@@ -8,16 +8,23 @@ def main():
     # masseval side
     masseval.config.mus_base_path = '/vol/vssp/maruss/data2/MUS2017'
     masseval.config.dsd_base_path = '/vol/vssp/maruss/data2/DSD100'
+
+    exclude_tracks = experiment_stimuli()
+
+    training(exclude_tracks)
+
+
+def experiment_stimuli():
+
     audio_dir = './site/sounds'
 
     # config for selection
-    # only_these_algos = ['GRA3', 'KON', 'OZE', 'UHL3', 'NUG3']
     only_these_algos = None
     targets = ['vocals']
     metrics = ['SAR', 'SIR']
     num_algos = 5
     num_tracks_per_metric = [8, 8]
-    target_loudness = -30
+    target_loudness = -23
     segment_duration = 7
     remove_outliers = False
     trim_factor_distorted = 0.4
@@ -58,6 +65,8 @@ def main():
                 include_background_in_quality_anchor=False,
                 loudness_normalise_interferer=False,
                 )
+
+    full_test.to_csv('./data/experiment_stimul.csv', index=None)
 
     return exclude_tracks
 
@@ -108,9 +117,9 @@ def training(exclude_tracks):
         loudness_normalise_interferer=False,
         )
 
+    sample.to_csv('./data/training_stimul.csv', index=None)
+
 
 if __name__ == '__main__':
 
-    exclude_tracks = main()
-
-    training(exclude_tracks)
+    main()
