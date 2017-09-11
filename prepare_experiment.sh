@@ -22,10 +22,10 @@ rm -rf "dependencies"
 mkdir "dependencies"
 cd "dependencies"
 
-# Get MUSHRA GUI (WebAudioEvaluationTool)
+# Get MUSHRA GUI
 git clone "$LISTEN" "listen"
 cd "listen"
-git checkout "4918e45d81d28b554558bfad71f4bb2dcf15098d"
+git checkout "e1de2a08a0f6b434d32c114d72997da80c79ace4"
 cd ..
 
 # Move all the files into place
