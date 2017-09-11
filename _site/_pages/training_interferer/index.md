@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: similarity
 config_file: training_interferer
 permalink: /training_interferer/
 next_url: /interferer/

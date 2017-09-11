@@ -2,7 +2,6 @@
 layout: similarity
 config_file: interferer
 permalink: /interferer/
-title: Interferer
 ---
 
 <h1 style="text-align: center;">Interference</h1>
