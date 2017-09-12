@@ -24,7 +24,7 @@ def experiment_stimuli():
     metrics = ['SAR', 'SIR']
     num_algos = 5
     num_tracks_per_metric = [8, 8]
-    target_loudness = -23
+    target_loudness = -24
     segment_duration = 7
     remove_outliers = False
     trim_factor_distorted = 0.4
@@ -37,6 +37,13 @@ def experiment_stimuli():
         exclude_tracks = [3]  # Song 3 has strange vocals
 
         exclude_algos_in_tracks = {'DUR': [11]}
+        song_start_and_end_times = {
+                '10': [96.5],
+                '12': [38.4],
+                '24': [122.35],
+                '25': [64.5],
+                '45': [51.49],
+                '47': [110]}
 
         for metric, num_tracks in zip(metrics, num_tracks_per_metric):
 
@@ -64,6 +71,7 @@ def experiment_stimuli():
                 directory=audio_dir,
                 force_mono=True,
                 target_loudness=target_loudness,
+                song_start_and_end_times=song_start_and_end_times,
                 segment_duration=segment_duration,
                 trim_factor_distorted=trim_factor_distorted,
                 include_background_in_quality_anchor=False,
