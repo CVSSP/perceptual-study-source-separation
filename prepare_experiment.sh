@@ -19,7 +19,7 @@ STIM=true
 VENV=true
 case "$OPTIONS" in
     --nostim) STIM=false;;
-    --novenv) VENV=false;;
+    --noenv) VENV=false;;
     --help) usage;;
 esac
 
