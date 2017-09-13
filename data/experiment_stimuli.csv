@@ -127,24 +127,22 @@ track_id,is_dev,target_id,method_id,metric_id,target,method,metric,score,title,g
 47,0,1,3,1,drums,ref,SAR,,Voelund - Comfort Lives In Belief,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/047 - Voelund - Comfort Lives In Belief/drums.wav
 47,0,1,3,1,other,ref,SAR,,Voelund - Comfort Lives In Belief,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/047 - Voelund - Comfort Lives In Belief/other.wav
 47,0,1,3,1,vocals,ref,SAR,,Voelund - Comfort Lives In Belief,Pop/Rock,,/vol/vssp/maruss/data2/DSD100/Sources/Test/047 - Voelund - Comfort Lives In Belief/vocals.wav
-48,0,0,1,1,accompaniment,DUR,SAR,11.72530229120512,We Fell From The Sky - Not You,Heavy Metal,48_DUR_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/DUR/Test/048 - We Fell From The Sky - Not You/accompaniment.wav
-48,0,4,1,1,vocals,DUR,SAR,3.002954605989489,We Fell From The Sky - Not You,Heavy Metal,48_DUR_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/DUR/Test/048 - We Fell From The Sky - Not You/vocals.wav
 48,0,0,4,1,accompaniment,HUA,SAR,5.9383973343429926,We Fell From The Sky - Not You,Heavy Metal,48_HUA_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/048 - We Fell From The Sky - Not You/accompaniment.wav
 48,0,4,4,1,vocals,HUA,SAR,9.986373168558623,We Fell From The Sky - Not You,Heavy Metal,48_HUA_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/048 - We Fell From The Sky - Not You/vocals.wav
-48,0,1,10,1,bass,KON,SAR,-0.8645613308779468,We Fell From The Sky - Not You,Heavy Metal,48_KON_bass.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/048 - We Fell From The Sky - Not You/bass.wav
-48,0,2,10,1,drums,KON,SAR,4.37800782502737,We Fell From The Sky - Not You,Heavy Metal,48_KON_drums.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/048 - We Fell From The Sky - Not You/drums.wav
-48,0,3,10,1,other,KON,SAR,4.700678757845474,We Fell From The Sky - Not You,Heavy Metal,48_KON_other.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/048 - We Fell From The Sky - Not You/other.wav
-48,0,4,10,1,vocals,KON,SAR,-3.86344296705796,We Fell From The Sky - Not You,Heavy Metal,48_KON_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KON/Test/048 - We Fell From The Sky - Not You/vocals.wav
+48,0,0,6,1,accompaniment,JEO1,SAR,16.222697403996875,We Fell From The Sky - Not You,Heavy Metal,48_JEO1_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/JEO1/Test/048 - We Fell From The Sky - Not You/accompaniment.wav
+48,0,4,6,1,vocals,JEO1,SAR,3.06309827764078,We Fell From The Sky - Not You,Heavy Metal,48_JEO1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/JEO1/Test/048 - We Fell From The Sky - Not You/vocals.wav
+48,0,0,9,1,accompaniment,KAM2,SAR,11.447920990812065,We Fell From The Sky - Not You,Heavy Metal,48_KAM2_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/KAM2/Test/048 - We Fell From The Sky - Not You/accompaniment.wav
+48,0,4,9,1,vocals,KAM2,SAR,0.4370056947565472,We Fell From The Sky - Not You,Heavy Metal,48_KAM2_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/KAM2/Test/048 - We Fell From The Sky - Not You/vocals.wav
+48,0,1,13,1,bass,NUG3,SAR,2.751526545360776,We Fell From The Sky - Not You,Heavy Metal,48_NUG3_bass.m4a,/vol/vssp/maruss/data2/MUS2017/NUG3/Test/048 - We Fell From The Sky - Not You/bass.wav
+48,0,2,13,1,drums,NUG3,SAR,10.812440867526341,We Fell From The Sky - Not You,Heavy Metal,48_NUG3_drums.m4a,/vol/vssp/maruss/data2/MUS2017/NUG3/Test/048 - We Fell From The Sky - Not You/drums.wav
+48,0,3,13,1,other,NUG3,SAR,8.873474366348512,We Fell From The Sky - Not You,Heavy Metal,48_NUG3_other.m4a,/vol/vssp/maruss/data2/MUS2017/NUG3/Test/048 - We Fell From The Sky - Not You/other.wav
+48,0,4,13,1,vocals,NUG3,SAR,-2.4066597327084343,We Fell From The Sky - Not You,Heavy Metal,48_NUG3_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/NUG3/Test/048 - We Fell From The Sky - Not You/vocals.wav
 48,0,0,18,1,accompaniment,RAF3,SAR,13.163192484034456,We Fell From The Sky - Not You,Heavy Metal,48_RAF3_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/RAF3/Test/048 - We Fell From The Sky - Not You/accompaniment.wav
 48,0,4,18,1,vocals,RAF3,SAR,6.136798895557625,We Fell From The Sky - Not You,Heavy Metal,48_RAF3_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/RAF3/Test/048 - We Fell From The Sky - Not You/vocals.wav
-48,0,1,21,1,bass,UHL1,SAR,2.506649556228689,We Fell From The Sky - Not You,Heavy Metal,48_UHL1_bass.m4a,/vol/vssp/maruss/data2/MUS2017/UHL1/Test/048 - We Fell From The Sky - Not You/bass.wav
-48,0,2,21,1,drums,UHL1,SAR,11.073831670362585,We Fell From The Sky - Not You,Heavy Metal,48_UHL1_drums.m4a,/vol/vssp/maruss/data2/MUS2017/UHL1/Test/048 - We Fell From The Sky - Not You/drums.wav
-48,0,3,21,1,other,UHL1,SAR,8.586220125139668,We Fell From The Sky - Not You,Heavy Metal,48_UHL1_other.m4a,/vol/vssp/maruss/data2/MUS2017/UHL1/Test/048 - We Fell From The Sky - Not You/other.wav
-48,0,4,21,1,vocals,UHL1,SAR,-0.4735454637599503,We Fell From The Sky - Not You,Heavy Metal,48_UHL1_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/UHL1/Test/048 - We Fell From The Sky - Not You/vocals.wav
-48,0,0,1,1,bass,ref,SAR,,We Fell From The Sky - Not You,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/048 - We Fell From The Sky - Not You/bass.wav
-48,0,0,1,1,drums,ref,SAR,,We Fell From The Sky - Not You,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/048 - We Fell From The Sky - Not You/drums.wav
-48,0,0,1,1,other,ref,SAR,,We Fell From The Sky - Not You,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/048 - We Fell From The Sky - Not You/other.wav
-48,0,0,1,1,vocals,ref,SAR,,We Fell From The Sky - Not You,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/048 - We Fell From The Sky - Not You/vocals.wav
+48,0,0,4,1,bass,ref,SAR,,We Fell From The Sky - Not You,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/048 - We Fell From The Sky - Not You/bass.wav
+48,0,0,4,1,drums,ref,SAR,,We Fell From The Sky - Not You,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/048 - We Fell From The Sky - Not You/drums.wav
+48,0,0,4,1,other,ref,SAR,,We Fell From The Sky - Not You,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/048 - We Fell From The Sky - Not You/other.wav
+48,0,0,4,1,vocals,ref,SAR,,We Fell From The Sky - Not You,Heavy Metal,,/vol/vssp/maruss/data2/DSD100/Sources/Test/048 - We Fell From The Sky - Not You/vocals.wav
 10,0,0,4,3,accompaniment,HUA,SIR,4.5400671982790834,Carlos Gonzalez - A Place For Us,Pop/Rock,10_HUA_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/010 - Carlos Gonzalez - A Place For Us/accompaniment.wav
 10,0,4,4,3,vocals,HUA,SIR,-0.029298626121097075,Carlos Gonzalez - A Place For Us,Pop/Rock,10_HUA_vocals.m4a,/vol/vssp/maruss/data2/MUS2017/HUA/Test/010 - Carlos Gonzalez - A Place For Us/vocals.wav
 10,0,0,8,3,accompaniment,KAM1,SIR,5.383890203019957,Carlos Gonzalez - A Place For Us,Pop/Rock,10_KAM1_accompaniment.m4a,/vol/vssp/maruss/data2/MUS2017/KAM1/Test/010 - Carlos Gonzalez - A Place For Us/accompaniment.wav

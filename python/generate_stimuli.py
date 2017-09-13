@@ -36,7 +36,8 @@ def experiment_stimuli():
     for target in targets:
         exclude_tracks = [3]  # Song 3 has strange vocals
 
-        exclude_algos_in_tracks = {'DUR': [11]}
+        exclude_algos_in_tracks = {'DUR': [11],
+                                   'KON': [48]}
         song_start_and_end_times = {
                 '10': [96.5],
                 '12': [38.4],
