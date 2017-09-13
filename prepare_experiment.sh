@@ -18,7 +18,7 @@ usage() {
 STIM=true
 VENV=true
 case "$OPTIONS" in
-    --nostim) STIM=false;;
+    --nostim) STIM=false: VENV=false;;
     --noenv) VENV=false;;
     --help) usage;;
 esac
