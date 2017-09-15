@@ -35,7 +35,7 @@ cd "dependencies"
 # Get MUSHRA GUI
 git clone "$LISTEN" "listen"
 cd "listen"
-git checkout "e1de2a08a0f6b434d32c114d72997da80c79ace4"
+git checkout "176a09083cea3454942b88f94d94e310dbce34f6"
 cd ..
 
 # Move all the files into place
