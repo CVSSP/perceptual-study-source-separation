@@ -1,0 +1,23 @@
+continuous_playback: true
+loop_playback: true
+rows:
+- name: Sound quality fixed / interference varied
+  sounds:
+  - button_label: Ref
+    url: sounds_familiarisation/0dB-Bulldozer.wav
+  - button_label: A
+    url: sounds_familiarisation/-6dB-Bulldozer.wav
+  - button_label: B
+    url: sounds_familiarisation/-12dB-Bulldozer.wav
+  - button_label: C
+    url: sounds_familiarisation/-18dB-Bulldozer.wav
+- name: Sound quality varied / interference fixed
+  sounds:
+  - button_label: Ref
+    url: sounds_familiarisation/0dB-Bulldozer.wav
+  - button_label: A
+    url: sounds_familiarisation/fair-Bulldozer.wav
+  - button_label: B
+    url: sounds_familiarisation/poor-Bulldozer.wav
+  - button_label: C
+    url: sounds_familiarisation/bad-Bulldozer.wav

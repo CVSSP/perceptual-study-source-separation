@@ -1,0 +1,32 @@
+allow_submission: false
+back_button_can_exit_test: true
+continuous_playback: true
+labels:
+- Much interference
+- No interference
+loop_playback: true
+must_play_all_samples_to_continue: true
+pages:
+- name: vocals-16-SAR
+  reference_url: sounds_training/vocals-16-SAR/ref.wav
+  sounds:
+  - name: UHL3
+    url: sounds_training/vocals-16-SAR/UHL3.wav
+  - name: GRA3
+    url: sounds_training/vocals-16-SAR/GRA3.wav
+  - name: KON
+    url: sounds_training/vocals-16-SAR/KON.wav
+  - name: Interferer
+    url: sounds_training/vocals-16-SAR/Interferer.wav
+  - name: NUG3
+    url: sounds_training/vocals-16-SAR/NUG3.wav
+  - name: ref
+    url: sounds_training/vocals-16-SAR/ref.wav
+  - name: Quality
+    url: sounds_training/vocals-16-SAR/Quality.wav
+  - name: OZE
+    url: sounds_training/vocals-16-SAR/OZE.wav
+randomise_pages: true
+randomise_slider_handle: true
+randomise_sounds_within_page: true
+show_number_on_slider: false

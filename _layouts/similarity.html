@@ -1,0 +1,24 @@
+---
+layout: test
+---
+
+{{ content }}
+
+{% assign config = site.data[page.config_file] %}
+<div class='mushra-container'>
+
+<button class="mushra-reference" data-inline="true">Reference</button>
+<button class="mushra-stop" data-inline="true">Stop</button>
+
+{% if config.labels %}
+<table class='similarity-table'>
+<tr>
+<th class='left-label'>{{ config.labels[0] }}</th>
+<th class='right-label'>{{ config.labels[1] }}</th>
+</tr>
+</table>
+{% endif %}
+
+<div class="mushra-slider-container" data-role="ui-content"></div>
+
+</div>

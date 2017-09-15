@@ -1,0 +1,318 @@
+add_consistency_check: true
+allow_submission: true
+back_button_can_exit_test: false
+continuous_playback: true
+labels:
+- Much interference
+- No interference
+loop_playback: true
+must_play_all_samples_to_continue: true
+pages:
+- name: vocals-20-SAR
+  reference_url: sounds/vocals-20-SAR/ref.wav
+  sounds:
+  - name: CHA
+    url: sounds/vocals-20-SAR/CHA.wav
+  - name: KAM2
+    url: sounds/vocals-20-SAR/KAM2.wav
+  - name: KON
+    url: sounds/vocals-20-SAR/KON.wav
+  - name: Interferer
+    url: sounds/vocals-20-SAR/Interferer.wav
+  - name: ref
+    url: sounds/vocals-20-SAR/ref.wav
+  - name: Quality
+    url: sounds/vocals-20-SAR/Quality.wav
+  - name: DUR
+    url: sounds/vocals-20-SAR/DUR.wav
+  - name: HUA
+    url: sounds/vocals-20-SAR/HUA.wav
+- name: vocals-11-SAR
+  reference_url: sounds/vocals-11-SAR/ref.wav
+  sounds:
+  - name: GRA3
+    url: sounds/vocals-11-SAR/GRA3.wav
+  - name: Interferer
+    url: sounds/vocals-11-SAR/Interferer.wav
+  - name: ref
+    url: sounds/vocals-11-SAR/ref.wav
+  - name: RAF2
+    url: sounds/vocals-11-SAR/RAF2.wav
+  - name: STO1
+    url: sounds/vocals-11-SAR/STO1.wav
+  - name: Quality
+    url: sounds/vocals-11-SAR/Quality.wav
+  - name: KAM1
+    url: sounds/vocals-11-SAR/KAM1.wav
+  - name: HUA
+    url: sounds/vocals-11-SAR/HUA.wav
+- name: vocals-42-SAR
+  reference_url: sounds/vocals-42-SAR/ref.wav
+  sounds:
+  - name: UHL3
+    url: sounds/vocals-42-SAR/UHL3.wav
+  - name: CHA
+    url: sounds/vocals-42-SAR/CHA.wav
+  - name: KAM2
+    url: sounds/vocals-42-SAR/KAM2.wav
+  - name: KON
+    url: sounds/vocals-42-SAR/KON.wav
+  - name: Interferer
+    url: sounds/vocals-42-SAR/Interferer.wav
+  - name: NUG3
+    url: sounds/vocals-42-SAR/NUG3.wav
+  - name: ref
+    url: sounds/vocals-42-SAR/ref.wav
+  - name: Quality
+    url: sounds/vocals-42-SAR/Quality.wav
+- name: vocals-12-SAR
+  reference_url: sounds/vocals-12-SAR/ref.wav
+  sounds:
+  - name: GRA3
+    url: sounds/vocals-12-SAR/GRA3.wav
+  - name: GRA2
+    url: sounds/vocals-12-SAR/GRA2.wav
+  - name: KAM2
+    url: sounds/vocals-12-SAR/KAM2.wav
+  - name: KON
+    url: sounds/vocals-12-SAR/KON.wav
+  - name: Interferer
+    url: sounds/vocals-12-SAR/Interferer.wav
+  - name: ref
+    url: sounds/vocals-12-SAR/ref.wav
+  - name: Quality
+    url: sounds/vocals-12-SAR/Quality.wav
+  - name: DUR
+    url: sounds/vocals-12-SAR/DUR.wav
+- name: vocals-18-SIR
+  reference_url: sounds/vocals-18-SIR/ref.wav
+  sounds:
+  - name: GRA3
+    url: sounds/vocals-18-SIR/GRA3.wav
+  - name: Interferer
+    url: sounds/vocals-18-SIR/Interferer.wav
+  - name: ref
+    url: sounds/vocals-18-SIR/ref.wav
+  - name: UHL1
+    url: sounds/vocals-18-SIR/UHL1.wav
+  - name: Quality
+    url: sounds/vocals-18-SIR/Quality.wav
+  - name: NUG1
+    url: sounds/vocals-18-SIR/NUG1.wav
+  - name: OZE
+    url: sounds/vocals-18-SIR/OZE.wav
+  - name: HUA
+    url: sounds/vocals-18-SIR/HUA.wav
+- name: vocals-10-SIR
+  reference_url: sounds/vocals-10-SIR/ref.wav
+  sounds:
+  - name: KON
+    url: sounds/vocals-10-SIR/KON.wav
+  - name: Interferer
+    url: sounds/vocals-10-SIR/Interferer.wav
+  - name: ref
+    url: sounds/vocals-10-SIR/ref.wav
+  - name: RAF2
+    url: sounds/vocals-10-SIR/RAF2.wav
+  - name: NUG2
+    url: sounds/vocals-10-SIR/NUG2.wav
+  - name: Quality
+    url: sounds/vocals-10-SIR/Quality.wav
+  - name: KAM1
+    url: sounds/vocals-10-SIR/KAM1.wav
+  - name: HUA
+    url: sounds/vocals-10-SIR/HUA.wav
+- name: vocals-26-SIR
+  reference_url: sounds/vocals-26-SIR/ref.wav
+  sounds:
+  - name: KON
+    url: sounds/vocals-26-SIR/KON.wav
+  - name: Interferer
+    url: sounds/vocals-26-SIR/Interferer.wav
+  - name: JEO1
+    url: sounds/vocals-26-SIR/JEO1.wav
+  - name: ref
+    url: sounds/vocals-26-SIR/ref.wav
+  - name: Quality
+    url: sounds/vocals-26-SIR/Quality.wav
+  - name: KAM1
+    url: sounds/vocals-26-SIR/KAM1.wav
+  - name: RAF1
+    url: sounds/vocals-26-SIR/RAF1.wav
+  - name: HUA
+    url: sounds/vocals-26-SIR/HUA.wav
+- name: vocals-30-SIR
+  reference_url: sounds/vocals-30-SIR/ref.wav
+  sounds:
+  - name: CHA
+    url: sounds/vocals-30-SIR/CHA.wav
+  - name: Interferer
+    url: sounds/vocals-30-SIR/Interferer.wav
+  - name: NUG3
+    url: sounds/vocals-30-SIR/NUG3.wav
+  - name: ref
+    url: sounds/vocals-30-SIR/ref.wav
+  - name: Quality
+    url: sounds/vocals-30-SIR/Quality.wav
+  - name: JEO2
+    url: sounds/vocals-30-SIR/JEO2.wav
+  - name: RAF1
+    url: sounds/vocals-30-SIR/RAF1.wav
+  - name: HUA
+    url: sounds/vocals-30-SIR/HUA.wav
+- name: vocals-25-SAR
+  reference_url: sounds/vocals-25-SAR/ref.wav
+  sounds:
+  - name: GRA2
+    url: sounds/vocals-25-SAR/GRA2.wav
+  - name: KON
+    url: sounds/vocals-25-SAR/KON.wav
+  - name: Interferer
+    url: sounds/vocals-25-SAR/Interferer.wav
+  - name: ref
+    url: sounds/vocals-25-SAR/ref.wav
+  - name: Quality
+    url: sounds/vocals-25-SAR/Quality.wav
+  - name: RAF1
+    url: sounds/vocals-25-SAR/RAF1.wav
+  - name: HUA
+    url: sounds/vocals-25-SAR/HUA.wav
+  - name: RAF3
+    url: sounds/vocals-25-SAR/RAF3.wav
+- name: vocals-19-SIR
+  reference_url: sounds/vocals-19-SIR/ref.wav
+  sounds:
+  - name: GRA3
+    url: sounds/vocals-19-SIR/GRA3.wav
+  - name: KAM2
+    url: sounds/vocals-19-SIR/KAM2.wav
+  - name: KON
+    url: sounds/vocals-19-SIR/KON.wav
+  - name: Interferer
+    url: sounds/vocals-19-SIR/Interferer.wav
+  - name: ref
+    url: sounds/vocals-19-SIR/ref.wav
+  - name: Quality
+    url: sounds/vocals-19-SIR/Quality.wav
+  - name: KAM1
+    url: sounds/vocals-19-SIR/KAM1.wav
+  - name: HUA
+    url: sounds/vocals-19-SIR/HUA.wav
+- name: vocals-47-SAR
+  reference_url: sounds/vocals-47-SAR/ref.wav
+  sounds:
+  - name: GRA3
+    url: sounds/vocals-47-SAR/GRA3.wav
+  - name: Interferer
+    url: sounds/vocals-47-SAR/Interferer.wav
+  - name: ref
+    url: sounds/vocals-47-SAR/ref.wav
+  - name: STO1
+    url: sounds/vocals-47-SAR/STO1.wav
+  - name: Quality
+    url: sounds/vocals-47-SAR/Quality.wav
+  - name: KAM1
+    url: sounds/vocals-47-SAR/KAM1.wav
+  - name: RAF1
+    url: sounds/vocals-47-SAR/RAF1.wav
+  - name: OZE
+    url: sounds/vocals-47-SAR/OZE.wav
+- name: vocals-24-SAR
+  reference_url: sounds/vocals-24-SAR/ref.wav
+  sounds:
+  - name: GRA3
+    url: sounds/vocals-24-SAR/GRA3.wav
+  - name: STO2
+    url: sounds/vocals-24-SAR/STO2.wav
+  - name: Interferer
+    url: sounds/vocals-24-SAR/Interferer.wav
+  - name: ref
+    url: sounds/vocals-24-SAR/ref.wav
+  - name: RAF2
+    url: sounds/vocals-24-SAR/RAF2.wav
+  - name: Quality
+    url: sounds/vocals-24-SAR/Quality.wav
+  - name: KAM1
+    url: sounds/vocals-24-SAR/KAM1.wav
+  - name: HUA
+    url: sounds/vocals-24-SAR/HUA.wav
+- name: vocals-45-SIR
+  reference_url: sounds/vocals-45-SIR/ref.wav
+  sounds:
+  - name: KAM2
+    url: sounds/vocals-45-SIR/KAM2.wav
+  - name: Interferer
+    url: sounds/vocals-45-SIR/Interferer.wav
+  - name: ref
+    url: sounds/vocals-45-SIR/ref.wav
+  - name: RAF2
+    url: sounds/vocals-45-SIR/RAF2.wav
+  - name: STO1
+    url: sounds/vocals-45-SIR/STO1.wav
+  - name: UHL1
+    url: sounds/vocals-45-SIR/UHL1.wav
+  - name: Quality
+    url: sounds/vocals-45-SIR/Quality.wav
+  - name: HUA
+    url: sounds/vocals-45-SIR/HUA.wav
+- name: vocals-41-SIR
+  reference_url: sounds/vocals-41-SIR/ref.wav
+  sounds:
+  - name: Interferer
+    url: sounds/vocals-41-SIR/Interferer.wav
+  - name: ref
+    url: sounds/vocals-41-SIR/ref.wav
+  - name: UHL1
+    url: sounds/vocals-41-SIR/UHL1.wav
+  - name: Quality
+    url: sounds/vocals-41-SIR/Quality.wav
+  - name: DUR
+    url: sounds/vocals-41-SIR/DUR.wav
+  - name: NUG1
+    url: sounds/vocals-41-SIR/NUG1.wav
+  - name: HUA
+    url: sounds/vocals-41-SIR/HUA.wav
+  - name: RAF3
+    url: sounds/vocals-41-SIR/RAF3.wav
+- name: vocals-49-SIR
+  reference_url: sounds/vocals-49-SIR/ref.wav
+  sounds:
+  - name: STO2
+    url: sounds/vocals-49-SIR/STO2.wav
+  - name: Interferer
+    url: sounds/vocals-49-SIR/Interferer.wav
+  - name: ref
+    url: sounds/vocals-49-SIR/ref.wav
+  - name: NUG2
+    url: sounds/vocals-49-SIR/NUG2.wav
+  - name: Quality
+    url: sounds/vocals-49-SIR/Quality.wav
+  - name: JEO2
+    url: sounds/vocals-49-SIR/JEO2.wav
+  - name: KAM1
+    url: sounds/vocals-49-SIR/KAM1.wav
+  - name: HUA
+    url: sounds/vocals-49-SIR/HUA.wav
+- name: vocals-48-SAR
+  reference_url: sounds/vocals-48-SAR/ref.wav
+  sounds:
+  - name: KAM2
+    url: sounds/vocals-48-SAR/KAM2.wav
+  - name: Interferer
+    url: sounds/vocals-48-SAR/Interferer.wav
+  - name: NUG3
+    url: sounds/vocals-48-SAR/NUG3.wav
+  - name: JEO1
+    url: sounds/vocals-48-SAR/JEO1.wav
+  - name: ref
+    url: sounds/vocals-48-SAR/ref.wav
+  - name: Quality
+    url: sounds/vocals-48-SAR/Quality.wav
+  - name: HUA
+    url: sounds/vocals-48-SAR/HUA.wav
+  - name: RAF3
+    url: sounds/vocals-48-SAR/RAF3.wav
+randomise_pages: true
+randomise_slider_handle: true
+randomise_sounds_within_page: true
+show_number_on_slider: false

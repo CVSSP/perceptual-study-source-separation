@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+    <div data-role='page' id='id-{{ page.url  | slugify}}'>
+
+    {% include menu.html %}
+
+    <div data-role="header">
+
+    <!-- Configuration of back button -->
+    <a 
+    data-rel="back"
+    class='ui-btn-left ui-btn ui-btn-inline ui-mini
+           ui-corner-all ui-btn-icon-left ui-icon-carat-l back'>
+    Previous
+    </a>
+
+    <!-- Main header title -->
+    <h1 class='title'> {{ page.title }} </h1>
+
+    <!-- Configuration of next button -->
+    {% if page.next_url %}
+    <a 
+    href="{{ site.url }}{{ page.next_url }}"
+    class='ui-btn-right ui-btn ui-btn-inline ui-mini
+           ui-corner-all ui-btn-icon-right ui-icon-carat-r next'>
+    Next
+    </a>
+    {% endif %}
+
+    </div>
+
+    <div data-role="main" class="ui-content">
+    {{ content }}
+    </div>
+
+</div>
+
+</body>
+
+</html>

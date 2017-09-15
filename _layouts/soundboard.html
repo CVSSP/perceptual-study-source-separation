@@ -1,0 +1,45 @@
+---
+layout: page
+---
+
+{{ content }}
+
+{% assign config = site.data[page.config_file] %}
+
+<div id="soundboard-container">
+
+<button id="soundboard-stop" data-inline="true">Stop</button>
+
+<ul>
+
+{% for row in config.sets %}
+
+<p> {{ row.name }} </p>
+
+<li>
+
+{% for sound in row.sounds %}
+
+<button id="btn-{{ sound.id }}" data-inline="true">{{ sound.button_label }}</button>
+
+{% endfor %}
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+<script type="text/javascript">
+
+$(document).on('pageinit', '#main', function() {
+
+    var config = JSON.parse('{{ config | jsonify}}');
+    config.siteURL = "{{ site.url }}";
+    var soundboardObj = new Soundboard(config);
+
+});
+
+</script>

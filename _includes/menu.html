@@ -1,0 +1,43 @@
+{% if site.data.menu %}
+{% assign links = site.data.menu %}
+<div class='menu' data-role="collapsible" 
+                  data-collapsed="true"
+                  data-collapsed-icon="carat-d"
+                  data-expanded-icon="carat-u">
+    <h4 class='cen'>Menu</h4>
+
+<ul data-role="listview" data-inset="false">
+
+{% for link in links %}
+
+{% if link.sublinks %}
+    <div data-role="collapsible"
+         data-collapsed="true"
+         class="inner-collapsible menu"
+         data-collapsed-icon="carat-d"
+         data-expanded-icon="carat-u">
+    <h4>{{ link.title }}</h4>
+
+    <ul data-role="listview">
+    {% for sublink in link.sublinks %}
+    <li data-icon="false">
+        <a class='page-link'
+            href="{{ site.url }}{{ sublink.url }}">{{ sublink.title }}</a>
+    </li>
+    {% endfor %}
+    </ul>
+
+    </div>
+{% else %}
+
+    <li data-icon="false">
+    <a class='page-link' href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
+    </li>
+
+{% endif %}
+
+{% endfor %}
+</ul>
+</div>
+
+{% endif %}

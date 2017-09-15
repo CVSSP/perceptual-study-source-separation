@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <!-- Include the jQuery library -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Include the jQuery Mobile library -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- Listen -->
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+    <script src="http://localhost:4000/assets/js/main.js"></script>
+
+</head> 
+
+
+<body>
+
+    <div data-role='page' id='id-familiarisation-quality'>
+
+    
+
+
+    <div data-role="header">
+
+    <!-- Configuration of back button -->
+    <a 
+    data-rel="back"
+    class='ui-btn-left ui-btn ui-btn-inline ui-mini
+           ui-corner-all ui-btn-icon-left ui-icon-carat-l back'>
+    Previous
+    </a>
+
+    <!-- Main header title -->
+    <h1 class='title'>  </h1>
+
+    <!-- Configuration of next button -->
+    
+    <a 
+    href="http://localhost:4000/training_quality/"
+    class='ui-btn-right ui-btn ui-btn-inline ui-mini
+           ui-corner-all ui-btn-icon-right ui-icon-carat-r next'>
+    Next
+    </a>
+    
+
+    </div>
+
+    <div data-role="main" class="ui-content">
+    <h1 style="text-align: center;">Familiarisation</h1>
+
+<h2 id="definitions">Definitions</h2>
+
+<h3 id="sound-quality">Sound quality</h3>
+<p><strong>Sound quality</strong> relates to the amount of artefacts or distortions affecting
+the perception of a reference sound.</p>
+
+<p>These can be heard as tone-like additions, abrupt changes in loudness, or
+missing parts of the audio.</p>
+
+<p>It does <strong>not</strong> include changes in the amount of interference by other
+instruments that might be heard besides the vocals.</p>
+
+<h3 id="interference">Interference</h3>
+<p><strong>Interference</strong> describes the amount of other instruments that are audible
+besides the vocals.</p>
+
+<p>It does <strong>not</strong> include artefacts or distortions that belong to the vocals.</p>
+
+<h2 id="examples">Examples</h2>
+
+<ul class="soundboard-container">
+ 
+<button class="soundboard-stop" data-inline="true">Stop</button>
+
+
+
+<p> Sound quality fixed / interference varied </p>
+
+<li>
+
+
+
+<button class="soundboard-play" data-inline="true">Ref</button>
+
+
+
+<button class="soundboard-play" data-inline="true">A</button>
+
+
+
+<button class="soundboard-play" data-inline="true">B</button>
+
+
+
+<button class="soundboard-play" data-inline="true">C</button>
+
+
+
+</li>
+
+
+
+<p> Sound quality varied / interference fixed </p>
+
+<li>
+
+
+
+<button class="soundboard-play" data-inline="true">Ref</button>
+
+
+
+<button class="soundboard-play" data-inline="true">A</button>
+
+
+
+<button class="soundboard-play" data-inline="true">B</button>
+
+
+
+<button class="soundboard-play" data-inline="true">C</button>
+
+
+
+</li>
+
+
+
+</ul>
+
+<script type="text/javascript">
+
+$('#id-familiarisation-quality').on('pageshow', function() {
+
+    var config = JSON.parse('{"continuous_playback":true,"loop_playback":true,"rows":[{"name":"Sound quality fixed / interference varied","sounds":[{"button_label":"Ref","url":"sounds_familiarisation/0dB-Bulldozer.wav"},{"button_label":"A","url":"sounds_familiarisation/-6dB-Bulldozer.wav"},{"button_label":"B","url":"sounds_familiarisation/-12dB-Bulldozer.wav"},{"button_label":"C","url":"sounds_familiarisation/-18dB-Bulldozer.wav"}]},{"name":"Sound quality varied / interference fixed","sounds":[{"button_label":"Ref","url":"sounds_familiarisation/0dB-Bulldozer.wav"},{"button_label":"A","url":"sounds_familiarisation/fair-Bulldozer.wav"},{"button_label":"B","url":"sounds_familiarisation/poor-Bulldozer.wav"},{"button_label":"C","url":"sounds_familiarisation/bad-Bulldozer.wav"}]}]}');
+    config.siteURL = "http://localhost:4000";
+
+    var board = new Soundboard(config);
+});
+
+</script>
+
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

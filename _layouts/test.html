@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+<div data-role='page' id='id-{{ page.url  | slugify}}'>
+
+{% include menu.html %}
+
+{% assign config = site.data[page.config_file] %}
+
+<div data-role="header">
+
+<a 
+    class='ui-btn-left ui-btn ui-btn-inline ui-mini
+           ui-corner-all ui-btn-icon-left ui-icon-carat-l back'>
+    Previous
+</a>
+
+<h1 class='title'></h1>
+
+<a 
+    class='ui-btn-right ui-btn ui-btn-inline ui-mini
+           ui-corner-all ui-btn-icon-right ui-icon-carat-r next'>
+    Next
+</a>
+</div>
+
+<!-- Popup window if all listener tries to move on before listening to all samples -->
+<div data-role="popup" class="listen-to-all-samples-popup" data-position-to="window" data-transition="turn">
+    <p>Please listen to all samples before moving on</p>
+</div>
+
+<div data-role="popup" class="submission-wait-popup" data-position-to="window" data-transition="turn">
+    <p>Please wait for this page to redirect...</p>
+</div>
+
+<!-- Popup window for submissions -->
+<div data-role='popup'
+     data-position-to='window'
+     class='ui-corner-all ui-popup ui-body-a ui-overlay-shadow submit-popup'
+     data-theme='b'
+     data-dismissible="false"
+     >
+
+<form method="post"
+      action="https://api.staticman.net/v2/entry/{{ site.github.username }}/{{
+      site.github.repository }}/{{ site.github.branch }}"
+      class='submit-form'
+      >
+
+<h2>Thank you, please submit your data:</h2>
+
+<input name="options[slug]" type="hidden" value='{{ page.url  | slugify}}'>
+<input name="options[redirect]" type="hidden" value='{{ site.url }}{{ page.next_url }}'>
+
+<input name='fields[name]'
+       value='My name'
+       type='text'
+>
+
+<input name='fields[experiment_id]'
+       value='{{ page.url  | slugify}}'
+       type='hidden'
+>
+
+<input type='submit'
+       value='Submit'
+       >
+
+<input type='button'
+       value='Cancel'
+       class='cancel'
+       >
+</form>
+</div>
+
+<!-- Main layout -->
+<div data-role="main" class="ui-content">
+{{ content }}
+</div>
+
+<!-- JS for interface instantiation -->
+<script type="text/javascript">
+
+$('#id-{{ page.url  | slugify}}').on('pageshow', function(e) {
+
+    // Show loading spinner when user clicks submit
+    $activePage ('.submit-form').on ('submit', function(e){
+        $.mobile.loading('show');
+    });
+
+    $activePage ('.submit-form .cancel').on ('click', function(e) {
+        $activePage ('.submit-popup').popup("close");
+    });
+});
+
+$('#id-{{ page.url  | slugify}}').on('pageshow', function(e) {
+
+    var config = JSON.parse('{{ config | jsonify}}');
+
+    if (config != null)
+    {
+        config.siteURL = "{{ site.url }}";
+        config.nextURL = '{{ site.url }}{{ page.next_url }}';
+
+        var layout = '{{ page.layout }}';
+
+        if (layout == 'mushra' || layout == 'similarity')
+        {
+            var testInterface = new Mushra (config);
+        }
+    }
+
+   });
+
+
+</script>
+
+</div>
+</body>
+</html>
