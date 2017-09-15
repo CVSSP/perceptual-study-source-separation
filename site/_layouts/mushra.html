@@ -1,0 +1,23 @@
+---
+layout: test
+---
+
+{{ content }}
+
+{% assign config = site.data[page.config_file] %}
+<div class='mushra-container'>
+
+<button class="mushra-reference" data-inline="true">Reference</button>
+<button class="mushra-stop" data-inline="true">Stop</button>
+
+<table class='mushra-table'>
+<tr>
+{% for label in config.labels %}
+<th>{{ label }}</th>
+{% endfor %}
+</tr>
+</table>
+
+<div class="mushra-slider-container" data-role="ui-content"></div>
+
+</div>

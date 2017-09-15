@@ -1,0 +1,19 @@
+continuous_playback: true
+loop_playback: true
+rows:
+    - name: 'Set 1'
+      sounds:
+          - button_label: 1
+            url: sounds/dog1.wav
+          - button_label: 2
+            url: sounds/dog2.wav
+          - button_label: 3
+            url: sounds/dog3.wav
+    - name: 'Set 2'
+      sounds:
+          - button_label: 4
+            url: sounds/dog4.wav
+          - button_label: 5
+            url: sounds/dog5.wav
+          - button_label: 6
+            url: sounds/dog6.wav

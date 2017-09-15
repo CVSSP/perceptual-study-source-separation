@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.similarity-table {
+
+    table-layout: fixed;
+    font-size: 1em;
+
+    width: 90%;
+    margin-left: 5%;
+    text-align: left;
+
+    @media only screen and (max-width: $breakpoint) {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+.similarity-table th {
+    color: $heading-font-color;
+    border: 0px;
+}
+
+.similarity-table .left-label {
+    text-align: left;
+}
+
+.similarity-table .right-label {
+    text-align: right;
+    color: $heading-font-color;
+}

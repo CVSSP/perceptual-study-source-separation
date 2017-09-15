@@ -1,0 +1,19 @@
+# Site Settings
+title: "Listen"
+description: >
+    "Blank"
+baseurl: ""
+url: "https://deeuu.github.io/listen"
+
+github:
+    username: "deeuu"
+    repository : "listen"
+    branch: "gh-pages"
+
+# Build Setting
+include: 
+    - '_pages'
+sass:
+  sass_dir: assets/_sass
+kramdown:
+  input: GFM

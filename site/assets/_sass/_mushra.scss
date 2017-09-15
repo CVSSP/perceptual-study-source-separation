@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+.mushra-container {
+    text-align: center;
+}
+
+.mushra-table {
+
+    table-layout: fixed;
+    font-size: 1em;
+
+    width: 90%;
+    margin-left: 5%;
+
+
+    @media only screen and (max-width: $breakpoint) {
+        font-size: 0.7em;
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+.mushra-table th {
+    color: $heading-font-color;
+    border: 1px solid black;
+}
+
+.mushra-slider-container {
+    text-align: center;
+    display: table;
+    margin: 0px auto;
+    width: 100%;
+};
+
+.mushra-slider-container .ui-slider-track {
+
+    width: 90%;
+    margin-left: 5%;
+
+    @media only screen and (max-width: $breakpoint) {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+.mushra-slider-container .slider-handle-active {
+
+    background-color: $dark !important;
+    color: $white !important;
+}
