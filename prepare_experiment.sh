@@ -47,6 +47,7 @@ rm -rf "site/sounds"
 
 if $VENV; then
     cd venvs
+    make clean
     make
     cd ../
 fi
