@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: soundboard
 config_file: familiarisation
 permalink: /familiarisation_quality/
 next_url: /training_quality/
@@ -26,5 +26,3 @@ besides the vocals.
 It does **not** include artefacts or distortions that belong to the vocals.
 
 ## Examples
-
-{% include soundboard.html %}
