@@ -59,6 +59,7 @@ if __name__ == '__main__':
               'back_button_can_exit_test': False,
               'allow_submission': True,
               'add_consistency_check': True,
+              'allow_slider_sort': True,
               }
 
     main(config,
@@ -87,6 +88,7 @@ if __name__ == '__main__':
               'must_play_all_samples_to_continue': True,
               'back_button_can_exit_test': True,
               'allow_submission': False,
+              'allow_slider_sort': True,
               }
 
     main(config,
