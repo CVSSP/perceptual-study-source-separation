@@ -184,12 +184,9 @@ AudioLoader.prototype.stop = function() {
 
         this.gainNodeIndex = (this.gainNodeIndex + 1) % 2;
         this.source = null;
+
+        this.currentIndex = null;
     }
-}
-
-AudioLoader.prototype.resetContinuousPlay = function() {
-
-    this.currentIndex = null;
 }
 
 AudioLoader.prototype.haveAllBuffersPlayed = function () {

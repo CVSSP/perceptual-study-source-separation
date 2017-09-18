@@ -80,7 +80,7 @@ function selectMinimum (a, b)
 /* Wrapper for selecting elements on active page:
 https://forum.jquery.com/topic/usage-of-ids-impossible
 */
-function $activePage(query) {return $(".ui-page-active " + query);}
+function $activePage(query='') {return $('.ui-page-active ' + query);}
 
 /*
  * AudioLoader
@@ -268,12 +268,9 @@ AudioLoader.prototype.stop = function() {
 
         this.gainNodeIndex = (this.gainNodeIndex + 1) % 2;
         this.source = null;
+
+        this.currentIndex = null;
     }
-}
-
-AudioLoader.prototype.resetContinuousPlay = function() {
-
-    this.currentIndex = null;
 }
 
 AudioLoader.prototype.haveAllBuffersPlayed = function () {
@@ -281,6 +278,8 @@ AudioLoader.prototype.haveAllBuffersPlayed = function () {
 }
 
 function Soundboard(config) {
+
+    $activePage ('.ui-content').find('*').off();
 
     // Grab audio urls relative to site url
     urls = [];
@@ -307,7 +306,7 @@ function Soundboard(config) {
 
     $activePage (".soundboard-play").each (function (i) {
 
-        $(this).off().on ('click', function(i){
+        $(this).on ('click', function(i){
 
             play (i);
 
@@ -315,12 +314,17 @@ function Soundboard(config) {
 
     });
 
-    $activePage (".soundboard-stop").off().on ('click', this.loader.stop.bind(this.loader));
+    $activePage (".soundboard-stop").on ('click', this.loader.stop.bind(this.loader));
+
+    $activePage ('.next').on("click", this.loader.stop.bind(this.loader));
+    $activePage ('.prev').on("click", this.loader.stop.bind(this.loader));
 }
 
 function Mushra(config) {
 
     console.log('MUSHRA');
+
+    $activePage ('.ui-content').find('*').off();
 
     this.config = config;
 
@@ -355,15 +359,15 @@ function Mushra(config) {
         this.soundOrder.push(order);
     }
 
-    this.configureNextAndBackButton();
+    this.configureButtons();
 
     this.updateTitle();
     this.loadPage();
 }
 
-Mushra.prototype.configureNextAndBackButton = function()
+Mushra.prototype.configureButtons = function()
 {
-    $activePage ('.next').off().on("click", function (e){
+    $activePage ('.next').on("click", function (e){
 
         if (this.loader.haveAllBuffersPlayed() ||
             !this.config.must_play_all_samples_to_continue)
@@ -380,10 +384,21 @@ Mushra.prototype.configureNextAndBackButton = function()
 
     }.bind(this));
 
-    $activePage ('.back').off().on("click", function (e){
+    $activePage ('.back').on("click", function (e){
 
         this.onNextOrBackButtonClick (-1);
 
+    }.bind(this));
+
+    // Stop audio
+    $activePage ('.mushra-stop').on("click", function() {
+        this.loader.stop();
+    }.bind(this));
+
+    // Reference
+    $activePage ('.mushra-reference').on("click", function(){
+        console.log(this.loader);
+        this.loader.play(this.numberOfSounds);
     }.bind(this));
 }
 
@@ -465,17 +480,6 @@ Mushra.prototype.loadPage = function()
 Mushra.prototype.setupGUI = function()
 {
     $activePage ('.mushra-container').show();
-
-    // Stop audio
-    $activePage ('.mushra-stop').off().on("click", function() {
-        this.loader.stop();
-        this.loader.resetContinuousPlay();
-    }.bind(this));
-
-    // Reference
-    $activePage ('.mushra-reference').off().on("click", function(i){
-        this.loader.play(i);
-    }.bind(this, this.numberOfSounds));
 
     this.createSliders();
 

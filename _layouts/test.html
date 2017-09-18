@@ -85,8 +85,8 @@
 <!-- JS for interface instantiation -->
 <script type="text/javascript">
 
-$('#id-{{ page.url  | slugify}}').on('pageshow', function(e) {
-
+$('#id-{{ page.url  | slugify}}').on('pageinit', function(e) {
+ 
     // Show loading spinner when user clicks submit
     $activePage ('.submit-form').on ('submit', function(e){
         $.mobile.loading('show');
@@ -97,12 +97,17 @@ $('#id-{{ page.url  | slugify}}').on('pageshow', function(e) {
     });
 });
 
+var testInterface = null;
+
 $('#id-{{ page.url  | slugify}}').on('pageshow', function(e) {
 
     var config = JSON.parse('{{ config | jsonify}}');
 
-    if (config != null)
+    if (config != null & e.type == 'pageshow')
     {
+        $activePage ('.next').off();
+        $activePage ('.back').off();
+
         config.siteURL = "{{ site.url }}";
         config.nextURL = '{{ site.url }}{{ page.next_url }}';
 
@@ -110,12 +115,11 @@ $('#id-{{ page.url  | slugify}}').on('pageshow', function(e) {
 
         if (layout == 'mushra' || layout == 'similarity')
         {
-            var testInterface = new Mushra (config);
+            testInterface = new Mushra (config);
         }
     }
 
-   });
-
+});
 
 </script>
 
