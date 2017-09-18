@@ -5,8 +5,8 @@ randomise_sounds_within_page: true
 randomise_pages: true
 show_number_on_slider: true
 must_play_all_samples_to_continue: false
-back_button_can_exit_test: false
-allow_submission: true
+back_button_can_exit_test: true
+allow_submission: false
 add_consistency_check: true
 
 labels:

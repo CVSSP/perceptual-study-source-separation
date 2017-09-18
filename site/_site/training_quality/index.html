@@ -69,7 +69,7 @@
      >
 
 <form method="post"
-      action="https://api.staticman.net/v2/entry/deeuu/listen/gh-pages"
+      action="https://api.staticman.net/v2/entry/CVSSP/perceptual-study-source-separation/gh-pages"
       class='submit-form'
       >
 
@@ -105,13 +105,14 @@
 
 <h2 style="text-align: center;">Please rate the sound quality compared to the reference</h2>
 
-<p>This is a training page to get used to the involved stimuli and the user
-interface.</p>
+<p>This is a training page for you to familiarise yourself with the user interface
+and also listen to examples of the type of stimuli involved.</p>
 
-<p>You can switch between the test stimuli by clicking on the corresponding slider
-buttons. With the slider button you can then also give your rating of that
-particular test stimulus. You can switch to the reference or stop the playback
-by the buttons above the sliders.</p>
+<ul>
+  <li>You can play the reference stimulus or stop playback by using the two buttons above the sliders.</li>
+  <li>Switch between the test stimuli by clicking on the corresponding slider buttons.</li>
+  <li>You can then rate each stimulus by sliding the button.</li>
+</ul>
 
 
 
@@ -138,8 +139,8 @@ by the buttons above the sliders.</p>
 <!-- JS for interface instantiation -->
 <script type="text/javascript">
 
-$('#id-training-quality').on('pageshow', function(e) {
-
+$('#id-training-quality').on('pageinit', function(e) {
+ 
     // Show loading spinner when user clicks submit
     $activePage ('.submit-form').on ('submit', function(e){
         $.mobile.loading('show');
@@ -150,12 +151,17 @@ $('#id-training-quality').on('pageshow', function(e) {
     });
 });
 
+var testInterface = null;
+
 $('#id-training-quality').on('pageshow', function(e) {
 
-    var config = JSON.parse('{"allow_submission":false,"back_button_can_exit_test":true,"continuous_playback":true,"labels":["Worse quality","Same quality"],"loop_playback":true,"must_play_all_samples_to_continue":true,"pages":[{"name":"vocals-16-SAR","reference_url":"sounds_training/vocals-16-SAR/ref.wav","sounds":[{"name":"UHL3","url":"sounds_training/vocals-16-SAR/UHL3.wav"},{"name":"GRA3","url":"sounds_training/vocals-16-SAR/GRA3.wav"},{"name":"KON","url":"sounds_training/vocals-16-SAR/KON.wav"},{"name":"Interferer","url":"sounds_training/vocals-16-SAR/Interferer.wav"},{"name":"NUG3","url":"sounds_training/vocals-16-SAR/NUG3.wav"},{"name":"ref","url":"sounds_training/vocals-16-SAR/ref.wav"},{"name":"Quality","url":"sounds_training/vocals-16-SAR/Quality.wav"},{"name":"OZE","url":"sounds_training/vocals-16-SAR/OZE.wav"}]}],"randomise_pages":true,"randomise_slider_handle":true,"randomise_sounds_within_page":true,"show_number_on_slider":false}');
+    var config = JSON.parse('{"allow_submission":false,"back_button_can_exit_test":true,"continuous_playback":true,"labels":["Worse quality","Same quality"],"loop_playback":true,"must_play_all_samples_to_continue":true,"pages":[{"name":"vocals-16-SAR","reference_url":"sounds_training/vocals-16-SAR/ref.wav","sounds":[{"name":"Quality","url":"sounds_training/vocals-16-SAR/Quality.wav"},{"name":"UHL3","url":"sounds_training/vocals-16-SAR/UHL3.wav"},{"name":"Interferer","url":"sounds_training/vocals-16-SAR/Interferer.wav"},{"name":"OZE","url":"sounds_training/vocals-16-SAR/OZE.wav"},{"name":"ref","url":"sounds_training/vocals-16-SAR/ref.wav"},{"name":"NUG3","url":"sounds_training/vocals-16-SAR/NUG3.wav"},{"name":"KON","url":"sounds_training/vocals-16-SAR/KON.wav"},{"name":"GRA3","url":"sounds_training/vocals-16-SAR/GRA3.wav"}]}],"randomise_pages":true,"randomise_slider_handle":true,"randomise_sounds_within_page":true,"show_number_on_slider":false}');
 
-    if (config != null)
+    if (config != null & e.type == 'pageshow')
     {
+        $activePage ('.next').off();
+        $activePage ('.back').off();
+
         config.siteURL = "http://localhost:4000";
         config.nextURL = 'http://localhost:4000/quality/';
 
@@ -163,12 +169,11 @@ $('#id-training-quality').on('pageshow', function(e) {
 
         if (layout == 'mushra' || layout == 'similarity')
         {
-            var testInterface = new Mushra (config);
+            testInterface = new Mushra (config);
         }
     }
 
-   });
-
+});
 
 </script>
 

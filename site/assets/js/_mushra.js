@@ -2,6 +2,8 @@ function Mushra(config) {
 
     console.log('MUSHRA');
 
+    $activePage ('.ui-content').find('*').off();
+
     this.config = config;
 
     this.pageCounter = 0;
@@ -35,15 +37,15 @@ function Mushra(config) {
         this.soundOrder.push(order);
     }
 
-    this.configureNextAndBackButton();
+    this.configureButtons();
 
     this.updateTitle();
     this.loadPage();
 }
 
-Mushra.prototype.configureNextAndBackButton = function()
+Mushra.prototype.configureButtons = function()
 {
-    $activePage ('.next').off().on("click", function (e){
+    $activePage ('.next').on("click", function (e){
 
         if (this.loader.haveAllBuffersPlayed() ||
             !this.config.must_play_all_samples_to_continue)
@@ -60,10 +62,21 @@ Mushra.prototype.configureNextAndBackButton = function()
 
     }.bind(this));
 
-    $activePage ('.back').off().on("click", function (e){
+    $activePage ('.back').on("click", function (e){
 
         this.onNextOrBackButtonClick (-1);
 
+    }.bind(this));
+
+    // Stop audio
+    $activePage ('.mushra-stop').on("click", function() {
+        this.loader.stop();
+    }.bind(this));
+
+    // Reference
+    $activePage ('.mushra-reference').on("click", function(){
+        console.log(this.loader);
+        this.loader.play(this.numberOfSounds);
     }.bind(this));
 }
 
@@ -145,17 +158,6 @@ Mushra.prototype.loadPage = function()
 Mushra.prototype.setupGUI = function()
 {
     $activePage ('.mushra-container').show();
-
-    // Stop audio
-    $activePage ('.mushra-stop').off().on("click", function() {
-        this.loader.stop();
-        this.loader.resetContinuousPlay();
-    }.bind(this));
-
-    // Reference
-    $activePage ('.mushra-reference').off().on("click", function(i){
-        this.loader.play(i);
-    }.bind(this, this.numberOfSounds));
 
     this.createSliders();
 

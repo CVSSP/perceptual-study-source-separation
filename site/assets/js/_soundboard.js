@@ -1,5 +1,7 @@
 function Soundboard(config) {
 
+    $activePage ('.ui-content').find('*').off();
+
     // Grab audio urls relative to site url
     urls = [];
     for (var i = 0; i < config.rows.length; ++i)
@@ -25,7 +27,7 @@ function Soundboard(config) {
 
     $activePage (".soundboard-play").each (function (i) {
 
-        $(this).off().on ('click', function(i){
+        $(this).on ('click', function(i){
 
             play (i);
 
@@ -33,5 +35,8 @@ function Soundboard(config) {
 
     });
 
-    $activePage (".soundboard-stop").off().on ('click', this.loader.stop.bind(this.loader));
+    $activePage (".soundboard-stop").on ('click', this.loader.stop.bind(this.loader));
+
+    $activePage ('.next').on("click", this.loader.stop.bind(this.loader));
+    $activePage ('.prev').on("click", this.loader.stop.bind(this.loader));
 }

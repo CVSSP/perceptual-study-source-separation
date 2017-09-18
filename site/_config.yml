@@ -1,13 +1,12 @@
 # Site Settings
-title: "Listen"
+title: "Perceptual study 1"
 description: >
     "Blank"
 baseurl: ""
-url: "https://deeuu.github.io/listen"
-
+url: "https://CVSSP.github.io/perceptual-study-source-separation"
 github:
-    username: "deeuu"
-    repository : "listen"
+    username: "CVSSP"
+    repository : "perceptual-study-source-separation"
     branch: "gh-pages"
 
 # Build Setting

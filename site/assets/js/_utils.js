@@ -67,4 +67,4 @@ function selectMinimum (a, b)
 /* Wrapper for selecting elements on active page:
 https://forum.jquery.com/topic/usage-of-ids-impossible
 */
-function $activePage(query) {return $(".ui-page-active " + query);}
+function $activePage(query='') {return $('.ui-page-active ' + query);}

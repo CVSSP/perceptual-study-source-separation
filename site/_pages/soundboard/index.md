@@ -3,6 +3,7 @@ layout: page
 config_file: soundboard
 permalink: /soundboard/
 title: Soundboard
+next_url: /mushra/
 ---
 
 You can include a soundboard in your page by adding `{\% include soundboard.html
