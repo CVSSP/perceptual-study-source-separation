@@ -19,9 +19,10 @@
     Previous
 </a>
 
-<h1 class='title'></h1>
+<h1 class='title'>{{ page.title }}</h1>
 
 <a 
+    href="{{ site.url }}{{ page.next_url }}"
     class='ui-btn-right ui-btn ui-btn-inline ui-mini
            ui-corner-all ui-btn-icon-right ui-icon-carat-r next'>
     Next
@@ -114,9 +115,9 @@ $('#id-{{ page.url  | slugify}}').on('pageshow', function(e) {
         var layout = '{{ page.layout }}';
 
         if (layout == 'mushra' || layout == 'similarity')
-        {
             testInterface = new Mushra (config);
-        }
+        else if (layout == 'soundboard')
+            testInterface = new Soundboard (config);
     }
 
 });

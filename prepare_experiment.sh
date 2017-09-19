@@ -46,7 +46,7 @@ if $VENV; then
     make clean
     make
     cd ../
-elif ! [ -d "venvs/py3" ]; then 
+elif ! [ -d "venvs/py3" ]; then
     echo     ""
     echo >&2 "py3 env is not existing, you can't use --noenv"
     exit 1

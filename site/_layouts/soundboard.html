@@ -1,18 +1,16 @@
 ---
-layout: page
+layout: test
 ---
 
 {{ content }}
 
 {% assign config = site.data[page.config_file] %}
 
-<div id="soundboard-container">
+<ul class="soundboard-container">
+ 
+<button class="soundboard-stop" data-inline="true">Stop</button>
 
-<button id="soundboard-stop" data-inline="true">Stop</button>
-
-<ul>
-
-{% for row in config.sets %}
+{% for row in config.rows %}
 
 <p> {{ row.name }} </p>
 
@@ -20,7 +18,7 @@ layout: page
 
 {% for sound in row.sounds %}
 
-<button id="btn-{{ sound.id }}" data-inline="true">{{ sound.button_label }}</button>
+<button class="soundboard-play" data-inline="true">{{ sound.button_label }}</button>
 
 {% endfor %}
 
@@ -29,17 +27,3 @@ layout: page
 {% endfor %}
 
 </ul>
-
-</div>
-
-<script type="text/javascript">
-
-$(document).on('pageinit', '#main', function() {
-
-    var config = JSON.parse('{{ config | jsonify}}');
-    config.siteURL = "{{ site.url }}";
-    var soundboardObj = new Soundboard(config);
-
-});
-
-</script>

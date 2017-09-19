@@ -8,6 +8,7 @@ must_play_all_samples_to_continue: false
 back_button_can_exit_test: true
 allow_submission: false
 add_consistency_check: true
+allow_slider_sort: true
 
 labels:
     - 'Dissimilar'

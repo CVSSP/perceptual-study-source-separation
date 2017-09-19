@@ -2,6 +2,8 @@ function Soundboard(config) {
 
     $activePage ('.ui-content').find('*').off();
 
+    this.config = config;
+
     // Grab audio urls relative to site url
     urls = [];
     for (var i = 0; i < config.rows.length; ++i)
@@ -38,5 +40,13 @@ function Soundboard(config) {
     $activePage (".soundboard-stop").on ('click', this.loader.stop.bind(this.loader));
 
     $activePage ('.next').on("click", this.loader.stop.bind(this.loader));
-    $activePage ('.prev').on("click", this.loader.stop.bind(this.loader));
+
+    $activePage ('.back').on("click", function () {
+
+        this.loader.stop();
+
+        if (this.config.back_button_can_exit_test)
+            window.history.back();
+
+    }.bind(this));
 }
