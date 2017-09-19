@@ -1,6 +1,6 @@
 #!/bin/bash
 
-OPTIONS="$@"
+OPTIONS="$1"
 LISTEN="https://github.com/deeuu/listen.git"
 TEMPLATES="_site"
 
@@ -9,16 +9,13 @@ usage() {
     echo "Usage: $0 [--option]"
     echo ""
     echo "Options:"
-    echo "  --nostim    don't generate audio files"
     echo "  --noenv     don't make python virtual environement"
     echo "  --help      show this help message"
     exit 0
 }
 
-STIM=true
 VENV=true
 case "$OPTIONS" in
-    --nostim) STIM=false: VENV=false;;
     --noenv) VENV=false;;
     --help) usage;;
 esac
@@ -49,19 +46,20 @@ if $VENV; then
     make clean
     make
     cd ../
+elif ! [ -d "venvs/py3" ]; then 
+    echo     ""
+    echo >&2 "py3 env is not existing, you can't use --noenv"
+    exit 1
 fi
-
 
 # Create stimuli and corresponding MUSHRA config files
-if $STIM; then
-    cd venvs
-    source ./py3/bin/activate
-    cd ../
-    python "python/generate_stimuli.py"
-    python "python/generate_interface_config_file.py"
-    python "python/generate_familarisation_stimuli.py"
-    deactivate
-fi
+cd venvs
+source ./py3/bin/activate
+cd ../
+python "python/generate_stimuli.py"
+python "python/generate_interface_config_file.py"
+python "python/generate_familarisation_stimuli.py"
+deactivate
 
 # Clean up
 rm -rf "dependencies"
