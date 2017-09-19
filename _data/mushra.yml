@@ -3,11 +3,12 @@ loop_playback: true
 randomise_slider_handle: true
 randomise_sounds_within_page: true
 randomise_pages: true
-show_number_on_slider: true
+show_number_on_slider: false
 must_play_all_samples_to_continue: false
 back_button_can_exit_test: true
 add_consistency_check: true
 allow_submission: false
+allow_slider_sort: true
 
 labels:
     - 'Bad'

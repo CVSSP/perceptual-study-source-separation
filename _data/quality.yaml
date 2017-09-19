@@ -1,4 +1,5 @@
 add_consistency_check: true
+allow_slider_sort: true
 allow_submission: true
 back_button_can_exit_test: false
 continuous_playback: true

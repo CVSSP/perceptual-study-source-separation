@@ -10,6 +10,10 @@ layout: test
 <button class="mushra-reference" data-inline="true">Reference</button>
 <button class="mushra-stop" data-inline="true">Stop</button>
 
+{% if config.allow_slider_sort %}
+<button class="mushra-sort" data-inline="true">Sort</button>
+{% endif %}
+
 <table class='mushra-table'>
 <tr>
 {% for label in config.labels %}
