@@ -22,7 +22,7 @@ function AudioLoader(urlList, continuousPlayback=true, loopPlayback=true) {
     this.startedPlayingAtTime = null;
     this.fadeTime = 0.1;
     this.currentIndex = null;
-    this.onsetTime = 0;
+    this.onsetTime = null;
     this.continuousPlayback = continuousPlayback;
     this.loopPlayback = loopPlayback;
     this.hasPlayed = []
@@ -100,7 +100,7 @@ AudioLoader.prototype.play = function (index=0, loop=false) {
 
     if ((index != this.currentIndex) && this.allOk)
     {
-        this.stop();
+        this.switchStop();
 
         console.log('Playing index: ', index);
 
@@ -114,7 +114,12 @@ AudioLoader.prototype.play = function (index=0, loop=false) {
         this.source.loopStart = false;
 
         if (!this.loopPlayback)
-            this.source.onended = this.resetContinuousPlay.bind(this);
+        {
+            this.source.onended = function() {
+                if (this.currentIndex == index)
+                    this.currentIndex = null;
+            }.bind(this);
+        }
 
         // ramping
         var currentGainNode = this.gainNodes[this.gainNodeIndex];
@@ -146,6 +151,8 @@ AudioLoader.prototype.play = function (index=0, loop=false) {
 
         this.startTimer();
 
+        console.log('time: ', this.onsetTime);
+
         this.source.start(0, this.onsetTime);
         currentGainNode.gain.linearRampToValueAtTime(
             1.0, audioContext.currentTime + this.fadeTime);
@@ -168,7 +175,11 @@ AudioLoader.prototype.endTimer = function ()
     return audioContext.currentTime - this.startTime;
 }
 
-AudioLoader.prototype.stop = function() {
+AudioLoader.prototype.switchStop = function () {
+    this.stop (false);
+}
+
+AudioLoader.prototype.stop = function(resetStartPosition=true) {
 
     if (this.source)
     {
@@ -185,7 +196,8 @@ AudioLoader.prototype.stop = function() {
         this.gainNodeIndex = (this.gainNodeIndex + 1) % 2;
         this.source = null;
 
-        this.currentIndex = null;
+        if (resetStartPosition)
+            this.currentIndex = null;
     }
 }
 

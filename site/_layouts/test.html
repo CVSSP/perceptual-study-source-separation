@@ -67,6 +67,29 @@
        type='hidden'
 >
 
+<input name='fields[data]'
+       value=''
+       type='hidden'
+>
+
+<input name='fields[sounds]'
+       value=''
+       type='hidden'
+>
+
+<input name='fields[pages]'
+       value=''
+       type='hidden'
+>
+<input name='fields[page_order]'
+       value=''
+       type='hidden'
+>
+<input name='fields[page_response_time]'
+       value=''
+       type='hidden'
+>
+
 <input type='submit'
        value='Submit'
        >
@@ -86,33 +109,31 @@
 <!-- JS for interface instantiation -->
 <script type="text/javascript">
 
-$('#id-{{ page.url  | slugify}}').on('pageinit', function(e) {
- 
-    // Show loading spinner when user clicks submit
-    $activePage ('.submit-form').on ('submit', function(e){
-        $.mobile.loading('show');
-    });
-
-    $activePage ('.submit-form .cancel').on ('click', function(e) {
-        $activePage ('.submit-popup').popup("close");
-    });
-});
-
-var testInterface = null;
-
 $('#id-{{ page.url  | slugify}}').on('pageshow', function(e) {
 
     var config = JSON.parse('{{ config | jsonify}}');
 
     if (config != null & e.type == 'pageshow')
     {
+        // Undo previous bindings:
         $activePage ('.next').off();
         $activePage ('.back').off();
+        $activePage ('.ui-content').find('*').off();
+
+        // Show loading spinner when user clicks submit
+        $activePage ('.submit-form').on ('submit', function(e){
+            $.mobile.loading('show');
+        });
+
+        $activePage ('.submit-form .cancel').on ('click', function(e) {
+            $activePage ('.submit-popup').popup("close");
+        });
 
         config.siteURL = "{{ site.url }}";
         config.nextURL = '{{ site.url }}{{ page.next_url }}';
 
         var layout = '{{ page.layout }}';
+        var testInterface = null;
 
         if (layout == 'mushra' || layout == 'similarity')
             testInterface = new Mushra (config);
