@@ -30,7 +30,7 @@ mkdir "dependencies"
 cd "dependencies"
 
 # Get MUSHRA GUI
-git clone "$LISTEN" "listen"
+git clone --quiet "$LISTEN" "listen" > /dev/null
 cd "listen"
 cd ..
 
