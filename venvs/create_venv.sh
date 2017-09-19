@@ -25,12 +25,12 @@ cd untwist
 python setup.py install
 cd ../
 
-git clone https://gitlab.eps.surrey.ac.uk/maruss2/masseval.git
+git clone https://github.com/CVSSP/masseval.git
 cd masseval
 python setup.py install
 cd ../
 
-git clone https://gitlab.eps.surrey.ac.uk/maruss2/massdatasets.git
+git clone https://github.com/CVSSP/massdatasets.git
 cd massdatasets
 python setup.py install
 cd ../
