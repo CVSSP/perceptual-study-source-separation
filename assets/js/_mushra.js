@@ -338,32 +338,12 @@ Mushra.prototype.complete = function()
 
     if (this.config.allow_submission)
     {
-        // Append inputs to the form
-        $('<input>').attr({
-                type: 'hidden',
-                name: 'fields[data]',
-                value: values,
-            }).appendTo ('div.submit-popup > form');
-
-        $('<input>').attr({
-                type: 'hidden',
-                name: 'fields[sounds]',
-                value: sounds,
-            }).appendTo ('div.submit-popup > form');
-
-        $('<input>').attr({
-                type: 'hidden',
-                name: 'fields[pages]',
-                value: pages,
-            }).appendTo ('div.submit-popup > form');
-
-        $('<input>').attr({
-                type: 'hidden',
-                name: 'fields[page_order]',
-                value: pageOrder,
-            }).appendTo ('div.submit-popup > form');
-
-        $activePage ('.submit-popup').popup('open');
+        $activePage ('input[name="fields[data]"]').val (values);
+        $activePage ('input[name="fields[sounds]"]').val (sounds);
+        $activePage ('input[name="fields[pages]"]').val (pages);
+        $activePage ('input[name="fields[page_order]"]').val (pageOrder);
+        $activePage ('input[name="fields[page_response_time]"]').val (times);
+        $activePage ('.submit-popup').popup ('open');
     }
     else{
         $.mobile.changePage (this.config.nextURL);
