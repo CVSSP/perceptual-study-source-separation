@@ -15,8 +15,8 @@ should rate the amount of **interference** present in the test sounds compared
 with the reference sound. Remember, it does **not** include artefacts or
 distortions.
 
-- Click the 'Reference' button to play the reference sound.
-- Click the 'Stop' button to stop playback. This will also reset the start position.
+- Click the **Reference** button to play the reference sound.
+- Click the **Stop** button to stop playback. This will also reset the start position.
 - Switch between the test sounds by clicking on the corresponding slider buttons. 
 - You can then rate each sounds by sliding the button.
-- Click the 'Sort' button to sort the sliders by rating.
+- Click the **Sort** button to sort the sliders by rating.
