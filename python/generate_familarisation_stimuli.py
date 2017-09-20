@@ -17,7 +17,8 @@ if __name__ == '__main__':
 
     masseval.config.dsd_base_path = '/vol/vssp/maruss/data2/DSD100'
     audio_dir = 'sounds_familiarisation/'
-    config_file = '../site/_data/familiarisation.yaml'
+    config_file = ['./site/_data/quality_familiarisation.yaml',
+                   './site/_data/interference_familiarisation.yaml']
 
     # Create folder for training stimuli
     dir = os.path.dirname(__file__)
@@ -26,29 +27,20 @@ if __name__ == '__main__':
         shutil.rmtree(path)
     os.mkdir(path)
 
-    # Paths for the config files
-    config_paths = [
-        os.path.join(dir, config_file),
-    ]
-
     # Take the development set as we don't use this in the main test
     df = masseval.data.get_dsd100_df()
     df = df[df.test_set == 0]
 
     # Pick some songs at random and get stems
-    allow_random = False
-    num_songs = len(config_paths)
+    num_songs = 1
     titles = pd.unique(df.title)
-    if allow_random:
-        selected = np.random.choice(titles, num_songs, False)
-    else:
-        selected = ['Bulldozer']
+    selected = ['Bulldozer']
     df = df[df.title.isin(selected) & (df.audio != 'mixture')]
 
     # Loudness balance params, where 0dB is the ref
     target_source = 'vocals'
     levels = [0, -6, -12, -18]
-    labels = ['Ref', 'A', 'B', 'C']
+    labels = ['Reference', 'A', 'B', 'C']
 
     # Audio quality params, just generate 3 because we have our reference
     trim_factor_distorted = [0.1, 0.2, 0.4]
@@ -70,9 +62,11 @@ if __name__ == '__main__':
                 'continuous_playback': True,
                 'loop_playback': True,
                 'rows': [
-                    {'name': 'Sound quality fixed / interference varied',
+                    {'name':
+                     "All of these have the same quality as the reference because the other instruments do not affect sound quality",
                      'sounds': []},
-                    {'name': 'Sound quality varied / interference fixed',
+                    {'name':
+                     "In this example the sound quality is degraded by introducing artefacts and distortions",
                      'sounds': []},
                 ]}
 
@@ -153,9 +147,19 @@ if __name__ == '__main__':
             stim_idx += 1
 
         # Write config file for this soundboard (song)
-        with open(config_paths[song_idx], 'w') as f:
+        with open(config_file[0], 'w') as f:
             yaml.dump(new_config,
                       f,
                       default_flow_style=False)
+
+        new_config['rows'][0], new_config['rows'][1] = new_config['rows'][1], new_config['rows'][0]
+        new_config['rows'][0]['name'] = 'All of these have no interference from other instruments despite the sound quality being different'
+        new_config['rows'][1]['name'] = 'In this example the amount of interference is changed by varying the relative loudness of the backing instruments'
+        with open(config_file[1], 'w') as f:
+            yaml.dump(new_config,
+                      f,
+                      default_flow_style=False)
+
+
 
         song_idx += 1

@@ -75,7 +75,7 @@ if __name__ == '__main__':
          ref_name='ref.wav',
          excluse_these_wav_files=['Artefacts.wav',
                                   'Distortion.wav'],
-         labels=['Much interference', 'No interference'],
+         labels=['Strong interference', 'No interference'],
          filename='./site/_data/interferer.yaml')
 
     # Training
@@ -108,4 +108,3 @@ if __name__ == '__main__':
          labels=['Much interference', 'No interference'],
          stimuli_website_folder='sounds_training',
          filename='./site/_data/training_interferer.yaml')
-

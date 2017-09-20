@@ -1,0 +1,25 @@
+continuous_playback: true
+loop_playback: true
+rows:
+- name: All of these have no interference from other instruments despite the sound
+    quality being different
+  sounds:
+  - button_label: Reference
+    url: sounds_familiarisation/0dB-Bulldozer.wav
+  - button_label: A
+    url: sounds_familiarisation/fair-Bulldozer.wav
+  - button_label: B
+    url: sounds_familiarisation/poor-Bulldozer.wav
+  - button_label: C
+    url: sounds_familiarisation/bad-Bulldozer.wav
+- name: Here only the amount of interference is changed as the relative loudness of
+    the backing instruments is varied
+  sounds:
+  - button_label: Reference
+    url: sounds_familiarisation/0dB-Bulldozer.wav
+  - button_label: A
+    url: sounds_familiarisation/-6dB-Bulldozer.wav
+  - button_label: B
+    url: sounds_familiarisation/-12dB-Bulldozer.wav
+  - button_label: C
+    url: sounds_familiarisation/-18dB-Bulldozer.wav
