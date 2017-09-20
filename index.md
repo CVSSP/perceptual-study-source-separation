@@ -29,10 +29,10 @@ break at any point!
 
   <h2 style="margin-top: 1cm;">Start your assigned experiment by clicking on the button</h2>
 
-  <a href="{{ site.url }}/familiarisation_quality" id="btn-quality" data-inline="true"
+  <a href="{{ site.url }}/familiarisation_quality/" id="btn-quality" data-inline="true"
           class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right"
           style="min-width: 300px;">Sound quality</a>
-  <a href="{{ site.url }}/familiarisation_interferer" id="btn-interferer" data-inline="true"
+  <a href="{{ site.url }}/familiarisation_interferer/" id="btn-interferer" data-inline="true"
           class=" ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right"
           style="min-width: 300px;">Interference</a>
 

@@ -9,24 +9,24 @@ loop_playback: true
 must_play_all_samples_to_continue: true
 pages:
 - name: vocals-16-SAR
-  reference_url: sounds_training/vocals-16-SAR/ref.wav
+  reference_url: sounds_training/vocals-16-SAR/ref.flac
   sounds:
   - name: Quality
-    url: sounds_training/vocals-16-SAR/Quality.wav
+    url: sounds_training/vocals-16-SAR/Quality.flac
   - name: UHL3
-    url: sounds_training/vocals-16-SAR/UHL3.wav
+    url: sounds_training/vocals-16-SAR/UHL3.flac
   - name: Interferer
-    url: sounds_training/vocals-16-SAR/Interferer.wav
+    url: sounds_training/vocals-16-SAR/Interferer.flac
   - name: OZE
-    url: sounds_training/vocals-16-SAR/OZE.wav
+    url: sounds_training/vocals-16-SAR/OZE.flac
   - name: ref
-    url: sounds_training/vocals-16-SAR/ref.wav
+    url: sounds_training/vocals-16-SAR/ref.flac
   - name: NUG3
-    url: sounds_training/vocals-16-SAR/NUG3.wav
+    url: sounds_training/vocals-16-SAR/NUG3.flac
   - name: KON
-    url: sounds_training/vocals-16-SAR/KON.wav
+    url: sounds_training/vocals-16-SAR/KON.flac
   - name: GRA3
-    url: sounds_training/vocals-16-SAR/GRA3.wav
+    url: sounds_training/vocals-16-SAR/GRA3.flac
 randomise_pages: true
 randomise_slider_handle: true
 randomise_sounds_within_page: true

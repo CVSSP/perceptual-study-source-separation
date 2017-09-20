@@ -5,21 +5,21 @@ rows:
     quality being different
   sounds:
   - button_label: Reference
-    url: sounds_familiarisation/0dB-Bulldozer.wav
+    url: sounds_familiarisation/0dB-Bulldozer.flac
   - button_label: A
-    url: sounds_familiarisation/fair-Bulldozer.wav
+    url: sounds_familiarisation/fair-Bulldozer.flac
   - button_label: B
-    url: sounds_familiarisation/poor-Bulldozer.wav
+    url: sounds_familiarisation/poor-Bulldozer.flac
   - button_label: C
-    url: sounds_familiarisation/bad-Bulldozer.wav
+    url: sounds_familiarisation/bad-Bulldozer.flac
 - name: Here only the amount of interference is changed as the relative loudness of
     the backing instruments is varied
   sounds:
   - button_label: Reference
-    url: sounds_familiarisation/0dB-Bulldozer.wav
+    url: sounds_familiarisation/0dB-Bulldozer.flac
   - button_label: A
-    url: sounds_familiarisation/-6dB-Bulldozer.wav
+    url: sounds_familiarisation/-6dB-Bulldozer.flac
   - button_label: B
-    url: sounds_familiarisation/-12dB-Bulldozer.wav
+    url: sounds_familiarisation/-12dB-Bulldozer.flac
   - button_label: C
-    url: sounds_familiarisation/-18dB-Bulldozer.wav
+    url: sounds_familiarisation/-18dB-Bulldozer.flac
