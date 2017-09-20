@@ -24,7 +24,7 @@ set -e
 
 # Update config files
 if $CONFIG; then
-    for FILE in "interferer.yaml" "quality.yaml" "training_interferer.yaml" "training_quality.yaml" "familiarisation.yaml"; do
+    for FILE in "interferer.yaml" "quality.yaml" "training_interferer.yaml" "training_quality.yaml" "quality_familiarisation.yaml" "interference_familiarisation.yaml"; do
         sed -i ''$FORMATSTR'' "site/_data/$FILE"
     done
 fi
