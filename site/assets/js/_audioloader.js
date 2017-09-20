@@ -22,7 +22,7 @@ function AudioLoader(urlList, continuousPlayback=true, loopPlayback=true) {
     this.startedPlayingAtTime = null;
     this.fadeTime = 0.1;
     this.currentIndex = null;
-    this.onsetTime = null;
+    this.onsetTime = 0;
     this.continuousPlayback = continuousPlayback;
     this.loopPlayback = loopPlayback;
     this.hasPlayed = []
@@ -150,8 +150,6 @@ AudioLoader.prototype.play = function (index=0, loop=false) {
         this.startedPlayingAtTime = audioContext.currentTime;
 
         this.startTimer();
-
-        console.log('time: ', this.onsetTime);
 
         this.source.start(0, this.onsetTime);
         currentGainNode.gain.linearRampToValueAtTime(
