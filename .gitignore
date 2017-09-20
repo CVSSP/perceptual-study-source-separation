@@ -22,9 +22,9 @@ site/_site/*
 .sass-cache
 
 # Remove our sounds for the moment
-site/sounds/*
-site/sounds_familiarisation/*
-site/sounds_training/*
+site/sounds/*/*.wav
+site/sounds_familiarisation/*.wav
+site/sounds_training/*/*.wav
 
 # Ignore installed virtual envs
 /venvs/py3/*
