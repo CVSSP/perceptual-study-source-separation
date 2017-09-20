@@ -1,8 +1,6 @@
 #!/bin/bash
 
 OPTIONS="$1"
-LISTEN="https://github.com/deeuu/listen.git"
-TEMPLATES="_site"
 
 usage() {
     echo ""
@@ -23,23 +21,14 @@ esac
 # Exit if any command fails
 set -e
 
-# Clean up
-rm -rf "site"
-rm -rf "dependencies"
-mkdir "dependencies"
-cd "dependencies"
-
-# Get MUSHRA GUI
-git clone --quiet "$LISTEN" "listen" > /dev/null
-cd "listen"
-cd ..
-
 # Move all the files into place
-cd ..
-mv "dependencies/listen/site" "site"
-cp -R "$TEMPLATES"/* "site/"
-rm "site/_data/menu.yml"
-rm -rf "site/sounds"
+rm -rf "site/sounds/*"
+
+# Update listen
+git checkout master
+git fetch listen/master
+git checkout listen/master site/assets site/_layouts site/_includes
+git commit -m "Merge listen."
 
 if $VENV; then
     cd venvs
@@ -60,6 +49,3 @@ python "python/generate_stimuli.py"
 python "python/generate_interface_config_file.py"
 python "python/generate_familarisation_stimuli.py"
 deactivate
-
-# Clean up
-rm -rf "dependencies"
