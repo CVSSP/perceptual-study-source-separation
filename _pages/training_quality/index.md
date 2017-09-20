@@ -16,6 +16,6 @@ sound.
 
 - Click the **Reference** button to play the reference sound.
 - Click the **Stop** button to stop playback. This will also reset the start position.
-- Switch between the test sounds by clicking on the corresponding slider buttons. 
-- You can then rate each sounds by sliding the button.
+- Use the slider buttons to listen to the different test sounds. 
+- You can then rate each sound by dragging the button or clicking on the slider track.
 - Click the **Sort** button to sort the sliders by rating.

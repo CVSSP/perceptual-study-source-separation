@@ -6,9 +6,12 @@ permalink: /interferer/
 
 # Interference
 
-## Please rate the amount of interference by other instruments
+## Please rate the interference
 
-**Interference** describes the amount of other instruments that are audible
-besides the vocals.
+**Interference** describes the loudness of the instruments compared to the
+loudness of the vocals. For example, 'strong interference' indicates a strong
+contribution from other instruments, whereas 'no interference' means that you
+can only hear the vocals. 
 
-It does **not** include artefacts or distortions.
+Interference does **not** include artefacts or distortions that you may
+perceive.

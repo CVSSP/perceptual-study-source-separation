@@ -1,9 +1,10 @@
 continuous_playback: true
 loop_playback: true
 rows:
-- name: Sound quality fixed / interference varied
+- name: All of these have the same quality as the reference because the other instruments
+    do not affect sound quality
   sounds:
-  - button_label: Ref
+  - button_label: Reference
     url: sounds_familiarisation/0dB-Bulldozer.wav
   - button_label: A
     url: sounds_familiarisation/-6dB-Bulldozer.wav
@@ -11,9 +12,9 @@ rows:
     url: sounds_familiarisation/-12dB-Bulldozer.wav
   - button_label: C
     url: sounds_familiarisation/-18dB-Bulldozer.wav
-- name: Sound quality varied / interference fixed
+- name: Here the sound quality is degraded by introducing artefacts and distortions
   sounds:
-  - button_label: Ref
+  - button_label: Reference
     url: sounds_familiarisation/0dB-Bulldozer.wav
   - button_label: A
     url: sounds_familiarisation/fair-Bulldozer.wav

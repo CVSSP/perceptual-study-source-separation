@@ -7,19 +7,19 @@ title: Welcome
 
 This listening assessment is comprised of 2 parts:
 
-* Test 1: **Sound quality**
-* Test 2: **Interference**
+* Test 1: **Sound quality**.
+* Test 2: **Interference**.
 
 The order in which you take each test is set by the experimenter.
 Each test will take between 30 and 50 minutes.
 
 In both cases you will listen to 8 samples of a vocal recording that has been
 extracted from a song. Your task is to compare each sample with a reference
-sound and then rate it according to one of the two perceptual attributes:
-quality or interference. This task is then repeated for a number of songs.  Both
+sound and then rate it according to either sound quality (test 1) or interference (test
+2). This task is then repeated for a number of songs.  Both
 experiments involve an initial training stage which will allow you to:
 
-- Familiarise yourself with the perceptual attribute we are interested in.
+- Better understand our definitions of sound quality and interference.
 - Gain some intuition for the main interface.
 
 Please let the experimenter know if you have any questions or wish to take a
