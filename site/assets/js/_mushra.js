@@ -278,17 +278,14 @@ Mushra.prototype.fillConfig = function()
 Mushra.prototype.complete = function()
 {
     // Build an array of arrays for the ratings
-    var values = '[';
-    var times = '[';
-    var sounds = '[';
-    var pages = '[';
-    var pageOrder = '[';
+    var values = '';
+    var times = '';
+    var sounds = '';
+    var pages = '';
+    var pageOrder = '';
 
     for (var i = 0; i < this.numberOfPages; ++i)
     {
-        values += '[';
-        sounds += '[';
-
         var numSounds = this.config.pages[i].sounds.length;
 
         for (var j = 0; j < numSounds; ++j)
@@ -296,38 +293,22 @@ Mushra.prototype.complete = function()
             values += this.config.pages[i].sounds[j].rating;
             sounds += this.config.pages[i].sounds[j].name;
 
-            if (j == numSounds - 1)
+            if (j < numSounds - 1)
             {
-                values += ']';
-                sounds += ']';
-            }
-            else
-            {
-                values += ',';
-                sounds += ',';
+                values += this.config.separator;
+                sounds += this.config.separator;
             }
         }
 
-        pages += this.config.pages[i].name;
-        pageOrder += this.config.pages[i].order;
-        times += this.config.pages[i].duration;
+        var appendThis = '';
+        if (i < this.numberOfPages - 1)
+            var appendThis = this.config.line_terminator;
 
-        if (i == this.numberOfPages - 1)
-        {
-            pages += ']';
-            pageOrder += ']';
-            times += ']';
-            values += ']';
-            sounds += ']';
-        }
-        else
-        {
-            pages += ',';
-            pageOrder += ',';
-            times += ',';
-            values += '],';
-            sounds += '],';
-        }
+        pages += this.config.pages[i].name + appendThis;
+        pageOrder += this.config.pages[i].order + appendThis;
+        times += this.config.pages[i].duration + appendThis;
+        values += appendThis;
+        sounds += appendThis;
     }
 
     console.log('values: ', values);
