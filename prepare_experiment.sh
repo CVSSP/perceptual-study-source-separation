@@ -19,16 +19,16 @@ case "$OPTIONS" in
 esac
 
 # Exit if any command fails
-set -e
+# set -e
 
-# Move all the files into place
+# Delete all wav files
 rm -rf "site/sounds/*"
 
 # Update listen
 git checkout master
-git fetch listen/master
+git fetch listen
 git checkout listen/master site/assets site/_layouts site/_includes
-git commit -m "Merge listen."
+git commit -a -m "Merge listen"
 
 if $VENV; then
     cd venvs
