@@ -61,6 +61,7 @@ if __name__ == '__main__':
         new_config = {
                 'continuous_playback': True,
                 'loop_playback': True,
+                'back_button_can_exit_test': True,
                 'rows': [
                     {'name':
                      "All of these have the same quality as the reference because the other instruments do not affect sound quality",
@@ -152,6 +153,7 @@ if __name__ == '__main__':
                       f,
                       default_flow_style=False)
 
+        # Swap around for the interference familiarisation
         new_config['rows'][0], new_config['rows'][1] = new_config['rows'][1], new_config['rows'][0]
         new_config['rows'][0]['name'] = 'All of these have no interference from other instruments despite the sound quality being different'
         new_config['rows'][1]['name'] = 'In this example the amount of interference is changed by varying the relative loudness of the backing instruments'

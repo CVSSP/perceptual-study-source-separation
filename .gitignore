@@ -23,8 +23,11 @@ site/_site/*
 
 # Remove our sounds for the moment
 site/sounds/*/*.wav
+site/sounds/*/*.flac
 site/sounds_familiarisation/*.wav
+site/sounds_familiarisation/*.flac
 site/sounds_training/*/*.wav
+site/sounds_training/*/*.flac
 
 # Ignore installed virtual envs
 /venvs/py3/*

@@ -1,3 +1,4 @@
+back_button_can_exit_test: true
 continuous_playback: true
 loop_playback: true
 rows:
@@ -5,20 +6,21 @@ rows:
     do not affect sound quality
   sounds:
   - button_label: Reference
-    url: sounds_familiarisation/0dB-Bulldozer.flac
+    url: sounds_familiarisation/0dB-Bulldozer.wav
   - button_label: A
-    url: sounds_familiarisation/-6dB-Bulldozer.flac
+    url: sounds_familiarisation/-6dB-Bulldozer.wav
   - button_label: B
-    url: sounds_familiarisation/-12dB-Bulldozer.flac
+    url: sounds_familiarisation/-12dB-Bulldozer.wav
   - button_label: C
-    url: sounds_familiarisation/-18dB-Bulldozer.flac
-- name: Here the sound quality is degraded by introducing artefacts and distortions
+    url: sounds_familiarisation/-18dB-Bulldozer.wav
+- name: In this example the sound quality is degraded by introducing artefacts and
+    distortions
   sounds:
   - button_label: Reference
-    url: sounds_familiarisation/0dB-Bulldozer.flac
+    url: sounds_familiarisation/0dB-Bulldozer.wav
   - button_label: A
-    url: sounds_familiarisation/fair-Bulldozer.flac
+    url: sounds_familiarisation/fair-Bulldozer.wav
   - button_label: B
-    url: sounds_familiarisation/poor-Bulldozer.flac
+    url: sounds_familiarisation/poor-Bulldozer.wav
   - button_label: C
-    url: sounds_familiarisation/bad-Bulldozer.flac
+    url: sounds_familiarisation/bad-Bulldozer.wav
