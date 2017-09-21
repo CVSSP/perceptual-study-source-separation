@@ -39,7 +39,7 @@ if __name__ == '__main__':
 
     # Loudness balance params, where 0dB is the ref
     target_source = 'vocals'
-    levels = [0, -6, -12, -18]
+    levels = [0, -18, -12, -6]
     labels = ['Reference', 'A', 'B', 'C']
 
     # Audio quality params, just generate 3 because we have our reference
