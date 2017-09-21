@@ -5,7 +5,7 @@ permalink: /familiarisation_interferer/
 next_url: /training_interferer/
 ---
 
-# Familiarisation
+# Familiarisation: Interference
 
 **Interference** describes the loudness of the instruments compared to the
 loudness of the vocals. For example, 'strong interference' indicates a strong
