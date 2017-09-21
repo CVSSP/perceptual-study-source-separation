@@ -202,21 +202,23 @@ Mushra.prototype.createSliders = function()
 
     $activePage (".ui-slider").each(function (i) {
 
-        // Remove the popup displaying the value of the slider
-        $(this).find('a').removeAttr('title');
-
         $(this).on('slidestart', function (i) {
 
             // play this audio file
             mainObj.playBuf (i);
             // change handle colour when slider is moved
-            $(this).find('a').addClass('slider-handle-active');
+            $(this).find('.ui-slider-handle').addClass('slider-handle-active');
             // Give focus to the handle even if handle is clicked
-            $(this).find('a').focus();
-
-            $(this).find('a').removeAttr('title');
+            $(this).find('.ui-slider-handle').focus();
 
         }.bind(this, i));
+
+        // Remove annoying popup displaying the value of the slider
+        $(this).find('.ui-slider-handle').removeAttr('title');
+        $(this).on('slidestop', function () {
+            $(this).find('.ui-slider-handle').removeAttr('title');
+        }.bind(this));
+
     });
 
 }
@@ -247,13 +249,13 @@ Mushra.prototype.sortSliders = function()
         var idx = mainObj.currentPageSoundOrder[i];
 
         if (mainObj.loader.hasPlayed[idx])
-            $(this).find('a').addClass('slider-handle-active');
+            $(this).find('.ui-slider-handle').addClass('slider-handle-active');
         else
-            $(this).find('a').removeClass('slider-handle-active');
+            $(this).find('.ui-slider-handle').removeClass('slider-handle-active');
 
         $(this).find('input').val(values[indices[i]]).slider('refresh');
 
-        $(this).find('a').removeAttr('title');
+        $(this).find('.ui-slider-handle').removeAttr('title');
     });
 
     console.log('Slider -> buffer indices: ', this.currentPageSoundOrder);
