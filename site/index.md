@@ -14,10 +14,10 @@ The order in which you take each test is set by the experimenter.
 Each test will take between 30 and 50 minutes.
 
 In both cases you will listen to 8 samples of a vocal recording that has been
-extracted from a song. Your task is to compare each sample with a reference
-sound and then rate it according to either sound quality (test 1) or interference (test
-2). This task is then repeated for a number of songs.  Both
-experiments involve an initial training stage which will allow you to:
+extracted from an overall mix of a song. Your task is to compare each sample
+with a reference sound and then rate it according to either sound quality (test
+1) or interference (test 2). This task is then repeated for a number of songs.
+Both experiments involve an initial training stage which will allow you to:
 
 - Better understand our definitions of sound quality and interference.
 - Gain some intuition for the main interface.
