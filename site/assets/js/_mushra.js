@@ -206,14 +206,18 @@ Mushra.prototype.createSliders = function()
         $(this).find('.ui-slider-handle').on('start', function(){
 
             var input = $(this).find('input');
-            input.attr('step', input.val());
-            setTimeout(function () {input.attr('step', 1)}, 50);
+
+            input.attr('min', input.val());
+            input.attr('max', input.val());
+
+            setTimeout(function () {
+                input.attr('min', 0);
+                input.attr('max', 100);
+            }, 50);
 
         }.bind(this));
 
         $(this).off().on('slidestart', function (i) {
-
-            //$(this).find('input').val($(this).find('input').val()).slider('refresh');
 
             // play this audio file
             mainObj.playBuf (i);
