@@ -10,7 +10,6 @@ def main(config,
          stimuli_website_folder='sounds',
          filename=None):
 
-
     x = [_ for _ in os.walk(stimuli_input_folder)]
     page_names = x[0][1]
     sounds = [_[2] for _ in x[1:]]
@@ -19,7 +18,8 @@ def main(config,
     for page, page_sounds in zip(page_names, sounds):
 
         page_sounds = [_ for _ in page_sounds
-                       if _ not in excluse_these_wav_files]
+                       if (_ not in excluse_these_wav_files) &
+                       ('.wav' in _)]
 
         sounds_list = []
         for sound in page_sounds:
@@ -105,6 +105,6 @@ if __name__ == '__main__':
          ref_name='ref.wav',
          excluse_these_wav_files=['Artefacts.wav',
                                   'Distortion.wav'],
-         labels=['Much interference', 'No interference'],
+         labels=['Strong interference', 'No interference'],
          stimuli_website_folder='sounds_training',
          filename='./site/_data/training_interferer.yaml')

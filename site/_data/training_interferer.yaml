@@ -3,7 +3,7 @@ allow_submission: false
 back_button_can_exit_test: true
 continuous_playback: true
 labels:
-- Much interference
+- Strong interference
 - No interference
 loop_playback: true
 must_play_all_samples_to_continue: true

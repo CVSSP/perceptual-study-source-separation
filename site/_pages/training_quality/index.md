@@ -14,6 +14,12 @@ and also listen to examples of the type of sounds involved. For this test, you
 should rate the **sound quality** of the test sounds by comparing them with the reference
 sound.
 
+**Sound quality** relates to the amount of artefacts or distortions that you can
+perceive.
+
+These can be heard as tone-like additions, abrupt changes in loudness, or
+missing parts of the audio.
+
 - Click the **Reference** button to play the reference sound.
 - Click the **Stop** button to stop playback. This will also reset the start position.
 - Use the slider buttons to listen to the different test sounds. 
