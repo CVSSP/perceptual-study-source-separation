@@ -1,10 +1,10 @@
 add_consistency_check: true
 allow_slider_sort: true
-allow_submission: false
+allow_submission: true
 back_button_can_exit_test: false
 continuous_playback: true
 labels:
-- Much interference
+- Strong interference
 - No interference
 loop_playback: true
 must_play_all_samples_to_continue: true

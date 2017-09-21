@@ -6,21 +6,21 @@ rows:
     do not affect sound quality
   sounds:
   - button_label: Reference
-    url: sounds_familiarisation/0dB-Bulldozer.wav
+    url: sounds_familiarisation/0dB-Bulldozer.flac
   - button_label: A
-    url: sounds_familiarisation/-6dB-Bulldozer.wav
+    url: sounds_familiarisation/-6dB-Bulldozer.flac
   - button_label: B
-    url: sounds_familiarisation/-12dB-Bulldozer.wav
+    url: sounds_familiarisation/-12dB-Bulldozer.flac
   - button_label: C
-    url: sounds_familiarisation/-18dB-Bulldozer.wav
+    url: sounds_familiarisation/-18dB-Bulldozer.flac
 - name: In this example the sound quality is degraded by introducing artefacts and
     distortions
   sounds:
   - button_label: Reference
-    url: sounds_familiarisation/0dB-Bulldozer.wav
+    url: sounds_familiarisation/0dB-Bulldozer.flac
   - button_label: A
-    url: sounds_familiarisation/fair-Bulldozer.wav
+    url: sounds_familiarisation/fair-Bulldozer.flac
   - button_label: B
-    url: sounds_familiarisation/poor-Bulldozer.wav
+    url: sounds_familiarisation/poor-Bulldozer.flac
   - button_label: C
-    url: sounds_familiarisation/bad-Bulldozer.wav
+    url: sounds_familiarisation/bad-Bulldozer.flac
