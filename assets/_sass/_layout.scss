@@ -18,12 +18,18 @@ div.ui-content {
 	line-height: 1.6;
     padding: 0;
 
-    width: 60%;
-    margin-left: 20%;
-    margin: 0px auto;
+    width: 90%;
+    margin-left: 5%;
 
-    @media only screen and (max-width: $breakpoint) {
-        width: 90%;
-        margin-left: 5%;
+    @media only screen and (min-width: $breakpoint) {
+        width: 60%;
+        margin-left: 20%;
+        margin: 0px auto;
+    }
+
+    @media only screen and (min-width: $breakpoint-large) {
+        width: 50%;
+        margin-left: 25%;
+        margin: 0px auto;
     }
 }
