@@ -185,7 +185,7 @@ Mushra.prototype.createSliders = function()
 
         // The slider, triggers audio when user makes adjustment.
         var inputHTML = "<input type='range' name='slider' " +
-        "value='" + startVal + "' min='0' max='100' class='ui-hidden-accessible' ";
+        "value='" + startVal + "' min='0' max='100' step='1' class='ui-hidden-accessible' ";
 
         if (this.config.show_number_on_slider)
             inputHTML += "data-show-value='true'/>";
@@ -202,10 +202,22 @@ Mushra.prototype.createSliders = function()
 
     $activePage (".ui-slider").each(function (i) {
 
-        $(this).on('slidestart', function (i) {
+        // A filthy hack to give a more resticted response when the user clicks
+        $(this).find('.ui-slider-handle').on('start', function(){
+
+            var input = $(this).find('input');
+            input.attr('step', input.val());
+            setTimeout(function () {input.attr('step', 1)}, 50);
+
+        }.bind(this));
+
+        $(this).off().on('slidestart', function (i) {
+
+            //$(this).find('input').val($(this).find('input').val()).slider('refresh');
 
             // play this audio file
             mainObj.playBuf (i);
+
             // change handle colour when slider is moved
             $(this).find('.ui-slider-handle').addClass('slider-handle-active');
             // Give focus to the handle even if handle is clicked
@@ -216,7 +228,9 @@ Mushra.prototype.createSliders = function()
         // Remove annoying popup displaying the value of the slider
         $(this).find('.ui-slider-handle').removeAttr('title');
         $(this).on('slidestop', function () {
+
             $(this).find('.ui-slider-handle').removeAttr('title');
+
         }.bind(this));
 
     });

@@ -36,9 +36,13 @@
 .mushra-slider-container .ui-slider-track {
     width: 95%;
     margin-left: 2.5%;
+    pointer-events:none !important;
 }
 
 .mushra-slider-container .slider-handle-active {
     background-color: $dark !important;
     color: $white !important;
+}
+.mushra-slider-container .ui-slider-track a {
+    pointer-events:auto !important;
 }
