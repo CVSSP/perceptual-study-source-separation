@@ -9,10 +9,6 @@ h3 {
 	line-height: 1.5;
 }
 
-h1, h2 {
-    text-align: center;
-}
-
 div.ui-content {
 
     color: $font-color;
@@ -22,8 +18,8 @@ div.ui-content {
 	line-height: 1.6;
     padding: 0;
 
-    width: 50%;
-    margin-left: 25%;
+    width: 60%;
+    margin-left: 20%;
     margin: 0px auto;
 
     @media only screen and (max-width: $breakpoint) {

@@ -9,14 +9,11 @@
     table-layout: fixed;
     font-size: 1em;
 
-    width: 90%;
-    margin-left: 5%;
-
+    width: 95%;
+    margin-left: 2.5%;
 
     @media only screen and (max-width: $breakpoint) {
         font-size: 0.7em;
-        width: 100%;
-        margin-left: 0;
     }
 }
 
@@ -33,18 +30,11 @@
 };
 
 .mushra-slider-container .ui-slider-track {
-
-    width: 90%;
-    margin-left: 5%;
-
-    @media only screen and (max-width: $breakpoint) {
-        width: 100%;
-        margin-left: 0;
-    }
+    width: 95%;
+    margin-left: 2.5%;
 }
 
 .mushra-slider-container .slider-handle-active {
-
     background-color: $dark !important;
     color: $white !important;
 }
