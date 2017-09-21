@@ -8,11 +8,11 @@ rows:
   - button_label: Reference
     url: sounds_familiarisation/0dB-Bulldozer.flac
   - button_label: A
-    url: sounds_familiarisation/-6dB-Bulldozer.flac
+    url: sounds_familiarisation/-18dB-Bulldozer.flac
   - button_label: B
     url: sounds_familiarisation/-12dB-Bulldozer.flac
   - button_label: C
-    url: sounds_familiarisation/-18dB-Bulldozer.flac
+    url: sounds_familiarisation/-6dB-Bulldozer.flac
 - name: In this example the sound quality is degraded by introducing artefacts and
     distortions
   sounds:
