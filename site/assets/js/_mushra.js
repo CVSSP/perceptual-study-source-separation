@@ -282,11 +282,17 @@ Mushra.prototype.sortSliders = function()
 Mushra.prototype.fillConfig = function()
 {
     var setRating = function(i, value) {
-        this.config.pages[this.currentPage].sounds[this.currentPageSoundOrder[i]].rating = value;
+        this.config.pages[this.currentPage].sounds[this.currentPageSoundOrder[i]].rating = parseInt (value);
     }.bind(this);
 
-    if ((this.config.pages[this.currentPage].duration == undefined) & (this.loader.timerStarted))
-        this.config.pages[this.currentPage].duration = this.loader.endTimer();
+    var dur = this.config.pages[this.currentPage].duration;
+    if ((dur == null) || (dur == 0))
+    {
+        if (this.loader.timerStarted)
+            this.config.pages[this.currentPage].duration = this.loader.endTimer();
+        else
+            this.config.pages[this.currentPage].duration = 0;
+    }
 
     this.config.pages[this.currentPage].order = this.pageCounter;
 
@@ -297,53 +303,12 @@ Mushra.prototype.fillConfig = function()
 
 Mushra.prototype.complete = function()
 {
-    // Build an array of arrays for the ratings
-    var values = '';
-    var times = '';
-    var sounds = '';
-    var pages = '';
-    var pageOrder = '';
-
-    for (var i = 0; i < this.numberOfPages; ++i)
-    {
-        var numSounds = this.config.pages[i].sounds.length;
-
-        for (var j = 0; j < numSounds; ++j)
-        {
-            values += this.config.pages[i].sounds[j].rating;
-            sounds += this.config.pages[i].sounds[j].name;
-
-            if (j < numSounds - 1)
-            {
-                values += this.config.separator;
-                sounds += this.config.separator;
-            }
-        }
-
-        var appendThis = '';
-        if (i < this.numberOfPages - 1)
-            var appendThis = this.config.line_terminator;
-
-        pages += this.config.pages[i].name + appendThis;
-        pageOrder += this.config.pages[i].order + appendThis;
-        times += this.config.pages[i].duration + appendThis;
-        values += appendThis;
-        sounds += appendThis;
-    }
-
-    console.log('values: ', values);
-    console.log('times: ', times);
-    console.log('sounds: ', sounds);
-    console.log('pages: ', pages);
-    console.log('page order: ', pageOrder);
+    var jsonString = JSON.stringify (this.config);
+    console.log('data: ', jsonString);
 
     if (this.config.allow_submission)
     {
-        $activePage ('input[name="fields[data]"]').val (values);
-        $activePage ('input[name="fields[sounds]"]').val (sounds);
-        $activePage ('input[name="fields[pages]"]').val (pages);
-        $activePage ('input[name="fields[page_order]"]').val (pageOrder);
-        $activePage ('input[name="fields[page_response_time]"]').val (times);
+        $activePage ('input[name="fields[data]"]').val (JSON.stringify (this.config));
         $activePage ('.submit-popup').popup ('open');
     }
     else{
