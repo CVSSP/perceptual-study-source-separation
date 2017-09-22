@@ -111,16 +111,10 @@ $('#id-{{ page.url  | slugify}}').on('pageshow', function(e) {
             $activePage ('.submit-popup').popup("close");
         });
 
-        // Parse the config file and add any variables we need:
-        config = JSON.parse('{{ config | jsonify}}');
+        // add any variables we need:
         config.siteURL = "{{ site.url }}";
         config.nextURL = '{{ site.url }}{{ page.next_url }}';
 
-        if (!config.separator)
-            config.separator = ',';
-        if (!config.line_terminator)
-            config.line_terminator = '\\n';
-        
         var layout = '{{ page.layout }}';
         var testInterface = null;
 

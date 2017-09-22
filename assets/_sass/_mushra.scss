@@ -7,10 +7,13 @@
 .mushra-table {
 
     table-layout: fixed;
+    padding: 0;
 
     width: 95%;
     margin-left: 2.5%;
     font-size: 0.7em;
+    border-collapse:collapse;
+
 
     @media only screen and (min-width: $breakpoint) {
         font-size: 1em;

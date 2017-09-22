@@ -5,14 +5,12 @@
     table-layout: fixed;
     font-size: 1em;
 
-    width: 90%;
-    margin-left: 5%;
-    text-align: left;
+    border-collapse:collapse;
 
-    @media only screen and (max-width: $breakpoint) {
-        width: 100%;
-        margin-left: 0;
-    }
+    width: 95%;
+    margin-left: 2.5%;
+
+    text-align: left;
 }
 
 .similarity-table th {
