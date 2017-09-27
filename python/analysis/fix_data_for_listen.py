@@ -19,8 +19,11 @@ for filename in files:
     parser = listen.parser.Parser(filename)
     out = parser.load(parser.path)
 
-    out['data']['site_url'] = out['data'].pop('siteURL')
-    out['data']['next_url'] = out['data'].pop('nextURL')
+    try:
+        out['data']['site_url'] = out['data'].pop('siteURL')
+        out['data']['next_url'] = out['data'].pop('nextURL')
+    except:
+        continue
 
     changeTo = None
     for page in out['data']['pages']:
