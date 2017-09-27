@@ -19,6 +19,9 @@ pip install lxml
 pip install pyyaml
 pip install mir_eval
 pip install matplotlib
+pip install jupyter
+
+ipython kernel install --prefix="$1" --name=$1
 
 git clone -b dev https://github.com/IoSR-Surrey/untwist.git
 cd untwist
