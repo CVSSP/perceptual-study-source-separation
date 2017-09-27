@@ -2,17 +2,19 @@
 Script to update the submissions to conform to expected data keys used by
 listen.
 '''
-
-import os
 import json
+import os
 import listen
 
-directories = ['./site/_data/results/interferer',
-               './site/_data/results/quality']
 
-filenames = os.listdir(directories[0]) + os.listdir(directories[1])
+def listFiles(directory):
+    filenames = os.listdir(directory)
+    return [os.path.abspath(os.path.join(directory, _)) for _ in filenames]
 
-for filename in filenames:
+files = listFiles('./site/_data/results/interferer')
+files += listFiles('./site/_data/results/quality')
+
+for filename in files:
 
     parser = listen.parser.Parser(filename)
     out = parser.load(parser.path)
@@ -32,12 +34,12 @@ for filename in filenames:
             else:
                 page['is_replicate'] = False
 
-
     if changeTo:
         for page in out['data']['pages']:
             if changeTo in page['name']:
                 page['is_replicate'] = True
-                print(page)
+
+    out['data'] = json.dumps(out['data'])
 
     with open(filename, 'w') as outfile:
         json.dump(out, outfile)
