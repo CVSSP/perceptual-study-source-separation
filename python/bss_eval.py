@@ -22,7 +22,7 @@ def condition_df(input_filename='../data/experiment_stimuli.csv'):
 
     df2 = df.copy()
     df2['eval_metric'] = 'SIR'
-    df2['task'] = 'interference'
+    df2['task'] = 'interferer'
 
     df = pd.concat([df, df2])
 
@@ -53,13 +53,21 @@ def estimated_target(path, method, audio_format='flac'):
     # estimated_vocal = lowpass(estimated_vocal, 2000, SAMPLERATE)
     return estimated_vocal
 
+def bss_eval(reference_sources, estimated_target):
+    s_true, e_spat, e_interf, e_artif = \
+        separation._bss_decomp_mtifilt(reference_sources,
+                                       estimated_target,
+                                       0, 512)
+    sdr, sir, sar = \
+        separation._bss_source_crit(s_true, e_spat, e_interf, e_artif)
+    return sir, sar
 
 def main(stim_path='../site/sounds/'):
 
     df = condition_df()
 
-    quality_df = df.query("task == 'quality'")
-    interference_df = df.query("task == 'interference'")
+    quality_df = df.query("task == 'quality'").copy()
+    interferer_df = df.query("task == 'interferer'").copy()
 
     for _, track_df in quality_df.groupby('track_id'):
 
@@ -67,23 +75,17 @@ def main(stim_path='../site/sounds/'):
                                     track_df['target'].iloc[0],
                                     track_df['track_id'].iloc[0],
                                     track_df['metric'].iloc[0])
-        ref_sources = reference_sources(path)
+        ref_sources = reference_sources(path, 'wav')
         print(path)
 
         for idx, row in track_df.iterrows():
-            est_target = estimated_target(path, row['method'])
 
-            s_true, e_spat, e_interf, e_artif = \
-                separation._bss_decomp_mtifilt(ref_sources,
-                                               est_target,
-                                               0, 512)
-            sdr, sir, sar = \
-                separation._bss_source_crit(s_true, e_spat, e_interf, e_artif)
-
+            est_target = estimated_target(path, row['method'], 'wav')
+            sir, sar = bss_eval(ref_sources, est_target)
             quality_df.loc[idx, 'measure'] = sar
-            interference_df.loc[idx, 'measure'] = sir
+            interferer_df.loc[idx, 'measure'] = sir
 
-    df = pd.concat([quality_df, interference_df])
+    df = pd.concat([quality_df, interferer_df])
     df.to_csv('test.csv', index=None)
 
 main()
