@@ -43,6 +43,13 @@ cd matlab_wrapper
 python setup.py install
 cd ../
 
+git clone https://github.com/deeuu/listen
+cd listen
+git checkout python
+cd python
+python setup.py install
+cd ../../
+
 deactivate
 
 cd ../
