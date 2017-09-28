@@ -88,6 +88,7 @@ def peass(reference_files, estimated_file, path_to_peass_toolbox):
 def main(stim_path='../site/sounds/'):
 
     audio_format = 'flac'
+    result_file = '../data/bss_eval_and_peass.csv'
 
     df = condition_df()
 
@@ -122,7 +123,7 @@ def main(stim_path='../site/sounds/'):
             interferer_df.loc[idx, 'peass_score'] = ips
 
     df = pd.concat([quality_df, interferer_df])
-    df.to_csv('test.csv', index=None)
+    df.to_csv(result_file, index=None)
 
 main()
 
