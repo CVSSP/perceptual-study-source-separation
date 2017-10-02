@@ -22,6 +22,8 @@ def condition_df(input_filename='../data/experiment_stimuli.csv'):
     df['eval_score'] = np.nan
     df['peass_metric'] = 'APS'
     df['peass_score'] = np.nan
+    df['peass_metric2'] = 'TPS'
+    df['peass2_score'] = np.nan
     df['task'] = 'quality'
 
     df2 = df.copy()
@@ -81,8 +83,9 @@ def peass(reference_files, estimated_file, path_to_peass_toolbox):
 
     ips = result['IPS']
     aps = result['APS']
+    tps = result['TPS']
 
-    return ips, aps
+    return ips, aps, tps
 
 
 def main(stim_path='../site/sounds/'):
@@ -113,12 +116,14 @@ def main(stim_path='../site/sounds/'):
             est_target, _ = sf.read(est_file)
 
             sir, sar = bss_eval(ref_sources, est_target)
-            ips, aps = peass([vocal_file, mix_file],
-                             est_file,
-                             '/user/HS203/hw0016/git/maruss/peass-software')
+            ips, aps, tps = peass(
+                [vocal_file, mix_file],
+                est_file,
+                '/user/HS203/hw0016/git/maruss/peass-software')
 
             quality_df.loc[idx, 'eval_score'] = sar
             quality_df.loc[idx, 'peass_score'] = aps
+            quality_df.loc[idx, 'peass2_score'] = tps
             interferer_df.loc[idx, 'eval_score'] = sir
             interferer_df.loc[idx, 'peass_score'] = ips
 
