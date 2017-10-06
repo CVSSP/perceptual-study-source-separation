@@ -34,3 +34,6 @@ site/sounds_training/*/*.flac
 
 # Ignore installed virtual envs
 /venvs/py3/*
+
+# scripts
+python/analysis/rename_subjects.py
