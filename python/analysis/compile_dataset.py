@@ -29,7 +29,7 @@ def main():
         pass
 
     # Remove these subjects completely based on post-screening:
-    frame = frame.qurty("~subjects.isin(['D', 'J'])")
+    frame = frame.query("~subject.isin(['D', 'J'])")
 
     for g in frame.groupby('experiment'):
 
