@@ -1,28 +1,30 @@
-from scipy import stats
-import numpy as np
+'''
+From visual analysis, these subjects stand out from the group in terms of the
+two anchors and the reference:
+    J, D, B, F, U, X
+
+The remaining subjects highlighted below were also selected as they had a low
+concordance value compared to the remaining subjects.
+
+'''
 import pandas as pd
-import listen as ln
 import seaborn as sb
 import matplotlib.pyplot as plt
 
+
 ratings = pd.read_csv('./data/ratings.csv')
 
-ratings['norm'] = ratings.groupby(['subject', 'experiment', 'page'])['rating'].transform(
-    lambda g: 100 * (g - g.min()) / (g.max() - g.min())
-)
+for exp, group in ratings.groupby('experiment'):
 
-# These three subjects didn't quite understand the task or had some
-# difficulties in judging extreme artefacts.
-ratings = ratings.query("~subject.isin(['SE-WEB', 'SS-WEB', 'J', 'DB-WEB'])" +
-                        "& experiment == 'interferer'")
-
-sb.boxplot('sound', 'norm', data=ratings)
-plt.show()
-
-# corr_data = ln.mushra.between_subject_agreement(ratings)
-
-for g in ratings.groupby(['subject']):
-    print(g[0])
-    g2 = g[1].query("sound.isin(['ref', 'Quality', 'Interferer'])")
-    sb.stripplot('sound', 'norm', data=g2, jitter=True)
+    sb.boxplot('sound', 'normalised_rating', data=group)
+    plt.title('Experiment: {}'.format(exp))
     plt.show()
+
+    sub = group.query(
+        "subject.isin(['J', 'D', 'B', 'F', 'U', 'X', 'T', 'I', 'L'])")
+
+    for g in sub.groupby(['subject']):
+        g2 = g[1].query("sound.isin(['ref', 'Quality', 'Interferer'])")
+        sb.stripplot('sound', 'normalised_rating', data=g2, jitter=True)
+        plt.title('Experiment: {0}, subject: {1}'.format(exp, g[0]))
+        plt.show()

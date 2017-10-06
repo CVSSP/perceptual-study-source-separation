@@ -28,9 +28,16 @@ def main():
     except:
         pass
 
-    subjects = pd.unique(frame.subject)
+    # Remove these subjects completely based on post-screening:
+    frame = frame.qurty("~subjects.isin(['D', 'J'])")
 
-    print('You have {} subjects: '.format(len(subjects)), subjects)
+    for g in frame.groupby('experiment'):
+
+        print('Subjects: ', pd.unique(g[1].subject))
+
+        print('You have {0} subjects in experiment: {1}'.format(
+            len(pd.unique(g[1].subject)), g[0]),
+        )
 
     frame.to_csv('./data/ratings.csv', index=None)
 
