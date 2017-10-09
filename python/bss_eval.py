@@ -4,10 +4,9 @@ import soundfile as sf
 import matlab.engine
 from mir_eval import separation
 from tempfile import TemporaryDirectory
-# from scipy.signal import butter, lfilter
 
 
-def condition_df(input_filename='../data/experiment_stimuli.csv'):
+def quality_df(input_filename='../data/experiment_stimuli.csv'):
 
     df = pd.read_csv(input_filename)
 
@@ -18,20 +17,12 @@ def condition_df(input_filename='../data/experiment_stimuli.csv'):
     df = df.loc[df['target'] == 'vocals']
     df = df.loc[df['method'] != 'ref']
 
-    df['eval_metric'] = 'SAR'
-    df['eval_score'] = np.nan
-    df['peass_metric'] = 'APS'
-    df['peass_score'] = np.nan
-    df['peass_metric2'] = 'TPS'
-    df['peass2_score'] = np.nan
+    df['SAR'] = np.nan
+    df['SIR'] = np.nan
+    df['APS'] = np.nan
+    df['TPS'] = np.nan
+    df['IPS'] = np.nan
     df['task'] = 'quality'
-
-    df2 = df.copy()
-    df2['eval_metric'] = 'SIR'
-    df2['peass_metric'] = 'IPS'
-    df2['task'] = 'interferer'
-
-    df = pd.concat([df, df2])
 
     return df
 
@@ -93,12 +84,9 @@ def main(stim_path='../site/sounds/'):
     audio_format = 'flac'
     result_file = '../data/bss_eval_and_peass.csv'
 
-    df = condition_df()
+    df = quality_df()
 
-    quality_df = df.query("task == 'quality'").copy()
-    interferer_df = df.query("task == 'interferer'").copy()
-
-    for _, track_df in quality_df.groupby('track_id'):
+    for _, track_df in df.groupby('track_id'):
 
         path = '{}{}-{}-{}/'.format(stim_path,
                                     track_df['target'].iloc[0],
@@ -121,13 +109,16 @@ def main(stim_path='../site/sounds/'):
                 est_file,
                 '/user/HS203/hw0016/git/maruss/peass-software')
 
-            quality_df.loc[idx, 'eval_score'] = sar
-            quality_df.loc[idx, 'peass_score'] = aps
-            quality_df.loc[idx, 'peass2_score'] = tps
-            interferer_df.loc[idx, 'eval_score'] = sir
-            interferer_df.loc[idx, 'peass_score'] = ips
+            df.loc[idx, 'SAR'] = sar
+            df.loc[idx, 'APS'] = aps
+            df.loc[idx, 'TPS'] = tps
+            df.loc[idx, 'SIR'] = sir
+            df.loc[idx, 'IPS'] = ips
 
-    df = pd.concat([quality_df, interferer_df])
+    df2 = df.copy()
+    df2['task'] = 'interferer'
+
+    df = pd.concat([df, df2])
     df.to_csv(result_file, index=None)
 
 main()
