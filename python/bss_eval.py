@@ -1,12 +1,15 @@
+import os
+
 import pandas as pd
 import numpy as np
+
 import soundfile as sf
 import matlab.engine
 from mir_eval import separation
 from tempfile import TemporaryDirectory
 
 
-def quality_df(input_filename='../data/experiment_stimuli.csv'):
+def df_experiment(input_filename):
 
     df = pd.read_csv(input_filename)
 
@@ -25,18 +28,6 @@ def quality_df(input_filename='../data/experiment_stimuli.csv'):
     df['task'] = 'quality'
 
     return df
-
-
-# def butter_lowpass(cutoff, fs, order=4):
-#     nyq = 0.5 * fs
-#     normal_cutoff = cutoff / nyq
-#     b, a = butter(order, normal_cutoff, btype='low', analog=False)
-#     return b, a
-#
-# def lowpass(data, cutoff, fs, order=4):
-#     b, a = butter_lowpass(cutoff, fs, order=order)
-#     y = lfilter(b, a, data)
-#     return y
 
 
 def reference_files(path, audio_format='flac'):
@@ -79,12 +70,15 @@ def peass(reference_files, estimated_file, path_to_peass_toolbox):
     return ips, aps, tps
 
 
-def main(stim_path='../site/sounds/'):
+def main(peass_path):
 
     audio_format = 'flac'
-    result_file = '../data/bss_eval_and_peass.csv'
+    pwd = os.path.dirname(os.path.realpath(__file__))
+    result_file = pwd + '/../data/bss_eval_and_peass.csv'
+    experiment_file = pwd + '/../data/experiment_stimuli.csv'
+    stim_path = pwd + '/../site/sounds/'
 
-    df = quality_df()
+    df = df_experiment(experiment_file)
 
     for _, track_df in df.groupby('track_id'):
 
@@ -104,10 +98,7 @@ def main(stim_path='../site/sounds/'):
             est_target, _ = sf.read(est_file)
 
             sir, sar = bss_eval(ref_sources, est_target)
-            ips, aps, tps = peass(
-                [vocal_file, mix_file],
-                est_file,
-                '/user/HS203/hw0016/git/maruss/peass-software')
+            ips, aps, tps = peass([vocal_file, mix_file], est_file, peass_path)
 
             df.loc[idx, 'SAR'] = sar
             df.loc[idx, 'APS'] = aps
@@ -121,8 +112,6 @@ def main(stim_path='../site/sounds/'):
     df = pd.concat([df, df2])
     df.to_csv(result_file, index=None)
 
-main()
 
-# sf.write("s_target.flac", s_true + e_spat, SAMPLERATE)
-# sf.write("e_interf.flac", e_interf, SAMPLERATE)
-# sf.write("e_artif.flac", e_artif, SAMPLERATE)
+peass_path = '/user/HS203/hw0016/git/maruss/peass-software'
+main(peass_path)
