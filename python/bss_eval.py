@@ -88,23 +88,28 @@ def main(peass_path):
                                     track_df['metric'].iloc[0])
         vocal_file, mix_file = reference_files(path, audio_format)
         vocal, _ = sf.read(vocal_file)
-        mix, _ = sf.read(mix_file)
+        mix, fs = sf.read(mix_file)
         interferer = mix - vocal
         ref_sources = np.array([vocal, interferer])
 
-        for idx, row in track_df.iterrows():
+        with TemporaryDirectory() as tmp_dir:
+            tmp_file = tmp_dir + '/tmp.flac'
+            sf.write(tmp_file, interferer, fs)
 
-            est_file = estimated_file(path, row['method'], audio_format)
-            est_target, _ = sf.read(est_file)
+            for idx, row in track_df.iterrows():
 
-            sir, sar = bss_eval(ref_sources, est_target)
-            ips, aps, tps = peass([vocal_file, mix_file], est_file, peass_path)
+                est_file = estimated_file(path, row['method'], audio_format)
+                est_target, _ = sf.read(est_file)
 
-            df.loc[idx, 'SAR'] = sar
-            df.loc[idx, 'APS'] = aps
-            df.loc[idx, 'TPS'] = tps
-            df.loc[idx, 'SIR'] = sir
-            df.loc[idx, 'IPS'] = ips
+                sir, sar = bss_eval(ref_sources, est_target)
+                ips, aps, tps = \
+                    peass([vocal_file, tmp_file], est_file, peass_path)
+
+                df.loc[idx, 'SAR'] = sar
+                df.loc[idx, 'APS'] = aps
+                df.loc[idx, 'TPS'] = tps
+                df.loc[idx, 'SIR'] = sir
+                df.loc[idx, 'IPS'] = ips
 
     df2 = df.copy()
     df2['task'] = 'interferer'
