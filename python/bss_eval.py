@@ -25,7 +25,6 @@ def df_experiment(input_filename):
     df['APS'] = np.nan
     df['TPS'] = np.nan
     df['IPS'] = np.nan
-    df['task'] = 'quality'
 
     return df
 
@@ -79,6 +78,7 @@ def main(peass_path):
     stim_path = pwd + '/../site/sounds/'
 
     df = df_experiment(experiment_file)
+    df['task'] = 'quality'
 
     for _, track_df in df.groupby('track_id'):
 
