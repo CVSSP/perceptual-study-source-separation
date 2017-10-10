@@ -14,6 +14,8 @@ import matplotlib.pyplot as plt
 
 ratings = pd.read_csv('./data/ratings.csv')
 
+print(ratings.head())
+
 for exp, group in ratings.groupby('experiment'):
 
     sb.boxplot('sound', 'normalised_rating', data=group)
@@ -25,6 +27,9 @@ for exp, group in ratings.groupby('experiment'):
 
     for g in sub.groupby(['subject']):
         g2 = g[1].query("sound.isin(['ref', 'Quality', 'Interferer'])")
+
+        print(g[1].query("sound.isin(['ref'])"))
+
         sb.stripplot('sound', 'normalised_rating', data=g2, jitter=True)
         plt.title('Experiment: {0}, subject: {1}'.format(exp, g[0]))
         plt.show()

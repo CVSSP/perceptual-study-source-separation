@@ -1,20 +1,29 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import pandas as pd
 import seaborn as sb
 import pandas as pd
 import listen as ln
 
 
+def iqr(data):
+
+    return data.quantile(0.75) - data.quantile(0.25)
+
+
 frame = pd.read_csv('./data/ratings.csv')
 
-corr_data = ln.mushra.within_subject_agreement(frame)
+frame = frame.query("~sound.isin(['ref', 'Quality', 'Interferer'])")
 
-print('~~~ Median correlation ~~~')
-print(corr_data.median)
+corr_data = ln.mushra.within_subject_agreement(frame, 'rating', 'median')
 
-print('~~~ Spearman CI95 ~~~')
-print(corr_data.spearman_ci)
+corrs = corr_data.correlation.reset_index()
 
-print('~~~ Pearson CI95 ~~~')
-print(corr_data.pearson_ci)
+spread = corrs.groupby('experiment').agg(iqr)
+
+corrs.boxplot(by='experiment', column='concordance')
+plt.show()
+
+print('~~~ Estimated correlation ~~~')
+print(corr_data.concordance)
+print(spread)
+print(corr_data.concordance_ci)

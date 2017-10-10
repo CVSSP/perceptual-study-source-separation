@@ -18,9 +18,15 @@ def main():
     )
 
     # Drop these submissions as we have resubmissions for them:
-    frame = frame.query("~subject.isin(['JF-WEB', 'SE-WEB'])").reset_index()
+    frame = frame.query("~subject.isin(['JF-WEB', 'SE-WEB'])")
 
-    listen.mushra.normalise_ratings(frame, True)
+    # Corrupt data for interference task
+    frame = frame.query("~subject.isin(['Ice'])").reset_index(drop=True)
+
+    frame['normalised_rating'] = (listen.mushra.normalise_ratings(frame)
+                                  ['rating']
+                                  )
+    frame['rank'] = listen.mushra.rank_ratings(frame)['rating']
 
     try:
         from rename_subjects import rename
@@ -29,7 +35,7 @@ def main():
         pass
 
     # Remove these subjects completely based on post-screening:
-    frame = frame.query("~subject.isin(['D', 'J'])")
+    frame = frame.query("~subject.isin(['D', 'J'])").reset_index(drop=True)
 
     for g in frame.groupby('experiment'):
 
