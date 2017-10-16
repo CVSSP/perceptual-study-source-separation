@@ -31,16 +31,19 @@ def main(config,
             )
 
         page_dict = {'name': page,
-                     'reference_url': '{0}/{1}/{2}'.format(stimuli_website_folder,
-                                                           page,
-                                                           ref_name),
+                     'reference_url': '{0}/{1}/{2}'.format(
+                         stimuli_website_folder,
+                         page,
+                         ref_name
+                     ),
                      'sounds': sounds_list}
 
         pages.append(page_dict)
 
-    add_to_config = {'labels': labels,
-                     'pages': pages,
-                    }
+    add_to_config = {
+        'labels': labels,
+        'pages': pages,
+    }
     config = {**config, **add_to_config}
 
     with open(filename, 'w') as outfile:
@@ -95,7 +98,8 @@ if __name__ == '__main__':
          stimuli_input_folder='./site/sounds_training',
          ref_name='ref.wav',
          excluse_these_wav_files=['Artefacts.wav',
-                                  'Distortion.wav'],
+                                  'Distortion.wav',
+                                  'Accompaniment.wav'],
          labels=['Worse quality', 'Same quality'],
          stimuli_website_folder='sounds_training',
          filename='./site/_data/training_quality.yaml')
@@ -104,7 +108,8 @@ if __name__ == '__main__':
          stimuli_input_folder='./site/sounds_training',
          ref_name='ref.wav',
          excluse_these_wav_files=['Artefacts.wav',
-                                  'Distortion.wav'],
+                                  'Distortion.wav',
+                                  'Accompaniment.wav'],
          labels=['Strong interference', 'No interference'],
          stimuli_website_folder='sounds_training',
          filename='./site/_data/training_interferer.yaml')

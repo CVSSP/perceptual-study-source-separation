@@ -31,8 +31,8 @@ def df_experiment(input_filename):
 
 def reference_files(path, audio_format='flac'):
     vocal = path + 'ref.' + audio_format.lower()
-    mix = path + 'Interferer.' + audio_format.lower()
-    return vocal, mix
+    accomp = path + 'Accompaniment.' + audio_format.lower()
+    return vocal, accomp
 
 
 def estimated_file(path, method, audio_format='flac'):
@@ -86,15 +86,14 @@ def main(peass_path):
                                     track_df['target'].iloc[0],
                                     track_df['track_id'].iloc[0],
                                     track_df['metric'].iloc[0])
-        vocal_file, mix_file = reference_files(path, audio_format)
+        vocal_file, accomp_file = reference_files(path, audio_format)
         vocal, _ = sf.read(vocal_file)
-        mix, fs = sf.read(mix_file)
-        interferer = mix - vocal
-        ref_sources = np.array([vocal, interferer])
+        accomp, fs = sf.read(accomp_file)
+        ref_sources = np.array([vocal, accomp])
 
         with TemporaryDirectory() as tmp_dir:
             tmp_file = tmp_dir + '/tmp.flac'
-            sf.write(tmp_file, interferer, fs)
+            sf.write(tmp_file, accomp, fs)
 
             for idx, row in track_df.iterrows():
 
