@@ -5,7 +5,6 @@ listen.
 Note, I later renamed (untracked script) some subjects in attempt to preserve
 their anonymity from the online submissions.
 '''
-import numpy as np
 import pandas as pd
 import listen
 
@@ -19,10 +18,10 @@ def main():
     )
 
     # Drop these submissions as we have resubmissions for them:
-    frame = frame.query("~subject.isin(['JF-WEB', 'SE-WEB'])")
+    frame = frame.query("~subject.isin(['JF-WEB', 'SE-WEB'])").copy()
 
     # Corrupt data for interference task
-    frame = frame.query("~subject.isin(['Ice'])").reset_index(drop=True)
+    # frame = frame.query("~subject.isin(['Ice'])").reset_index(drop=True)
 
     frame['normalised_rating'] = (listen.mushra.normalise_ratings(frame)
                                   ['rating']

@@ -20,6 +20,7 @@ pip install pyyaml
 pip install mir_eval
 pip install matplotlib
 pip install jupyter
+pip install pysoundfile
 
 ipython kernel install --prefix="$1" --name=$1
 
