@@ -20,16 +20,21 @@ def main(stimulus_folder,
 
         ref_path = '{0}/{1}/{2}'.format(stimulus_folder,
                                         page,
-                                        'ref.flac')
+                                        'ref.wav')
 
-        mix_path = '{0}/{1}/{2}'.format(stimulus_folder,
-                                        page,
-                                        'accompaniment.flac')
+        accomp_path = '{0}/{1}/{2}'.format(stimulus_folder,
+                                           page,
+                                           'ref_accompaniment.wav')
 
-        ref = data.audio.Wave(*sf.read(ref_path))
-        accomp = data.audio.Wave(*sf.read(mix_path))
+        ref, fs = sf.read(ref_path)
+        accomp, fs = sf.read(accomp_path)
+
+        accomp = data.audio.Wave(accomp, fs)
+        ref = data.audio.Wave(ref, fs)
 
         frame.iloc[i] = ref.loudness - accomp.loudness
+
+    print(frame)
 
 
 if __name__ == '__main__':

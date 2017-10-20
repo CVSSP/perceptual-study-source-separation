@@ -17,14 +17,15 @@ out = ref.groupby('experiment')['normalised_rating'].agg(
 print('Percentage of ratings for the reference equal to 100:', out)
 
 
-red, blue = sb.xkcd_rgb["pale red"], sb.xkcd_rgb["denim blue"]
+#red, blue = sb.xkcd_rgb["pale red"], sb.xkcd_rgb["denim blue"]
+colors = sb.color_palette("PRGn")
 
 fig, ax = plt.subplots(figsize=(3.39, 2.5))
 
 sb.swarmplot(x="sound", y="normalised_rating",
              ax=ax,
              data=sub.query("experiment == 'quality'"),
-             color=red,
+             color=colors[0],
              marker='o',
              label='Quality',
              )
@@ -32,7 +33,7 @@ sb.swarmplot(x="sound", y="normalised_rating",
 sb.swarmplot(x="sound", y="normalised_rating",
              ax=ax,
              data=sub.query("experiment == 'interferer'"),
-             color=blue,
+             color=colors[1],
              marker='X',
              label='Interference',
              )
@@ -52,7 +53,7 @@ ax.legend(handles, labels,
 
 ax.set_ylim(-5, 105)
 
-sb.despine()
+sb.despine(offset=10)
 plt.tight_layout()
 plt.savefig('./paper/images/swarmplot_hidden_sounds.png', dpi=300)
 plt.show()

@@ -10,7 +10,8 @@ print(corrs.groupby(['experiment', 'metric', 'corr_type']).median())
 
 fig, ax = plt.subplots(figsize=(3.39, 3.39))
 
-red, blue = sb.xkcd_rgb["pale red"], sb.xkcd_rgb["denim blue"]
+colors = sb.color_palette("PRGn")
+#colors = [colors[1], colors[2]]
 
 sb.boxplot(y='metric', x='corr', hue='experiment',
            order=['SAR', 'APS', 'TPS', 'SIR', 'IPS'],
@@ -32,22 +33,22 @@ corrs['corr'] += np.random.uniform(-0.01, 0.01, size=len(corrs))
 sb.swarmplot(y='metric', x='corr',
              data=corrs.query("corr_type == 'spearman' & experiment == 'quality'"),
              order=['SAR', 'APS', 'TPS', 'SIR', 'IPS'],
-             size=4,
+             size=5,
              dodge=True,
              marker='o',
              ax=ax,
-             color=red,
+             color=colors[0],
              label='Quality',
              )
 
 sb.swarmplot(y='metric', x='corr',
              data=corrs.query("corr_type == 'spearman' & experiment == 'interferer'"),
              order=['SAR', 'APS', 'TPS', 'SIR', 'IPS'],
-             size=4,
+             size=5,
              dodge=True,
              marker='X',
              ax=ax,
-             color=blue,
+             color=colors[1],
              label='Interference',
              )
 
@@ -55,11 +56,11 @@ sb.swarmplot(y='metric', x='corr',
 handles, labels = ax.get_legend_handles_labels()
 handles = [handles[2], handles[7]]
 labels = [labels[2], labels[7]]
-ax.legend(handles, labels, loc=(0.2, 0.99), ncol=2)
+ax.legend(handles, labels, loc=(0.15, 0.99), ncol=2)
 
 plt.ylabel('')
 plt.xlabel('Spearman correlation')
-sb.despine(left=True)
+sb.despine(offset=10)
 plt.tight_layout()
 plt.savefig('./paper/images/spearman_boxplot.png', dpi=300)
 plt.show()
