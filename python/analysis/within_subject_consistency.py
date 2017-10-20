@@ -8,7 +8,7 @@ ratings = pd.read_csv('./data/ratings.csv')
 
 ratings = ratings.query("~sound.isin(['ref', 'Quality', 'Interferer'])")
 
-corrs = ln.mushra.within_subject_agreement(ratings, 'rating')
+corrs = ln.mushra.within_subject_agreement(ratings, 'normalised_rating')
 
 print(corrs)
 

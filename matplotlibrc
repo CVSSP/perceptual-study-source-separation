@@ -9,3 +9,4 @@ font.cursive        : Zapf Chancery
 font.monospace      : Courier, Computer Modern Typewriter
 
 text.usetex         : true
+legend.fontsize     : 8

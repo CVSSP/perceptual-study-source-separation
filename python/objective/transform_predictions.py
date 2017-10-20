@@ -1,50 +1,50 @@
 import pandas as pd
 
 
-# Load subjective data
-ratings = pd.read_csv("./data/ratings.csv")
+def main():
 
-# Load model predictions
-predictions = pd.read_csv("./data/bss_eval_and_peass.csv")
+    for filename in ["./data/bss_eval_and_peass.csv",
+                     "./data/bss_eval_and_peass_non_norm.csv"]:
 
-# Drop first half
-# predictions = predictions.query("task == 'quality'")
+        # Load subjective data
+        ratings = pd.read_csv("./data/ratings.csv")
 
-# don't need these columns
-predictions = predictions.drop(['metric', 'score', 'target'], axis=1)
+        # Load model predictions
+        predictions = pd.read_csv(filename)
 
-# Rename needed columns to match subjective dataframe
-predictions = predictions.rename(columns={'track_id': 'page',
-                                          'target': 'target',
-                                          'method': 'sound',
-                                          'task': 'experiment',
-                                          }
-                                 )
+        # don't need these columns
+        predictions = predictions.drop(['metric', 'score', 'target'], axis=1)
 
-# Rename pages
-pages = pd.unique(ratings['page'])
-sound_id = [_.split('-')[1] for _ in pages]
+        # Rename needed columns to match subjective dataframe
+        predictions = predictions.rename(columns={'track_id': 'page',
+                                                  'target': 'target',
+                                                  'method': 'sound',
+                                                  'task': 'experiment',
+                                                  }
+                                         )
 
-for i, row in predictions.iterrows():
-    j = sound_id.index(str(row['page']))
-    predictions.ix[i, 'page'] = pages[j]
+        # Rename pages
+        pages = pd.unique(ratings['page'])
+        sound_id = [_.split('-')[1] for _ in pages]
 
-# Wide to long
-predictions = predictions.melt(id_vars=['experiment', 'page', 'sound'],
-                               value_vars=['SAR', 'SIR', 'APS', 'TPS', 'IPS'],
-                               var_name='metric',
-                               value_name='score',
-                               )
+        for i, row in predictions.iterrows():
+            j = sound_id.index(str(row['page']))
+            predictions.ix[i, 'page'] = pages[j]
 
-'''
-# Associate metrics with correct experiment
-#predictions['experiment'] = 'quality'
-predictions.loc[
-    predictions.metric.isin(['SIR', 'IPS']),
-    'experiment'] = 'interferer'
-'''
+        # Wide to long
+        predictions = predictions.melt(
+            id_vars=['experiment', 'page', 'sound'],
+            value_vars=['SAR', 'SIR', 'APS', 'TPS', 'IPS'],
+            var_name='metric',
+            value_name='score',
+        )
 
-predictions = predictions.sort_values(
-    by=['experiment', 'page', 'sound', 'metric'])
+        predictions = predictions.sort_values(
+            by=['experiment', 'page', 'sound', 'metric'])
 
-predictions.to_csv('./data/predictions.csv', index=None)
+        predictions.to_csv(filename[:-4] + '_corrected.csv', index=None)
+
+
+if __name__ == '__main__':
+
+    main()

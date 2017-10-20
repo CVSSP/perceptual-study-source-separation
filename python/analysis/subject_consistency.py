@@ -14,16 +14,14 @@ frame = pd.read_csv('./data/ratings.csv')
 
 frame = frame.query("~sound.isin(['ref', 'Quality', 'Interferer'])")
 
-corr_data = ln.mushra.within_subject_agreement(frame, 'rating', 'median')
-
-corrs = corr_data.correlation.reset_index()
-
-spread = corrs.groupby('experiment').agg(iqr)
+corrs, stats = ln.mushra.within_subject_agreement(frame,
+                                                  'normalised_rating')
 
 corrs.boxplot(by='experiment', column='concordance')
 plt.show()
 
 print('~~~ Estimated correlation ~~~')
-print(corr_data.concordance)
-print(spread)
-print(corr_data.concordance_ci)
+print('Medians')
+print(stats.median)
+print('IQR')
+print(stats.iqr)

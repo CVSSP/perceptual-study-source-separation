@@ -41,7 +41,9 @@ for g in alpha.groupby(['experiment', 'Hidden included', 'type']):
 
     ci = g[1][0].agg(lambda g2: listen.utils.bootstrap_ci(g2, np.median))
 
-    print('median : ', median, 'CI95 : ', ci)
+    iqr = g[1][0].agg(lambda g2: g2.quantile(0.75) - g2.quantile(0.25))
+
+    print('median : ', median, 'CI95 : ', ci, 'IQR : ', iqr)
 
 
 if plot:

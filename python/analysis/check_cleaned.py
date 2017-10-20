@@ -2,43 +2,37 @@ import numpy as np
 import listen as ln
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sb
+from scipy import stats
 
 
 ratings = pd.read_csv('./data/ratings.csv')
-
 ratings = ratings.query("~sound.isin(['ref', 'Quality', 'Inteference'])")
 
-subjects = pd.unique(ratings.subject)
+ratings2 = pd.read_csv('./data/ratings_dropped.csv')
+ratings2 = ratings2.query("~sound.isin(['ref', 'Quality', 'Inteference'])")
 
-out = np.zeros((1000, 2))
 
-which = []
+# Medians
+meds = ratings.groupby(['experiment', 'page', 'sound']).agg(
+    {'normalised_rating': np.median}).reset_index()
+meds2 = ratings2.groupby(['experiment', 'page', 'sound']).agg(
+    {'normalised_rating': np.median}).reset_index()
 
-mine = ['B', 'D', 'F', 'J', 'L', 'U', 'I', 'U']
+meds['normalised_rating2'] = meds2['normalised_rating']
 
-choose = [x for x in subjects if x not in mine]
+func = ln.utils.concordance
 
-for i in range(out.shape[0]):
+concordance = meds.groupby(['experiment', 'page']).apply(
+    lambda g: func(g['normalised_rating'].values,
+                   g['normalised_rating2'].values
+                   )
+).reset_index()
 
-    these = np.random.choice(choose, 7, replace=False)
-    which.append(these)
+concordance.boxplot(column=0, by=['experiment'])
+plt.show()
 
-    for j, g in enumerate(ratings.groupby(['experiment'])):
-
-        # rating2 = g[1].query("~subject.isin(['B', 'D', 'F', 'J', 'L', 'U', 'I', 'U'])")
-
-        rating2 = g[1][~g[1].subject.isin(these)]
-
-        medians1 = ln.mushra.average(g[1], 'median')
-        medians2 = ln.mushra.average(rating2, 'median')
-
-        concor = ln.utils.concordance(medians1['rating'].values,
-                                    medians2['rating'].values)
-
-        out[i, j] = concor
-
-print(np.sum(out[:, 0] < 0.889) / out.shape[0])
-print(np.sum(out[:, 1] < 0.9696) / out.shape[0])
-
-plt.boxplot(out)
+error = (meds['normalised_rating'] - meds['normalised_rating2']).abs()
+print(error.quantile(0.95))
+sb.boxplot(error)
 plt.show()

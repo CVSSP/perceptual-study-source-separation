@@ -40,10 +40,10 @@ def correlation_stats(data):
     return stats
 
 
-def main(filename, shuffle_ratings=False):
+def main(filename, outputname, shuffle_ratings=False):
 
     # Load subjective data
-    ratings = pd.read_csv("./data/ratings.csv")
+    ratings = pd.read_csv('./data/ratings.csv')
 
     # Drop hidden stimuli from ratings
     ratings = ratings.query("~sound.isin(['ref', 'Quality', 'Interferer'])")
@@ -62,7 +62,7 @@ def main(filename, shuffle_ratings=False):
     median_rating = listen.mushra.average(ratings, 'median')
 
     # Model predictions
-    predictions = pd.read_csv("./data/predictions.csv")
+    predictions = pd.read_csv(filename)
 
     # Compute correlation statistics
     corrs = predictions.groupby(['experiment', 'metric', 'page']).agg(
@@ -80,12 +80,15 @@ def main(filename, shuffle_ratings=False):
     stats = corrs.groupby(['experiment', 'metric', 'corr_type'])['corr'].apply(
         correlation_stats)
 
-    corrs.to_csv(filename)
-
+    corrs.to_csv(outputname)
 
     return stats
 
 
 if __name__ == '__main__':
 
-    print(main(filename='./data/correlations.csv'))
+    stats = main(filename='./data/bss_eval_and_peass_non_norm_corrected.csv',
+                 outputname='./data/non_norm_correlations.csv')
+
+    stats = main(filename='./data/bss_eval_and_peass_corrected.csv',
+                 outputname='./data/correlations.csv')

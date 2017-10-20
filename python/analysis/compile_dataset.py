@@ -9,7 +9,7 @@ import pandas as pd
 import listen
 
 
-def main():
+def main(exclude=False):
 
     frame = listen.parser.MUSHRA('./site/_data/results/interferer').parse()
 
@@ -19,9 +19,6 @@ def main():
 
     # Drop these submissions as we have resubmissions for them:
     frame = frame.query("~subject.isin(['JF-WEB', 'SE-WEB'])").copy()
-
-    # Corrupt data for interference task
-    # frame = frame.query("~subject.isin(['Ice'])").reset_index(drop=True)
 
     frame['normalised_rating'] = (listen.mushra.normalise_ratings(frame)
                                   ['rating']
@@ -33,7 +30,8 @@ def main():
         pass
 
     # Remove these subject completely based on post-screening:
-    frame = frame.query("~subject.isin(['J', 'D'])").reset_index(drop=True)
+    if exclude:
+        frame = frame.query("~subject.isin(['J', 'D'])").reset_index(drop=True)
 
     '''
     # Drop any pages with normalised ratings less than 90 (this is not
@@ -56,9 +54,13 @@ def main():
             len(pd.unique(g[1].subject)), g[0]),
         )
 
-    frame.to_csv('./data/ratings.csv', index=None)
+    if exclude:
+        frame.to_csv('./data/ratings_dropped.csv', index=None)
+    else:
+        frame.to_csv('./data/ratings.csv', index=None)
 
 
 if __name__ == '__main__':
 
-    main()
+    main(False)  # All 24 subjects
+    main(True)  # 22 subjects
