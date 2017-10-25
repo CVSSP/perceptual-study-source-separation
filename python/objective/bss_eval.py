@@ -47,9 +47,9 @@ def bss_eval(reference_sources, estimated_target, audio_format='wav'):
         separation._bss_decomp_mtifilt(reference_sources,
                                        estimated_target,
                                        0, 512)
-    sdr, sir, sar = \
-        separation._bss_source_crit(s_true, e_spat, e_interf, e_artif)
-    return sir, sar
+    sdr, isr, sir, sar = \
+        separation._bss_image_crit(s_true, e_spat, e_interf, e_artif)
+    return sir, sar, isr
 
 
 def peass(reference_files, estimated_file, path_to_peass_toolbox):
@@ -83,6 +83,8 @@ def main(peass_path='/vol/vssp/maruss/matlab_toolboxes/PEASS-Software-v2.0_audio
 
     for _, track_df in df.groupby('track_id'):
 
+        print(_)
+
         path = '{}{}-{}-{}/'.format(stim_path,
                                     track_df['target'].iloc[0],
                                     track_df['track_id'].iloc[0],
@@ -103,12 +105,13 @@ def main(peass_path='/vol/vssp/maruss/matlab_toolboxes/PEASS-Software-v2.0_audio
                                           audio_format, suffix)
                 est_target, _ = sf.read(est_file)
 
-                sir, sar = bss_eval(ref_sources, est_target)
+                sir, sar, isr = bss_eval(ref_sources, est_target)
                 ips, aps, tps = \
                     peass([vocal_file, tmp_file], est_file, peass_path)
 
                 df.loc[idx, 'SAR'] = sar
                 df.loc[idx, 'APS'] = aps
+                df.loc[idx, 'ISR'] = isr
                 df.loc[idx, 'TPS'] = tps
                 df.loc[idx, 'SIR'] = sir
                 df.loc[idx, 'IPS'] = ips
