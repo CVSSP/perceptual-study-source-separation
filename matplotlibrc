@@ -1,7 +1,7 @@
 backend      : TkAgg
 
 mathtext.default    : regular
-font.size           : 10
+font.size           : 8
 font.family         : serif
 font.serif          : Times, Palatino, New Century Schoolbook, Bookman, Computer Modern Roman
 font.sans-serif     : Helvetica, Avant Garde, Computer Modern Sans serif

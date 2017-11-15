@@ -11,10 +11,10 @@ def calculate_alpha(frame, remove_these=['Quality', 'Interferer', 'ref']):
         frame = frame[~frame.sound.isin(remove_these)]
 
     alpha, _ = listen.mushra.inter_rater_reliability(
-        frame, 'normalised_rating')
+        frame, 'normalised_rating', 'ratio')
 
     alpha2, _ = listen.mushra.inter_rater_reliability(
-        frame, 'rank')
+        frame, 'rank', 'ordinal')
 
     alpha, alpha2 = alpha.reset_index(), alpha2.reset_index()
     alpha['type'] = 'rating'
@@ -26,6 +26,7 @@ def calculate_alpha(frame, remove_these=['Quality', 'Interferer', 'ref']):
 
 plot = False
 frame = pd.read_csv('./data/ratings.csv')
+frame = frame.query("~sound.isin(['ref', 'Quality', 'Interferer'])")
 frame = listen.mushra.rank_ratings(frame)
 
 alpha = calculate_alpha(frame)
@@ -39,11 +40,11 @@ for g in alpha.groupby(['experiment', 'Hidden included', 'type']):
 
     median = g[1][0].agg(np.median)
 
-    ci = g[1][0].agg(lambda g2: listen.utils.bootstrap_ci(g2, np.median))
+    # ci = g[1][0].agg(lambda g2: listen.utils.bootstrap_ci(g2, np.median))
 
     iqr = g[1][0].agg(lambda g2: g2.quantile(0.75) - g2.quantile(0.25))
 
-    print('median : ', median, 'CI95 : ', ci, 'IQR : ', iqr)
+    print('median : ', median, 'IQR : ', iqr)
 
 
 if plot:

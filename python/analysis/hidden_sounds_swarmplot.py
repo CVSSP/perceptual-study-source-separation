@@ -6,6 +6,9 @@ import numpy as np
 
 frame = pd.read_csv('./data/ratings.csv')
 
+# Probably best to average reps
+frame = ln.
+
 sub = frame.query("sound.isin(['Quality', 'Interferer', 'ref'])")
 
 ref = sub.query("sound == 'ref'")
@@ -25,16 +28,18 @@ fig, ax = plt.subplots(figsize=(3.39, 2.5))
 sb.swarmplot(x="sound", y="normalised_rating",
              ax=ax,
              data=sub.query("experiment == 'quality'"),
-             color=colors[0],
+             color=colors[1],
              marker='o',
+             size=4,
              label='Quality',
              )
 
 sb.swarmplot(x="sound", y="normalised_rating",
              ax=ax,
              data=sub.query("experiment == 'interferer'"),
-             color=colors[1],
+             color=colors[4],
              marker='X',
+             size=4,
              label='Interference',
              )
 
@@ -54,6 +59,6 @@ ax.legend(handles, labels,
 ax.set_ylim(-5, 105)
 
 sb.despine(offset=10)
-plt.tight_layout()
+plt.tight_layout(pad=0.2)
 plt.savefig('./paper/images/swarmplot_hidden_sounds.png', dpi=300)
 plt.show()

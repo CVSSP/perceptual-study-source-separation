@@ -14,6 +14,8 @@ frame = pd.read_csv('./data/ratings.csv')
 
 frame = frame.query("~sound.isin(['ref', 'Quality', 'Interferer'])")
 
+# frame = frame.query("subject == 'R'")
+
 corrs, stats = ln.mushra.within_subject_agreement(frame,
                                                   'normalised_rating')
 

@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def main():
+def main(expected_metrics_only=True):
 
     for filename in ["./data/bss_eval_and_peass.csv",
                      "./data/bss_eval_and_peass_non_norm.csv"]:
@@ -34,10 +34,20 @@ def main():
         # Wide to long
         predictions = predictions.melt(
             id_vars=['experiment', 'page', 'sound'],
-            value_vars=['SAR', 'SIR', 'APS', 'TPS', 'IPS'],
+            value_vars=['SAR', 'ISR', 'SIR', 'APS', 'TPS', 'IPS'],
             var_name='metric',
             value_name='score',
         )
+
+        if expected_metrics_only:
+            predictions = predictions.query(
+                ("metric == 'SAR' and experiment == 'quality' or "
+                 "metric == 'APS' and experiment == 'quality' or "
+                 "metric == 'ISR' and experiment == 'quality' or "
+                 "metric == 'TPS' and experiment == 'quality' or "
+                 "metric == 'SIR' and experiment == 'interferer' or "
+                 "metric == 'IPS' and experiment == 'interferer'")
+            )
 
         predictions = predictions.sort_values(
             by=['experiment', 'page', 'sound', 'metric'])

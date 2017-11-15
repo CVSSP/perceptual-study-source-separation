@@ -64,6 +64,13 @@ def main(filename, outputname, shuffle_ratings=False):
     # Model predictions
     predictions = pd.read_csv(filename)
 
+    # Just a sanity check:
+    t = median_rating.query("page == 'vocals-10-SIR' and experiment == 'interferer'")
+    t2 = predictions.query("page == 'vocals-10-SIR' and metric == 'SIR'")
+    print(ratings.query("page == 'vocals-10-SIR' and experiment == 'interferer'").groupby('sound')['normalised_rating'].median())
+    print(t)
+    print(scipy.stats.pearsonr(t['normalised_rating'], t2['score']))
+
     # Compute correlation statistics
     corrs = predictions.groupby(['experiment', 'metric', 'page']).agg(
         lambda g: pearson(median_rating, g)
