@@ -70,5 +70,5 @@ ax.set_yticks(ticks)
 sb.despine(offset=0)
 plt.tight_layout(pad=0.2)
 
-plt.savefig('./paper/images/subjective_vs_sar_aps.png', dpi=300)
+plt.savefig('./paper/images/subjective_vs_sar_aps.pdf')
 plt.show()

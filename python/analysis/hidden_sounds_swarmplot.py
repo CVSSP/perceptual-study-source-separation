@@ -73,7 +73,7 @@ def main(for_paper=True):
     sb.despine(offset=10)
     plt.tight_layout(pad=0.2)
     if for_paper:
-        plt.savefig('./paper/images/swarmplot_hidden_sounds.png', dpi=300)
+        plt.savefig('./paper/images/swarmplot_hidden_sounds.pdf')
     else:
         plt.savefig('./paper/images/swarmplot_hidden_sounds_pres.png', dpi=300)
     plt.show()
