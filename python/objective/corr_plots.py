@@ -71,8 +71,8 @@ sb.swarmplot(y='metric', x='corr',
 
 handles, labels = ax.get_legend_handles_labels()
 handles = [handles[0], handles[-1]]
-labels = [labels[0], labels[-1]]
-ax.legend(handles, labels, loc='lower left')
+labels = ['Sound quality', 'Interference']
+ax.legend(handles, labels, loc='lower left', title='Task')
 
 labels = ['APS\n' + r'\scriptsize{PEASS}', 'TPS\n' + r'{\scriptsize PEASS}',
           'SAR\n' + r'{\scriptsize BSS Eval}', 'ISR\n' + r'{\scriptsize BSS Eval}',

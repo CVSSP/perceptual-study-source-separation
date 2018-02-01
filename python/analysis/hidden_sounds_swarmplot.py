@@ -27,7 +27,7 @@ def main(for_paper=True):
 
     if for_paper:
         order = ['Quality', 'Interferer', 'ref']
-        xtick_labels = ['$A_{Q}$', '$A_{I}$', 'Ref']
+        xtick_labels = ['Sound quality', 'Interference', 'Reference']
     else:
         order = ['ref', 'Quality', 'Interferer']
         xtick_labels = ['Ref', '$A_{Q}$', '$A_{I}$']
@@ -60,10 +60,11 @@ def main(for_paper=True):
 
     handles, labels = ax.get_legend_handles_labels()
     handles = [handles[0], handles[3]]
-    labels = [labels[0], labels[3]]
+    labels = ['Sound quality', 'Interference']
     if for_paper:
         ax.legend(handles, labels,
                   loc=(0.6, 0.22),
+                  title='Task',
                   )
     else:
         ax.legend(handles, labels, loc='best')
