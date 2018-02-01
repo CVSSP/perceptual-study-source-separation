@@ -1,64 +1,83 @@
+import listen as ln
 import matplotlib.pyplot as plt
 import seaborn as sb
 import pandas as pd
 import numpy as np
 
 
-frame = pd.read_csv('./data/ratings.csv')
+def main(for_paper=True):
 
-# Probably best to average reps
-frame = ln.
+    frame = pd.read_csv('./data/ratings.csv')
 
-sub = frame.query("sound.isin(['Quality', 'Interferer', 'ref'])")
+    # Probably best to average reps
+    frame = ln.mushra.average_replicates(frame)
 
-ref = sub.query("sound == 'ref'")
+    sub = frame.query("sound.isin(['Quality', 'Interferer', 'ref'])")
 
-out = ref.groupby('experiment')['normalised_rating'].agg(
-    lambda g: 100 * np.sum(g == 100) / g.size
-)
+    ref = sub.query("sound == 'ref'")
 
-print('Percentage of ratings for the reference equal to 100:', out)
+    out = ref.groupby('experiment')['normalised_rating'].agg(
+        lambda g: 100 * np.sum(g == 100) / g.size
+    )
 
+    print('Percentage of ratings for the reference equal to 100:', out)
 
-#red, blue = sb.xkcd_rgb["pale red"], sb.xkcd_rgb["denim blue"]
-colors = sb.color_palette("PRGn")
+    # red, blue = sb.xkcd_rgb["pale red"], sb.xkcd_rgb["denim blue"]
+    colors = sb.color_palette("PRGn")
 
-fig, ax = plt.subplots(figsize=(3.39, 2.5))
+    if for_paper:
+        order = ['Quality', 'Interferer', 'ref']
+        xtick_labels = ['$A_{Q}$', '$A_{I}$', 'Ref']
+    else:
+        order = ['ref', 'Quality', 'Interferer']
+        xtick_labels = ['Ref', '$A_{Q}$', '$A_{I}$']
 
-sb.swarmplot(x="sound", y="normalised_rating",
-             ax=ax,
-             data=sub.query("experiment == 'quality'"),
-             color=colors[1],
-             marker='o',
-             size=4,
-             label='Quality',
-             )
+    fig, ax = plt.subplots(figsize=(3.39, 2.5))
 
-sb.swarmplot(x="sound", y="normalised_rating",
-             ax=ax,
-             data=sub.query("experiment == 'interferer'"),
-             color=colors[4],
-             marker='X',
-             size=4,
-             label='Interference',
-             )
+    sb.swarmplot(x="sound", y="normalised_rating",
+                 order=order,
+                 ax=ax,
+                 data=sub.query("experiment == 'quality'"),
+                 color=colors[1],
+                 marker='o',
+                 size=4,
+                 label='Quality',
+                 )
 
+    sb.swarmplot(x="sound", y="normalised_rating",
+                 order=order,
+                 ax=ax,
+                 data=sub.query("experiment == 'interferer'"),
+                 color=colors[4],
+                 marker='X',
+                 size=4,
+                 label='Interference',
+                 )
 
+    ax.set_ylabel('Rating')
+    ax.set_xlabel('')
+    ax.set_xticklabels(xtick_labels)
 
-ax.set_ylabel('Rating')
-ax.set_xlabel('')
-ax.set_xticklabels(['$A_{Q}$', '$A_{I}$', 'Ref'])
+    handles, labels = ax.get_legend_handles_labels()
+    handles = [handles[0], handles[3]]
+    labels = [labels[0], labels[3]]
+    if for_paper:
+        ax.legend(handles, labels,
+                  loc=(0.6, 0.22),
+                  )
+    else:
+        ax.legend(handles, labels, loc='best')
 
-handles, labels = ax.get_legend_handles_labels()
-handles = [handles[0], handles[3]]
-labels = [labels[0], labels[3]]
-ax.legend(handles, labels,
-          loc=(0.6, 0.22),
-          )
+    ax.set_ylim(-5, 105)
 
-ax.set_ylim(-5, 105)
+    sb.despine(offset=10)
+    plt.tight_layout(pad=0.2)
+    if for_paper:
+        plt.savefig('./paper/images/swarmplot_hidden_sounds.png', dpi=300)
+    else:
+        plt.savefig('./paper/images/swarmplot_hidden_sounds_pres.png', dpi=300)
+    plt.show()
 
-sb.despine(offset=10)
-plt.tight_layout(pad=0.2)
-plt.savefig('./paper/images/swarmplot_hidden_sounds.png', dpi=300)
-plt.show()
+if __name__ == '__main__':
+
+    main(True)
