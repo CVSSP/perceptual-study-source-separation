@@ -37,4 +37,4 @@ site/sounds_training/*/*.flac
 # scripts
 python/analysis/rename_subjects.py
 
-paper/*
+icassp18_paper/
