@@ -21,7 +21,7 @@ pip install mir_eval
 pip install matplotlib
 pip install pysoundfile
 pip install krippendorff
-
+pip install soundfile
 
 git clone -b dev https://github.com/IoSR-Surrey/untwist.git
 cd untwist
