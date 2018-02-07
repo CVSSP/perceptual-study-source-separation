@@ -41,11 +41,6 @@ git checkout ff3ff1574c0898422ee0849bbdd850c15015ff4b
 python setup.py install
 cd ../
 
-git clone -b python3 https://github.com/deeuu/matlab_wrapper
-cd matlab_wrapper
-python setup.py install
-cd ../
-
 git clone https://github.com/deeuu/listen
 cd listen
 git checkout python
