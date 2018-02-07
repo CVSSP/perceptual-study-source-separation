@@ -1,14 +1,9 @@
-import matplotlib.pyplot as plt
 from untwist import data
-import soundfile as sf
-import numpy as np
 import pandas as pd
 import os
 
 
-
-def main(stimulus_folder,
-         filename=None):
+def main(stimulus_folder):
 
     x = [_ for _ in os.walk(stimulus_folder)]
     page_names = x[0][1]
@@ -20,17 +15,14 @@ def main(stimulus_folder,
 
         ref_path = '{0}/{1}/{2}'.format(stimulus_folder,
                                         page,
-                                        'ref.wav')
+                                        'ref.flac')
 
         accomp_path = '{0}/{1}/{2}'.format(stimulus_folder,
                                            page,
-                                           'ref_accompaniment.wav')
+                                           'ref_accompaniment.flac')
 
-        ref, fs = sf.read(ref_path)
-        accomp, fs = sf.read(accomp_path)
-
-        accomp = data.audio.Wave(accomp, fs)
-        ref = data.audio.Wave(ref, fs)
+        accomp = data.audio.Wave.read(accomp_path)
+        ref = data.audio.Wave.read(ref_path)
 
         frame.iloc[i] = ref.loudness - accomp.loudness
 
@@ -39,6 +31,4 @@ def main(stimulus_folder,
 
 if __name__ == '__main__':
 
-
-    main(stimulus_folder='./site/sounds',
-         filename='./site/_data/interferer_anchor_balances.csv')
+    main(stimulus_folder='./site/sounds')

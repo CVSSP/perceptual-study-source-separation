@@ -1,4 +1,3 @@
-import os
 import pandas as pd
 import numpy as np
 import soundfile as sf
@@ -27,12 +26,23 @@ def df_experiment(input_filename):
     return df
 
 
-def reference_files(path, audio_format='wav', suffix=''):
+def reference_files(path,
+                    audio_format='wav',
+                    suffix='',
+                    just_accompaniment=False):
 
-    vocal = '{0}ref{1}.{2}'.format(path, suffix, audio_format.lower())
-    accomp = '{0}ref{1}_accompaniment.{2}'.format(path, suffix,
-                                                 audio_format.lower())
-    return vocal, accomp
+    paths = ['{0}ref{1}.{2}'.format(path, suffix, audio_format.lower())]
+    if just_accompaniment:
+        paths.append('{0}ref{1}_accompaniment.{2}'.format(path, suffix,
+                                                          audio_format.lower())
+                     )
+    else:
+        paths += [
+            '{0}{1}{2}.{3}'.format(path, _, suffix, audio_format.lower())
+            for _ in ['bass', 'drums', 'other']
+        ]
+
+    return paths
 
 
 def estimated_file(path, method, audio_format='wav', suffix=''):
@@ -70,44 +80,54 @@ def peass(reference_files, estimated_file, path_to_peass_toolbox):
     return ips, aps, tps
 
 
-def main(peass_path='/vol/vssp/maruss/matlab_toolboxes/PEASS-Software-v2.0_audioread_compiled',
+def main(peass_path,
          experiment_file='./data/experiment_stimuli.csv',
-         result_file='./data/bss_eval_and_peass.csv',
-         suffix='',
          stim_path='./site/sounds/',
-         audio_format='wav'
+         audio_format='wav',
          ):
 
-    df = df_experiment(experiment_file)
-    df['task'] = 'quality'
+    for suffix, result_file, just_accompaniment in zip(
+        ['',
+         '',
+         'non_norm'],
+        ['./data/bss_eval_and_peass.csv',
+         './data/bss_eval_and_peass_all_stems.csv',
+         './data/bss_eval_and_peass_nonorm_all_stems.csv'],
+        [True, False, False],
+    ):
 
-    for _, track_df in df.groupby('track_id'):
+        df = df_experiment(experiment_file)
+        df['task'] = 'quality'
 
-        print(_)
+        for _, track_df in df.groupby('track_id'):
 
-        path = '{}{}-{}-{}/'.format(stim_path,
-                                    track_df['target'].iloc[0],
-                                    track_df['track_id'].iloc[0],
-                                    track_df['metric'].iloc[0])
+            print(_)
 
-        vocal_file, accomp_file = reference_files(path, audio_format, suffix)
-        vocal, _ = sf.read(vocal_file)
-        accomp, fs = sf.read(accomp_file)
-        ref_sources = np.array([vocal, accomp])
+            path = '{}{}-{}-{}/'.format(stim_path,
+                                        track_df['target'].iloc[0],
+                                        track_df['track_id'].iloc[0],
+                                        track_df['metric'].iloc[0])
 
-        with TemporaryDirectory() as tmp_dir:
-            tmp_file = tmp_dir + '/tmp.wav'
-            sf.write(tmp_file, accomp, fs)
+            paths = reference_files(path,
+                                    audio_format,
+                                    suffix,
+                                    just_accompaniment)
+            refs = []
+            for ref in paths:
+                wav, fs = sf.read(ref)
+                refs.append(wav)
+            refs = np.array(refs)
 
             for idx, row in track_df.iterrows():
 
                 est_file = estimated_file(path, row['method'],
                                           audio_format, suffix)
+
                 est_target, _ = sf.read(est_file)
 
-                sir, sar, isr = bss_eval(ref_sources, est_target)
-                ips, aps, tps = \
-                    peass([vocal_file, tmp_file], est_file, peass_path)
+                sir, sar, isr = bss_eval(refs, est_target)
+
+                ips, aps, tps = peass(paths, est_file, peass_path)
 
                 df.loc[idx, 'SAR'] = sar
                 df.loc[idx, 'APS'] = aps
@@ -116,21 +136,14 @@ def main(peass_path='/vol/vssp/maruss/matlab_toolboxes/PEASS-Software-v2.0_audio
                 df.loc[idx, 'SIR'] = sir
                 df.loc[idx, 'IPS'] = ips
 
-    df2 = df.copy()
-    df2['task'] = 'interferer'
+        df2 = df.copy()
+        df2['task'] = 'interferer'
 
-    df = pd.concat([df, df2])
-    df.to_csv(result_file, index=None)
+        df = pd.concat([df, df2])
+        df.to_csv(result_file, index=None)
 
 
 if __name__ == '__main__':
 
-    for suffix, result_file in zip(
-        ['',
-         'non_norm'],
-        ['./data/bss_eval_and_peass.csv',
-         './data/bss_eval_and_peass_non_norm.csv']
-    ):
-
-        main(suffix=suffix,
-             result_file=result_file)
+    main(peass_path='/vol/vssp/maruss/matlab_toolboxes/PEASS-Software-v2.0_audioread_compiled',
+         audio_format='wav')

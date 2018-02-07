@@ -4,7 +4,8 @@ import pandas as pd
 def main(expected_metrics_only=True):
 
     for filename in ["./data/bss_eval_and_peass.csv",
-                     "./data/bss_eval_and_peass_non_norm.csv"]:
+                     "./data/bss_eval_and_peass_all_stems.csv",
+                     "./data/bss_eval_and_peass_nonorm_all_stems.csv"]:
 
         # Load subjective data
         ratings = pd.read_csv("./data/ratings.csv")
@@ -52,7 +53,7 @@ def main(expected_metrics_only=True):
         predictions = predictions.sort_values(
             by=['experiment', 'page', 'sound', 'metric'])
 
-        predictions.to_csv(filename[:-4] + '_corrected.csv', index=None)
+        predictions.to_csv(filename[:-4] + '_clean.csv', index=None)
 
 
 if __name__ == '__main__':
