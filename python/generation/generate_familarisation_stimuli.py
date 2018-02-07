@@ -1,5 +1,8 @@
-import pandas as pd
-import numpy as np
+'''
+Generates stimuli for the soundboard on the familiarisation page of the
+introduction to the listening test. Its goal is to demonstrate the
+difference between sound quality and interference.
+'''
 from untwist import (data, utilities)
 import masseval
 import yaml
@@ -7,15 +10,9 @@ import os
 import shutil
 
 
-if __name__ == '__main__':
+def main(dsd_base_path='/vol/vssp/maruss/data2/DSD100'):
 
-    '''
-    Generates stimuli for the soundboard on the familiarisation page of the
-    introduction to the listening test. Its goal is to demonstarte the
-    difference between sound quality and interference.
-    '''
-
-    masseval.config.dsd_base_path = '/vol/vssp/maruss/data2/DSD100'
+    masseval.config.dsd_base_path = dsd_base_path
     audio_dir = 'sounds_familiarisation/'
     config_file = ['./site/_data/quality_familiarisation.yaml',
                    './site/_data/interference_familiarisation.yaml']
@@ -32,8 +29,6 @@ if __name__ == '__main__':
     df = df[df.test_set == 0]
 
     # Pick some songs at random and get stems
-    num_songs = 1
-    titles = pd.unique(df.title)
     selected = ['Bulldozer']
     df = df[df.title.isin(selected) & (df.audio != 'mixture')]
 
@@ -55,7 +50,6 @@ if __name__ == '__main__':
     Create the config files
     '''
 
-    song_idx = stim_idx = 0
     for title, song in df.groupby('title'):
 
         new_config = {
@@ -112,15 +106,11 @@ if __name__ == '__main__':
             if (i == 0):
                 ref = mix_tmp
 
-            stim_idx += 1
-
         # Now create artefacts, here were add the reference again
         new_config['rows'][1]['sounds'].append(
             {'button_label': labels[0],
              'url': audio_dir + '0dB-{}.wav'.format(title)}
         )
-
-        stim_idx += 1
 
         for trim_d, trim_a, balance, anchor_type, label in zip(trim_factor_distorted,
                                                                trim_factor_artefacts,
@@ -145,8 +135,6 @@ if __name__ == '__main__':
                  'url': audio_dir + filename}
             )
 
-            stim_idx += 1
-
         # Write config file for this soundboard (song)
         with open(config_file[0], 'w') as f:
             yaml.dump(new_config,
@@ -163,5 +151,6 @@ if __name__ == '__main__':
                       default_flow_style=False)
 
 
+if __name__ == '__main__':
 
-        song_idx += 1
+    main('/vol/vssp/maruss/data2/DSD100')

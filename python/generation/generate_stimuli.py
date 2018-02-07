@@ -3,15 +3,16 @@ import numpy as np
 import masseval
 
 
-def main():
+def main(dsd_path, mus_path):
 
     # masseval side
-    masseval.config.mus_base_path = '/vol/vssp/maruss/data2/MUS2017'
-    masseval.config.dsd_base_path = '/vol/vssp/maruss/data2/DSD100'
+    masseval.config.mus_base_path = mus_path
+    masseval.config.dsd_base_path = dsd_path
 
     exclude_tracks = experiment_stimuli(target_loudness=None,
                                         suffix='non_norm',
                                         overall_gain=-6)
+
     exclude_tracks = experiment_stimuli(target_loudness=-24)
 
     training(exclude_tracks)
@@ -139,4 +140,5 @@ def training(exclude_tracks):
 
 if __name__ == '__main__':
 
-    main()
+    main('/vol/vssp/maruss/data2/MUS2017'
+         '/vol/vssp/maruss/data2/DSD100')
