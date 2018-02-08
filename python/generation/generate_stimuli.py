@@ -140,5 +140,4 @@ def training(exclude_tracks):
 
 if __name__ == '__main__':
 
-    main('/vol/vssp/maruss/data2/MUS2017'
-         '/vol/vssp/maruss/data2/DSD100')
+    main('/vol/vssp/maruss/data2/DSD100', '/vol/vssp/maruss/data2/MUS2017')
