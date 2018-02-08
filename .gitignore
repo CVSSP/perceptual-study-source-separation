@@ -38,3 +38,4 @@ site/sounds_training/*/*.flac
 python/analysis/rename_subjects.py
 
 paper/
+bkup/
