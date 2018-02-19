@@ -70,6 +70,7 @@ def plot(corrs, filename):
         box.set_facecolor('white')
 
     # Add some small jitter
+    np.random.seed(1111)
     corrs['corr'] += np.random.uniform(-0.01, 0.01, size=len(corrs))
 
     sb.swarmplot(y='metric', x='corr',
