@@ -1,9 +1,7 @@
-# Intro
-
 This is the repository for the paper:
 
 ```bibtex
-@inproceedings{WARD_2018,
+@inproceedings{Ward_2018,
 	year = 2018,
 	month = {April},
 	publisher = {{IEEE}},
@@ -77,7 +75,7 @@ For our analysis, we used the SiSEC submission data (~400 GB), which was kindly
 provided by Fabian-Robert Stöter. You can contact me for the complete submission
 data.
 
-## Scripts
+### Scripts
 
 ```
 python/generation/generate_familarisation_stimuli.py
@@ -169,14 +167,18 @@ Measures of inter-rater reliability as reported in paragraph 3 of the paper
 (thanks to [kripperndorff-alpha](https://github.com/grrrr/krippendorff-alpha)
 for the python implementation).
 
-# Objective Data
+## Objective Data
 
 ```
 python/objective/compute_objective_measures.py
 ```
-Computes the objective measures according to BSS Eval and PEASS. We use 
-[mir_eval](https://github.com/craffel/mir_eval) for BSS Eval. You will need
-Matlab to run PEASS; see [this](https://github.com/CVSSP/peass-software) repo.
+Computes the objective measures according to [BSS
+Eval](http://bass-db.gforge.inria.fr/bss_eval/) and
+[PEASS](http://bass-db.gforge.inria.fr/peass/PEASS-Software.html). We are
+essentially using
+[`mir_eval.separation.bss_eval_images`](https://github.com/craffel/mir_eval) for
+BSS Eval. You will need Matlab to run PEASS; see
+[this](https://github.com/CVSSP/peass-software) repo.
 
 In the `main` function, you will need to:
 
