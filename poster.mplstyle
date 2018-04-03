@@ -3,5 +3,7 @@ font.size           : 35
 font.family         : sans-serif
 font.sans-serif     : Open Sans
 
+savefig.dpi         : 100
+
 text.usetex         : true
 legend.fontsize     : 35
