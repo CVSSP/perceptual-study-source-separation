@@ -3,6 +3,7 @@ import scipy
 import listen
 import pandas as pd
 import seaborn as sb
+import argparse
 import matplotlib.pyplot as plt
 from matplotlib import rcParams
 rcParams['text.usetex'] = True
@@ -48,7 +49,7 @@ def correlate(path_to_ratings='./data/ratings.csv',
     return corrs
 
 
-def plot(corrs, filename):
+def paper_plot(corrs, filename):
 
     fig, ax = plt.subplots(figsize=(3.3, 3.0))
 
@@ -119,9 +120,83 @@ def plot(corrs, filename):
     plt.show()
 
 
+def poster_plot(corrs, filename, style='poster.mplstyle'):
+    plt.style.use(style)
+
+    # Subset for poster
+    corrs = corrs.query("metric.isin(['APS', 'SAR', 'SIR', 'IPS'])")
+
+    fig, ax = plt.subplots(figsize=(11, 6))
+
+    colors = sb.color_palette("PRGn")
+
+    order = ['APS', 'SAR', 'SIR', 'IPS']
+    sb.boxplot(y='metric', x='corr',
+               order=order,
+               dodge=False,
+               data=corrs,
+               whis=0,
+               fliersize=0,
+               ax=ax,
+               )
+
+    # iterate over boxes
+    for i, box in enumerate(ax.artists):
+        box.set_edgecolor('black')
+        box.set_facecolor('white')
+
+    # Add some small jitter
+    np.random.seed(1111)
+    corrs['corr'] += np.random.uniform(-0.01, 0.01, size=len(corrs))
+
+    sb.swarmplot(y='metric', x='corr',
+                 data=corrs.query("experiment == 'quality'"),
+                 order=order,
+                 size=15,
+                 dodge=True,
+                 marker='o',
+                 ax=ax,
+                 color=colors[1],
+                 label='Quality',
+                 )
+
+    sb.swarmplot(y='metric', x='corr',
+                 data=corrs.query("experiment == 'interferer'"),
+                 order=order,
+                 size=15,
+                 dodge=True,
+                 marker='X',
+                 ax=ax,
+                 color=colors[4],
+                 label='Interference',
+                 )
+
+    handles, labels = ax.get_legend_handles_labels()
+    handles = [handles[0], handles[-1]]
+    labels = ['Sound quality', 'Interference']
+    ax.legend(handles, labels, loc='lower left', title='Task')
+
+    labels = [
+        'APS\n' + 'PEASS',
+        'SAR\n' + 'BSS Eval',
+        'SIR\n' + 'BSS Eval',
+        'IPS\n' + 'PEASS'
+    ]
+
+    ax.set_yticklabels(labels, ha='right')
+
+    plt.ylabel('')
+    plt.xlabel('Spearman correlation')
+    sb.despine(offset=10)
+    plt.tight_layout(pad=0.2)
+    plt.savefig(filename, dpi=100)
+    plt.show()
+
+
 def main(path_to_ratings,
          path_to_measures,
-         image_name
+         image_name,
+         poster=False
          ):
 
     corrs = correlate(path_to_ratings, path_to_measures)
@@ -129,11 +204,25 @@ def main(path_to_ratings,
     print('Median of within-song Spearman correlations')
     print(corrs.groupby('metric').median())
 
-    plot(corrs, image_name)
+    if poster:
+        poster_plot(corrs, image_name)
+    else:
+        paper_plot(corrs, image_name)
 
 
 if __name__ == '__main__':
 
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--poster', dest='poster', action='store_true',
+                        default=False)
+    args = parser.parse_args()
+
+    if args.poster:
+        image_name = './paper/poster/resources/spearman_boxplot.png'
+    else:
+        image_name = './paper/images/spearman_boxplot.pdf'
+
     main(path_to_ratings='./data/ratings.csv',
          path_to_measures='./data/bss_eval_and_peass_clean.csv',
-         image_name='./paper/images/spearman_boxplot.pdf')
+         image_name=image_name,
+         poster=args.poster)
