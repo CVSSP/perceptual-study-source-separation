@@ -1,7 +1,7 @@
 mathtext.default    : regular
-font.size           : 30
+font.size           : 35
 font.family         : sans-serif
 font.sans-serif     : Open Sans
 
 text.usetex         : true
-legend.fontsize     : 25
+legend.fontsize     : 35

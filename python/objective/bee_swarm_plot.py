@@ -174,7 +174,8 @@ def poster_plot(corrs, filename, style='poster.mplstyle'):
     handles, labels = ax.get_legend_handles_labels()
     handles = [handles[0], handles[-1]]
     labels = ['Sound quality', 'Interference']
-    ax.legend(handles, labels, loc='lower left', title='Task')
+    leg = ax.legend(handles, labels, loc='lower left', title='Task')
+    plt.setp(leg.get_texts(), color='#1b656d')
 
     labels = [
         'APS\n' + 'PEASS',
