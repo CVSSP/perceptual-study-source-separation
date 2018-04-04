@@ -6,4 +6,4 @@ font.sans-serif     : Open Sans
 savefig.dpi         : 100
 
 text.usetex         : true
-legend.fontsize     : 35
+legend.fontsize     : 30

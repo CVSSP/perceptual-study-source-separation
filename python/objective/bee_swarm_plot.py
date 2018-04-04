@@ -123,14 +123,11 @@ def paper_plot(corrs, filename):
 def poster_plot(corrs, filename, style='poster.mplstyle'):
     plt.style.use(style)
 
-    # Subset for poster
-    corrs = corrs.query("metric.isin(['APS', 'SAR', 'SIR', 'IPS'])")
+    order = ['APS', 'TPS', 'SAR', 'ISR', 'SIR', 'IPS']
 
-    fig, ax = plt.subplots(figsize=(11, 6))
-
+    fig, ax = plt.subplots(figsize=(11, 7))
     colors = sb.color_palette("PRGn")
 
-    order = ['APS', 'SAR', 'SIR', 'IPS']
     sb.boxplot(y='metric', x='corr',
                order=order,
                dodge=False,
@@ -152,7 +149,7 @@ def poster_plot(corrs, filename, style='poster.mplstyle'):
     sb.swarmplot(y='metric', x='corr',
                  data=corrs.query("experiment == 'quality'"),
                  order=order,
-                 size=15,
+                 size=12,
                  dodge=True,
                  marker='o',
                  ax=ax,
@@ -174,14 +171,16 @@ def poster_plot(corrs, filename, style='poster.mplstyle'):
     handles, labels = ax.get_legend_handles_labels()
     handles = [handles[0], handles[-1]]
     labels = ['Sound quality', 'Interference']
-    leg = ax.legend(handles, labels, loc='lower left', title='Task')
+    leg = ax.legend(handles, labels, loc='lower left')
     plt.setp(leg.get_texts(), color='#1b656d')
 
     labels = [
-        'APS\n' + r'\huge{PEASS}',
-        'SAR\n' + r'\huge{BSS Eval}',
-        'SIR\n' + r'\huge{BSS Eval}',
-        'IPS\n' + r'\huge{PEASS}'
+        'APS' + r'{\large PEASS}',
+        'TPS' + r'{\large PEASS}',
+        'SAR' + r'{\large BSS Eval}',
+        'ISR' + r'{\large BSS Eval}',
+        'SIR' + r'{\large BSS Eval}',
+        'IPS' + r'{\large PEASS}'
     ]
 
     ax.set_yticklabels(labels, ha='right')
