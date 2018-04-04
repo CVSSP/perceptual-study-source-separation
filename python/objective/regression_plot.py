@@ -151,7 +151,7 @@ def poster_plot(fits, image_dir, style='poster.mplstyle'):
         ax.text(50, 10, task, color='#1b656d', fontsize=40)
 
         ax.plot([-20, 100], [-20, 100], '--',
-                color='0.25', zorder=-3, linewidth=0.5)
+                color='0.1', zorder=-3, linewidth=1)
         plt.xlim(0, 95)
         plt.ylim(0, 95)
         plt.ylabel('Fitted objective rating')
