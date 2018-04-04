@@ -178,10 +178,10 @@ def poster_plot(corrs, filename, style='poster.mplstyle'):
     plt.setp(leg.get_texts(), color='#1b656d')
 
     labels = [
-        'APS\n' + 'PEASS',
-        'SAR\n' + 'BSS Eval',
-        'SIR\n' + 'BSS Eval',
-        'IPS\n' + 'PEASS'
+        'APS\n' + r'\huge{PEASS}',
+        'SAR\n' + r'\huge{BSS Eval}',
+        'SIR\n' + r'\huge{BSS Eval}',
+        'IPS\n' + r'\huge{PEASS}'
     ]
 
     ax.set_yticklabels(labels, ha='right')
