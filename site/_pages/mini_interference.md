@@ -9,10 +9,7 @@ next_url: /mini_quality/
 
 ## Please rate the interference
 
-This is a training page for you to familiarise yourself with the user interface
-and also listen to examples of the type of sounds involved. For this test, you
-should rate the **interference** of the test sounds compared with the reference
-sound.
+Rate the **interference** of the test sounds compared with the reference
 
 **Interference** describes the loudness of the instruments compared to the
 loudness of the vocals. For example, 'strong interference' indicates a strong
