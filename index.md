@@ -3,37 +3,31 @@ layout: page
 title: Welcome
 ---
 
-# Welcome to the listening test
+# Welcome
 
-This listening assessment is comprised of 2 parts:
+For the exact assessment used for the original study, please see the [experiment
+home page]({{ site.url }}/test_home/). All results are submitted as a pull
+requires to the [GitHub
+repository](https://github.com/CVSSP/perceptual-study-source-separation)
+associated with this project.
 
-* Test 1: **Sound quality**.
-* Test 2: **Interference**.
+All resources (Python source code, data, audio, paper,
+poster, issues and comments) can be found on the [GitHub
+repository](https://github.com/CVSSP/perceptual-study-source-separation). If you
+have any questions, please raise an issue on GitHub or contact me at
+[contactdominicward@gmail.com](maito:contactdominicward@gmail.com).
 
-The order in which you take each test is set by the experimenter.
-Each test will take between 30 and 50 minutes.
+## Short examples
 
-In both cases you will listen to 8 samples of a vocal recording that has been
-extracted from an overall mix of a song. Your task is to compare each sample
-with a reference sound and then rate it according to either sound quality (test
-1) or interference (test 2). This task is then repeated for a number of songs.
-Both experiments involve an initial training stage which will allow you to:
-
-- Better understand our definitions of sound quality and interference.
-- Gain some intuition for the main interface.
-
-Please let the experimenter know if you have any questions or wish to take a
-break at any point!
+Click a button below to take a mini test involving 2 songs:
 
 <div style="text-align: center;">
 
-  <h2 style="margin-top: 1cm;">Start your assigned experiment by clicking on the button</h2>
-
-  <a href="{{ site.url }}/familiarisation_quality/" id="btn-quality" data-inline="true"
+  <a href="{{ site.url }}/mini_quality/" id="btn-quality" data-inline="true"
           class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right"
-          style="min-width: 300px;">Sound quality</a>
-  <a href="{{ site.url }}/familiarisation_interferer/" id="btn-interferer" data-inline="true"
+          style="min-width: 300px;">Test 1: Sound quality</a>
+  <a href="{{ site.url }}/mini_interferer/" id="btn-interferer" data-inline="true"
           class=" ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right"
-          style="min-width: 300px;">Interference</a>
+          style="min-width: 300px;">Test 2: Interference</a>
 
 </div>
