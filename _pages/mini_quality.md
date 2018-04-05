@@ -9,6 +9,9 @@ next_url: /mini_interference/
 
 ## Please rate the sound quality compared to the reference
 
+Rate the **sound quality** of the test sounds by comparing them with the
+reference sound.
+
 **Sound quality** relates to the amount of artefacts or distortions that you can
 perceive.
 
