@@ -1,0 +1,53 @@
+allow_slider_sort: true
+allow_submission: false
+back_button_can_exit_test: true
+continuous_playback: true
+labels:
+- Strong interference
+- No interference
+loop_playback: true
+must_play_all_samples_to_continue: false
+pages:
+- name: vocals-42-SAR
+  reference_url: sounds_mini/vocals-42-SAR/ref.mp3
+  sounds:
+  - name: Quality
+    url: sounds_mini/vocals-42-SAR/Quality.mp3
+  - name: CHA
+    url: sounds_mini/vocals-42-SAR/CHA.mp3
+  - name: Interferer
+    url: sounds_mini/vocals-42-SAR/Interferer.mp3
+  - name: KAM2
+    url: sounds_mini/vocals-42-SAR/KAM2.mp3
+  - name: KON
+    url: sounds_mini/vocals-42-SAR/KON.mp3
+  - name: NUG3
+    url: sounds_mini/vocals-42-SAR/NUG3.mp3
+  - name: UHL3
+    url: sounds_mini/vocals-42-SAR/UHL3.mp3
+  - name: ref
+    url: sounds_mini/vocals-42-SAR/ref.mp3
+- name: vocals-10-SIR
+  reference_url: sounds_mini/vocals-10-SIR/ref.mp3
+  sounds:
+  - name: Quality
+    url: sounds_mini/vocals-10-SIR/Quality.mp3
+  - name: HUA
+    url: sounds_mini/vocals-10-SIR/HUA.mp3
+  - name: Interferer
+    url: sounds_mini/vocals-10-SIR/Interferer.mp3
+  - name: KAM1
+    url: sounds_mini/vocals-10-SIR/KAM1.mp3
+  - name: KON
+    url: sounds_mini/vocals-10-SIR/KON.mp3
+  - name: NUG2
+    url: sounds_mini/vocals-10-SIR/NUG2.mp3
+  - name: RAF2
+    url: sounds_mini/vocals-10-SIR/RAF2.mp3
+  - name: ref
+    url: sounds_mini/vocals-10-SIR/ref.mp3
+
+randomise_pages: true
+randomise_slider_handle: true
+randomise_sounds_within_page: true
+show_number_on_slider: false
