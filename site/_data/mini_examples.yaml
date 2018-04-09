@@ -1,0 +1,45 @@
+back_button_can_exit_test: true
+continuous_playback: true
+loop_playback: true
+rows:
+- name: Song 1 (algorithms selected to give a range of SAR values)
+  sounds:
+  - button_label: Reference
+    url: sounds_mini/vocals-42-SAR/ref.mp3
+  - button_label: Quality Anchor
+    url: sounds_mini/vocals-42-SAR/Quality.mp3
+  - button_label: Interference Anchor
+    url: sounds_mini/vocals-42-SAR/Interferer.mp3
+- name:
+  sounds:
+  - button_label: CHA
+    url: sounds_mini/vocals-42-SAR/CHA.mp3
+  - button_label: KAM2
+    url: sounds_mini/vocals-42-SAR/KAM2.mp3
+  - button_label: KON
+    url: sounds_mini/vocals-42-SAR/KON.mp3
+  - button_label: NUG3
+    url: sounds_mini/vocals-42-SAR/NUG3.mp3
+  - button_label: UHL3
+    url: sounds_mini/vocals-42-SAR/UHL3.mp3
+
+- name: Song 2 (algorithm selected to give a range of SIR values)
+  sounds:
+  - button_label: Reference
+    url: sounds_mini/vocals-10-SIR/ref.mp3
+  - button_label: Quality Anchor
+    url: sounds_mini/vocals-10-SIR/Quality.mp3
+  - button_label: Interference Anchor
+    url: sounds_mini/vocals-10-SIR/Interferer.mp3
+- name:
+  sounds:
+  - button_label: HUA
+    url: sounds_mini/vocals-10-SIR/HUA.mp3
+  - button_label: KAM1
+    url: sounds_mini/vocals-10-SIR/KAM1.mp3
+  - button_label: KON
+    url: sounds_mini/vocals-10-SIR/KON.mp3
+  - button_label: NUG2
+    url: sounds_mini/vocals-10-SIR/NUG2.mp3
+  - button_label: RAF2
+    url: sounds_mini/vocals-10-SIR/RAF2.mp3

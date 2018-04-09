@@ -1,6 +1,8 @@
 ---
-layout: page
+layout: soundboard
+config_file: mini_examples
 title: Welcome
+next_url: /test_home/
 ---
 
 # Welcome
@@ -19,15 +21,7 @@ have any questions, please raise an issue on GitHub or contact me at
 
 ## Short examples
 
-Click a button below to take a mini test involving 2 songs:
-
-<div style="text-align: center;">
-
-  <a href="{{ site.url }}/mini_quality/" id="btn-quality" data-inline="true"
-          class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right"
-          style="min-width: 300px;">Test 1: Sound quality</a>
-  <a href="{{ site.url }}/mini_interference/" id="btn-interferer" data-inline="true"
-          class=" ui-btn ui-btn-inline ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right"
-          style="min-width: 300px;">Test 2: Interference</a>
-
-</div>
+Audio Examples of the stimuli used for two songs from the main experiment are
+below. [Switch to the main interface]({{ site.url
+}}/mini_quality/){:target="_blank"} to rate
+the sound quality and interference of these samples.
