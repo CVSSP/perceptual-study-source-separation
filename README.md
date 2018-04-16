@@ -13,10 +13,12 @@ This is the repository for the paper:
 
 # What's what?
 
-- The website, hosted on GitHub pages is in the `site` folder
+- The website, hosted on GitHub pages, is in the `site` folder
 - The submitted (raw) subjective ratings are in `site/_data/results`
 - Audio are in `site/sounds/`
-- The source code and images for the paper are in the `paper` folder
+- The source files and images for the paper are in the `paper` folder
+- The source code for the poster (as presented as ICASSP 2018) is
+    `site/pages/poster.md`. Required images can be found in `site/images`.
 
 The experiment lives in the `site` folder, which is deployed to the `gh-pages`
 branch via
@@ -25,7 +27,7 @@ git subtree push --prefix site origin gh-pages
 ```
 
 Go to https://cvssp.github.io/perceptual-study-source-separation/ to see the
-experiment.
+experiment and additional resources.
 
 ## Main data files you should care about
 
@@ -225,10 +227,12 @@ are specified (compares `./data/bss_eval_and_peass.csv` with
 python/objective/bee_swarm_plot.py
 ```
 Computes the within-song Spearman correlations reported in Section 3.2 of the
-paper, and generates Figure 2.
+paper, and generates Figure 2. Add the flag `--poster` to generate the poster
+image instead.
 
 ```
 python/objective/regression_plot.py
 ```
 Prints the Pearson correlation coefficients and RMSEs as reported in the final
-paragraph of Section 3 and generates the Figure 3 in the paper.
+paragraph of Section 3 and generates the Figure 3 in the paper. Add the flag
+`--poster` to generate the poster images instead.

@@ -218,7 +218,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     if args.poster:
-        image_name = './paper/poster/resources/spearman_boxplot.png'
+        image_name = './site/images/spearman_boxplot.png'
     else:
         image_name = './paper/images/spearman_boxplot.pdf'
 

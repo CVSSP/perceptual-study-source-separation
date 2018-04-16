@@ -187,7 +187,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     if args.poster:
-        image_dir = './paper/poster/resources'
+        image_dir = './site/images'
     else:
         image_dir = './paper/images'
 
