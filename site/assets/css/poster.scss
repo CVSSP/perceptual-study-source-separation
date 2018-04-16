@@ -5,20 +5,27 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
 
+body {
+}
+
 #wrapper{
     @media not print {
         max-height: 10in !important;
         max-width: 15in !important;
     }
     margin: auto;
+
+    overflow: hidden;
+    -moz-overflow: hidden;
 }
 
 #content{
 
     width: 46in;
     max-width: 46in;
-    max-height: 32in;
+    max-height: 33in;
     overflow: hidden;
+    -moz-overflow: hidden;
     margin-left: auto;
     margin-right: auto;
 
@@ -33,7 +40,6 @@
     display: grid;
     grid-gap: 20px;
     margin: 0 auto;
-
 
     grid-template-areas:
     'title title title title title title-info title-info'
