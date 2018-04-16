@@ -21,8 +21,8 @@ permalink: /poster/
 <div id='title-info'>
 
 <div>
-<img style='width: 45%; margin: 0; padding: 25px; float: left' src="/images/uos.png">
-<img style='width: 45%; margin: 0; padding: 25px; float: left' src="/images/epsrc.png">
+<img style='width: 45%; margin: 0; padding: 25px; float: left' src="{{ site.url }}/images/uos.png">
+<img style='width: 45%; margin: 0; padding: 25px; float: left' src="{{ site.url }}/images/epsrc.png">
 </div>
 
 </div>
@@ -55,7 +55,7 @@ $$\hat{S} - S = e_{\text{target}} + e_{\text{interference}} + e_{\text{artifacts
 Error components estimated through least-squares projections of estimated and
 true sources
 
-![](/images/bss_eval.png)
+![]({{ site.url }}/images/bss_eval.png)
 
 <div class='refs' markdown="1">
 - Vincent et al. (2006) { [10.1109/tsa.2005.858005](https://doi.org/10.1109/TSA.2005.858005) }
@@ -103,7 +103,7 @@ by modern source separation systems?
 - **Listeners compared 5 algorithms** selected pseudorandomly from 21 systems for each song <sup>3</sup>
 - Hidden reference and hidden sound quality and interference anchors included
 
-![](/images/interface.png)
+![]({{ site.url }}/images/interface.png)
 *Interface for Task 1. Examples at { [bit.ly/2GutUKR](https://bit.ly/2GutUKR) }*
 
 <div class='refs' markdown='1'>
@@ -127,7 +127,7 @@ by modern source separation systems?
 </div>
 
 <div markdown="1">
-![](/images/spearman_boxplot.png)
+![]({{ site.url }}/images/spearman_boxplot.png)
 </div>
 
 </div>
@@ -136,11 +136,11 @@ by modern source separation systems?
 
 <div class='nested-1-1-split'>
 <div markdown="1">
-![](/images/subjective_vs_APS_SAR.png)
+![]({{ site.url }}/images/subjective_vs_APS_SAR.png)
 </div>
 
 <div markdown="1">
-![](/images/subjective_vs_IPS_SIR.png)
+![]({{ site.url }}/images/subjective_vs_IPS_SIR.png)
 </div>
 
 </div>
