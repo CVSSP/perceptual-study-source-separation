@@ -14,7 +14,7 @@ next_url: /test_home/
     [Surrey Research Insight](http://epubs.surrey.ac.uk/845998/)
 
 - The poster presented by Emad M. Grais at [ICASSP 2018](https://2018.ieeeicassp.org/Papers/ViewPapers.asp?PaperNum=3314)
-    can be [viewed online]({{ site.url }}/poster/)
+    can be [viewed online]({{ site.url }}/poster/){:target='_blank'}
 
 - Source files and resources (Python code, data, audio, paper, poster, issues
     and comments) can be found on the [GitHub repository](https://github.com/CVSSP/perceptual-study-source-separation)

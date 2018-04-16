@@ -9,11 +9,13 @@ body {
 }
 
 #wrapper{
+
     @media not print {
-        max-height: 10in !important;
-        max-width: 15in !important;
+        width: 14in;
+        height: 10in;
     }
-    margin: auto;
+
+    margin: 0 auto;
 
     overflow: hidden;
     -moz-overflow: hidden;
