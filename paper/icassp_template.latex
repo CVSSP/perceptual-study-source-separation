@@ -1,0 +1,155 @@
+\documentclass{article}
+
+\usepackage{setspace}
+\usepackage{amsmath,graphicx}
+\usepackage{authblk}
+\usepackage{titlesec}
+\usepackage[utf8]{inputenc}
+\usepackage[colorlinks=true,allcolors=black]{hyperref}
+\urlstyle{same}
+
+\renewcommand{\sfdefault}{phv} % Times Roman the default Roman family
+\renewcommand{\rmdefault}{ptm} % Helvetica the default sans serif family
+\renewcommand{\ttdefault}{pcr} % Courier the default typewriter family
+
+\oddsidemargin-6.2truemm
+\evensidemargin-6.2truemm
+
+\topmargin 0truept
+\headheight 0truept
+\headsep 0truept
+%\footheight 0truept
+%\footskip 0truept
+\textheight 229truemm
+\textwidth 178truemm
+
+\twocolumn
+\columnsep 6truemm
+\pagestyle{empty}
+
+\emergencystretch=11pt
+
+\def\tightlist{}
+\def\passthrulatex#1{#1}
+
+\usepackage[labelfont=bf, labelsep=period]{caption}
+\captionsetup{$if(latex.skip.below)$belowskip=$latex.skip.below$$endif$$if(latex.skip.above)$,aboveskip=$latex.skip.above$$endif$}
+
+\makeatletter
+\renewcommand{\fnum@figure}{Fig. \thefigure}
+\renewcommand{\fnum@table}{Table \thetable}
+\makeatother
+
+\usepackage{longtable,booktabs}
+\makeatletter
+\let\oldlt\longtable
+\let\endoldlt\endlongtable
+\def\longtable{\@ifnextchar[\longtable@i \longtable@ii}
+\def\longtable@i[#1]{\begin{figure}[t]
+\onecolumn
+\begin{minipage}{0.5\textwidth}
+\oldlt[#1]
+}
+\def\longtable@ii{\begin{figure}[t]
+\onecolumn
+\begin{minipage}{0.5\textwidth}
+\oldlt
+}
+\def\endlongtable{\endoldlt
+\end{minipage}
+\twocolumn
+\end{figure}}
+\makeatother
+
+\usepackage[
+    backend=biber,
+    style=ieee,
+    doi=false,
+    isbn=false
+]{biblatex}
+$for(bibliography)$
+\addbibresource{$bibliography$}
+$endfor$
+
+\def\abstract{\begin{center}
+{\bf ABSTRACT\vspace{-.5em}\vspace{0pt}}
+\end{center}}
+\def\endabstract{\par}
+
+\def\keywords{\vspace{.5em}
+{\bfseries\textit{Index Terms}---\,\relax%
+}}
+\def\endkeywords{\par} 
+
+\titleformat{\section}[block]{\bfseries\filcenter}{\thesection.}{1em}{\MakeUppercase}
+\titleformat{\subsection}[block]{\bfseries}{\thesubsection.}{1em}{}
+\titleformat{\subsubsection}[block]{\em}{\thesubsubsection.}{1em}{}
+
+$if(title)$
+\title{\large \bf \uppercase{$title$}}
+$endif$
+
+%\renewcommand*{\Authsep}{, }
+%\renewcommand*{\Authand}{, }
+%\renewcommand*{\Authands}{, }
+%\renewcommand*{\Affilfont}{\normalfont}
+\setlength{\affilsep}{1.5em}
+
+$for(author)$
+$if(author.affil-number)$
+    \author[$author.affil-number$]{\em{$author.name$}}
+$else$
+    \author[ ]{$author.name$}
+$endif$
+$endfor$
+
+$for(affil)$
+$if(affil.number)$
+    \affil[$affil.number$]{
+        $affil.school$$if(affil.department)$,
+        $affil.department$$endif$$if(affil.address)$,
+        $affil.address$$endif$$if(affil.thanks)$\thanks{$affil.thanks$}$endif$
+    }
+$else$
+    \affil[ ]{
+        $affil.school$$if(affil.department)$,
+        $affil.department$$endif$$if(affil.address)$,
+        $affil.address$$endif$$if(affil.thanks)$\thanks{$affil.thanks$}$endif$
+    }
+$endif$
+$endfor$
+
+$if(latex.suppress_thanks_footnote_marker)$
+\renewcommand\footnotemark{}
+$endif$
+
+\date{\vspace{-1.3em}}
+
+\begin{document}
+
+$if(title)$
+\maketitle
+\thispagestyle{empty}
+$endif$
+
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+
+$if(keywords)$
+\begin{keywords}
+$for(keywords)$
+    $keywords$$sep$,
+$endfor$
+\end{keywords}
+$endif$
+
+$body$
+
+\section{References}
+\noindent
+\printbibliography[heading=none]
+
+\end{document}

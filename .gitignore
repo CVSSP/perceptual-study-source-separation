@@ -37,5 +37,5 @@ site/sounds_training/*/*.flac
 # scripts
 python/analysis/rename_subjects.py
 
-paper/
+paper/build
 bkup/

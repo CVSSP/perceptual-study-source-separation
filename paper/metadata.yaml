@@ -1,0 +1,56 @@
+---
+title: BSS EVAL OR PEASS? PREDICTING THE PERCEPTION OF SINGING-VOICE SEPARATION
+
+affil: 
+    - school: Centre for Vision, Speech and Signal Processing
+      number: 1
+      thanks: |
+          This work is supported by grant EP/L027119/2 from the UK Engineering
+          and Physical Sciences Research Council (EPSRC).
+    - school: Institute of Sound Recording
+      number: 2
+    - school: University of Surrey
+      address: UK
+
+author:
+  - name: Dominic Ward
+    affil-number: 1
+  - name: Hagen Wierstorf$\,$
+    affil-number: 1
+  - name: Russell D. Mason
+    affil-number: 2
+  - name: Emad M. Grais
+    affil-number: 1
+  - name: Mark D. Plumbley
+    affil-number: 1
+
+keywords:
+  - Audio quality assessment
+  - subjective evaluation
+  - source separation
+
+abstract: |
+    There is some uncertainty as to whether objective metrics for predicting the
+    perceived quality of audio source separation are sufficiently accurate.
+    This issue was investigated by employing a revised experimental methodology
+    to collect subjective ratings of sound quality and interference of
+    singing-voice recordings that have been extracted from musical mixtures
+    using state-of-the-art audio source separation. A correlation analysis
+    between the experimental data and the measures of two objective evaluation
+    toolkits, BSS Eval and PEASS, was performed to assess their performance. The
+    artifacts-related perceptual score of the PEASS toolkit had the strongest
+    correlation with the perception of artifacts and distortions caused by
+    singing-voice separation. Both the source-to-interference ratio of BSS Eval
+    and the interference-related perceptual score of PEASS showed comparable
+    correlations with the human ratings of interference.
+
+latex:
+    skip:
+        above: 0mm
+        below: -6mm
+
+    suppress_thanks_footnote_marker: true
+
+bibliography:
+    - refs.bib
+---
