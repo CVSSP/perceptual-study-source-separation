@@ -1,0 +1,242 @@
+---
+---
+
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
+
+#wrapper{
+    @media not print {
+        max-height: 10in !important;
+        max-width: 15in !important;
+    }
+    margin: auto;
+}
+
+#content{
+
+    width: 46in;
+    max-width: 46in;
+    max-height: 32in;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media print {
+        transform: scale(1);
+        transform-origin: 0 0;
+    }
+
+    transform: scale(0.3);
+    transform-origin: 0 0;
+
+    display: grid;
+    grid-gap: 20px;
+    margin: 0 auto;
+
+
+    grid-template-areas:
+    'title title title title title title-info title-info'
+    'intro intro intro2 intro2 results results results'
+    'intro intro method method results results results'
+    'intro intro method method conclusions conclusions conclusions';
+
+    grid-template-columns: repeat(7, 1fr);
+
+    font-size: 32pt !important;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    counter-reset: ref-counter;
+}
+
+#content > *{
+    padding: 20px;
+    border-radius: 50px;
+}
+
+/* Header */
+#title {
+    grid-area: title;
+    padding: 0px;
+    h1 {
+        font-size: 90pt !important;
+        color: #8c69aa !important;
+    }
+    h2 {font-size: 60pt !important;}
+    h3 {font-size: 40pt !important;
+    }
+    h4 {font-size: 35pt !important;
+    }
+
+    text-align: left;
+}
+
+#title-info {
+    grid-area: title-info;
+    padding: 0px;
+    position: relative;
+    text-align: right;
+    margin: auto;
+    h1, h2, h3, h4 {color: #54768c  !important;}
+}
+
+h1, h2, h3, h4 
+{
+    font-family: 'Yanone Kaffeesatz',arial,serif;
+    font-weight: normal;
+    margin-top: 0em;
+    margin-bottom: 0.25em;
+}
+
+#intro {
+    grid-area: intro;
+}
+
+#intro2 {
+    grid-area: intro2;
+}
+
+#method {
+    grid-area: method;
+}
+
+#results {
+    grid-area: results;
+}
+
+#conclusions {
+    grid-area: conclusions;
+}
+
+.nested-1-2-split {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.nested-1-1-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+#points {
+    grid-area: points;
+}
+
+#outro {
+    grid-area: outro;
+}
+
+.panel {
+    border: 10px solid #818f91 !important;
+    position: relative;
+}
+
+.panel > h1 {
+    color: white;
+    background: #54768c;
+    text-align: center;
+    margin: -20px;
+    border-radius: 35px 35px 0 0;
+    border: none;
+    padding-top: 20px;
+    font-size: 50pt;
+    height: 60pt;
+    margin-bottom: 0em;
+}
+
+.panel h2, .panel h3, .panel h4 
+{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.panel-emph {
+    @extend .panel;
+    h1 {
+        background-color: #a39bc7;
+    }
+}
+
+footer {
+    grid-column: span 12;
+    color: #1b656d !important;
+    text-align: left;
+    font-size: 25pt;
+    padding: 0 !important;
+}
+
+// Refs
+.refs {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 30pt;
+    color: #818f91 !important;
+    padding: 0.5rem;
+
+    ul {
+        list-style: none;
+    }
+
+    li::before {
+        content: counter(ref-counter); color: red;
+        display: inline-block; width: 1em;
+        margin-left: -1em
+    }
+
+    li {counter-increment: ref-counter}
+}
+
+sup {
+    color: red;
+}
+
+.equation {
+    text-align: center;
+    padding: 1em;
+}
+
+blockquote{
+    margin: 10px;
+    text-align: justify;
+}
+
+blockquote p {
+    padding: 20px;
+    font-style: italic;
+    background-color: #fed299;
+    border-radius: 35px;
+}
+
+ol, ul {
+    margin: 0.5rem;
+}
+
+p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+a, u {
+    text-decoration: none;
+    color: #a39bc7;
+}
+
+// images
+
+img {
+    max-width: 95%;
+    display: block;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 0em;
+}
+img + em {
+    display: block;
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 30pt;
+}
