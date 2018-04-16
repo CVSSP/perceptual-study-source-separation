@@ -17,8 +17,10 @@ This is the repository for the paper:
 - The submitted (raw) subjective ratings are in `site/_data/results`
 - Audio files are in `site/sounds/`
 - The source files and images for the paper are in the `paper` folder
-- The source code for the poster (as presented as ICASSP 2018) is
-    `site/pages/poster.md`. Required images can be found in `site/images`
+- The content for the poster (as presented by Emad M. Grais at ICASSP 2018) is
+    `site/pages/poster.md`. Images, styling and layout are can be found at
+    `site/images`, `site/css/poster.scss` and `site/_layouts/poster.html`,
+    respectively.
 - Python code lives in the `python` folder
 
 The experiment lives in the `site` folder, which is deployed to the `gh-pages`
@@ -37,7 +39,8 @@ There are quite a few intermediate files and things left for future work.
 In short, the main data are:
 
 - `data/ratings.csv` is the compiled subjective dataset
-- `data/experiment_stimuli.csv` describes the main audio files used in the experiment
+- `data/experiment_stimuli.csv` describes the main audio files used in the 
+    experiment
 - `data/bss_eval_and_peass_clean.csv` the predictions of BSS Eval and PEASS
 
 The stimuli used for the experiment can be found in the `./site/sounds` folder.
@@ -85,8 +88,8 @@ python/generation/generate_familarisation_stimuli.py
 ```
 Generates the configuration files and audio files for the [quality familiarisation
 page](https://cvssp.github.io/perceptual-study-source-separation/familiarisation_quality/)  and the [interference familiarisation page](https://cvssp.github.io/perceptual-study-source-separation/familiarisation_interferer/).
-You will need to set the path, in the `main` function, to the demixing Secret Dataset
-(DSD100) dataset, which can be downloaded [here](http://liutkus.net/DSD100.zip).
+You will need to set the path, in the `main` function, to the demixing Secret
+Dataset (DSD100) dataset, which can be downloaded [here](http://liutkus.net/DSD100.zip).
 
 ```
 python/generation/generate_stimuli.py
@@ -96,10 +99,10 @@ This script generates all wav files for the training stages, e.g.
 and the main experiment, e.g.
 [here](https://cvssp.github.io/perceptual-study-source-separation/interferer/).
 This includes the reference vocals and original accompaniment (required for
-objective evaluation), the estimated vocals (from the algorithms) and the anchors.
-Audio files belonging to a single song are placed in their own folder, e.g.
-`./site/sounds/vocals-10-SIR` holds the audio associated with the vocals of song
-10.
+objective evaluation), the estimated vocals (from the algorithms) and the
+anchors.  Audio files belonging to a single song are placed in their own folder,
+e.g.  `./site/sounds/vocals-10-SIR` holds the audio associated with the vocals
+of song 10.
 
 The `main` function requires the path to `DSD100` and `MUS2017`.
 
@@ -107,7 +110,8 @@ Naming convention:
 
 - The estimated files have been named as done [here](http://sisec17.audiolabs-erlangen.de/#/results/1/4/2). 
 - The reference vocal is named `ref.flac`.
-- The accompaniment (sum of other sources) associated with each reference vocal has the name `ref_accompaniment.flac`.
+- The accompaniment (sum of other sources) associated with each reference vocal
+    has the name `ref_accompaniment.flac`.
 - `Artefacts.wav` is the sound-quality anchor.
 - `Interferer.wav` is the original mixture.
 
@@ -192,17 +196,18 @@ This script generates 3 files:
 
 1. `./data/bss_eval_and_peass.csv`
 
-    This is the main data we used for the paper. The predictions are made using the
-    same stimuli as used in the experiment, with the original (reference) vocal and
-    accompaniment (sum of all other instruments) as the ground truth sources.
-    The `flac` files are included for the accompaniments so you can run this
-    script. 
+    This is the main data we used for the paper. The predictions are made using
+    the same stimuli as used in the experiment, with the original (reference)
+    vocal and accompaniment (sum of all other instruments) as the ground truth
+    sources.  The `flac` files are included for the accompaniments so you can
+    run this script. 
 
 2. `./data/bss_eval_and_peass_all_stems.csv`
 
     We later discovered that you get different results depending on whether you
     input the vocals, bass, drums and other as separate ground truth sources
-    (rather than the vocal and accompaniment). This is possibly the subject of future work.
+    (rather than the vocal and accompaniment). This is possibly the subject of
+    future work.
 
 3. `./data/bss_eval_and_peass_nonorm_all_stems.csv`
     
@@ -220,8 +225,8 @@ the suffix `_clean` appended to the filename;
 ```
 python/objective/compare_methods.py
 ```
-Not used for the paper, but shows differences due to how the ground truth sources
-are specified (compares `./data/bss_eval_and_peass.csv` with
+Not used for the paper, but shows differences due to how the ground truth
+sources are specified (compares `./data/bss_eval_and_peass.csv` with
 `./data/bss_eval_and_peass_all_stems.csv`).
 
 ```
@@ -242,28 +247,28 @@ paragraph of Section 3 and generates the Figure 3 in the paper. Add the flag
 
 The source files:
 
-- `./paper/paper.md`: Paper written in Markdown
-- `./paper/metadata.yaml`: Authors, abstract, and some configuration settings
-- `./paper/icassp_template.latex`: `pandoc` template for generating the tex 
+- `paper/paper.md`: The paper content, written in Markdown
+- `paper/metadata.yaml`: Authors, abstract, and some configuration settings
+- `paper/icassp_template.latex`: `pandoc` template for generating the tex
     file for the PDF build.
-- `./paper/refs.bib`: References
-- `./paper/images`: Images generated by the python scripts (see above)
+- `paper/refs.bib`: References
+- `paper/images`: Images generated by the python scripts (see above)
 
-In order to build the paper, you will need:
+In order to build the paper, you will need to install
 
 - [pandoc](https://pandoc.org/installing.html)
 - The `pandoc` filter [pandoc-crossref](https://github.com/lierdakil/pandoc-crossref) 
 - A TeX distribution such as [TeX Live](https://www.tug.org/texlive/)
 - The [biber](https://ctan.org/pkg/biber?lang=en) package
 
-Then do
+Then do (from the root of this repo)
 
 ```
-cd ./paper
+cd paper
 make
 ```
 
 which calls `pandoc` to run `paper.md` and `metadata.yaml` through the `latex`
-template `icassp_template.latex`, generating `./build/paper.tex`.  In the
-`build` folder you will find intermediate files generated by the `pdflatex` and
-`biber` commands, and the built PDF file `paper.pdf`.
+template `icassp_template.latex`, generating `paper/build/paper.tex`.  In the
+`build` folder you will find various intermediate files generated by the
+`pdflatex` and `biber` commands, in addition to the built PDF file `paper.pdf`.
