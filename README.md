@@ -11,6 +11,8 @@ This is the repository for the paper:
 }
 ```
 
+which is available via [Surrey Research Insight Open Access](http://epubs.surrey.ac.uk/845998/).
+
 # What's what?
 
 - The website, hosted on GitHub pages, is in the `site` folder
