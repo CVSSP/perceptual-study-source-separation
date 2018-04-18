@@ -20,8 +20,8 @@ which is available via [Surrey Research Insight Open Access](http://epubs.surrey
 - Audio files are in `site/sounds/`
 - The source files and images for the paper are in the `paper` folder
 - The content for the poster (as presented by Emad M. Grais at ICASSP 2018) is
-    `site/pages/poster.md`. Images, styling and layout are can be found at
-    `site/images`, `site/css/poster.scss` and `site/_layouts/poster.html`,
+    `site/_pages/poster.md`. Images, styling and layout are can be found at
+    `site/images`, `site/assets/css/poster.scss` and `site/_layouts/poster.html`,
     respectively.
 - Python code lives in the `python` folder
 
